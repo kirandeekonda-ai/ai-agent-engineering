@@ -22,6 +22,9 @@ This course takes you from zero to Staff/Principal-level AI engineering skills t
 | 10 | Prompt Injection Defense | Input validation, pattern detection |
 | 11 | PII Protection | Data privacy, masking |
 | 12 | Rate Limiter | Token budgets, guardrails |
+| 13 | Memory Agent | Conversation history, caching |
+| 14 | Streaming Agent | Real-time responses, progress |
+| 15 | Agent Server | FastAPI, Docker deployment |
 
 ---
 
@@ -68,6 +71,33 @@ python "Week 5 - Multi-Agent/research_team.py"
 
 # Week 6: API Orchestrator
 python "Week 6 - APIs/api_orchestrator.py"
+
+# Week 7: LangSmith Deep Dive
+python "Week 7 - LLMOps/langsmith_deep_dive.py"
+
+# Week 8: Evaluation Framework
+python "Week 8 - Evaluation/evaluation_framework.py"
+
+# Week 9: Production Monitor
+python "Week 9 - Monitoring/production_monitor.py"
+
+# Week 10: Prompt Injection Defense
+python "Week 10 - Security/prompt_injection_defense.py" test
+
+# Week 11: PII Protection
+python "Week 11 - Privacy/pii_protection.py" test
+
+# Week 12: Rate Limiter
+python "Week 12 - Guardrails/rate_limiter.py" test
+
+# Week 13: Memory Agent (interactive)
+python "Week 13 - Memory/memory_agent.py"
+
+# Week 14: Streaming Agent
+python "Week 14 - Streaming/streaming_agent.py"
+
+# Week 15: Agent Server (starts API at localhost:8000)
+python "Week 15 - Deployment/agent_server.py"
 ```
 
 ---
@@ -143,6 +173,23 @@ python "Week 6 - APIs/api_orchestrator.py"
 - Request rate limiting
 - Output content guardrails
 
+### Module 5: Advanced Agent Patterns (Weeks 13-15)
+
+**Week 13: Agent Memory & Caching**
+- Conversation history management
+- Session persistence across restarts
+- Semantic caching for cost optimization
+
+**Week 14: Streaming & Real-time**
+- Token-by-token streaming
+- Async streaming for concurrent tasks
+- Progress tracking for multi-step operations
+
+**Week 15: Deployment & Scaling**
+- FastAPI REST API wrapper
+- Docker containerization
+- Health checks for load balancers
+
 ---
 
 ## 🏗️ Project Structure
@@ -175,6 +222,14 @@ ai-agent-engineering/
 │   └── pii_protection.py     # PII masking
 ├── Week 12 - Guardrails/
 │   └── rate_limiter.py       # Rate limiting & output guards
+├── Week 13 - Memory/
+│   └── memory_agent.py       # Conversation history & caching
+├── Week 14 - Streaming/
+│   └── streaming_agent.py    # Real-time responses
+├── Week 15 - Deployment/
+│   ├── agent_server.py       # FastAPI server
+│   ├── Dockerfile            # Container config
+│   └── requirements.txt      # Dependencies
 ├── .env.example              # API key template
 └── README.md
 ```

@@ -1,0 +1,14 @@
+# Week 15: Requirements for AI Agent Server
+
+# Core
+langchain>=0.1.0
+langchain-groq>=0.1.0
+python-dotenv>=1.0.0
+
+# API Server
+fastapi>=0.109.0
+uvicorn>=0.27.0
+pydantic>=2.0.0
+
+# Streaming support
+sse-starlette>=1.6.0
