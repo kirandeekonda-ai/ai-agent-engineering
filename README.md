@@ -16,6 +16,9 @@ This course takes you from zero to Staff/Principal-level AI engineering skills t
 | 4 | RAG Agent | Vector stores, embeddings |
 | 5 | Research Team | Multi-agent, supervisor-worker |
 | 6 | API Orchestrator | Tool composition, external APIs |
+| 7 | LangSmith Deep Dive | Tracing, cost tracking |
+| 8 | Evaluation Framework | Datasets, evaluators |
+| 9 | Production Monitor | A/B testing, alerts |
 
 ---
 
@@ -103,6 +106,23 @@ python "Week 6 - APIs/api_orchestrator.py"
 - Multiple API integration
 - Weather, stock, news APIs
 
+### Module 3: LLMOps & Observability (Weeks 7-9)
+
+**Week 7: LangSmith Deep Dive**
+- Custom tracing with @traceable
+- Token and cost tracking
+- Latency analysis
+
+**Week 8: Evaluation & Testing**
+- Building evaluation datasets
+- Custom evaluators (exact match, LLM judge)
+- Category-based analysis
+
+**Week 9: Production Monitoring**
+- A/B testing prompts
+- Quality scoring
+- Alerts and dashboards
+
 ---
 
 ## 🏗️ Project Structure
@@ -123,6 +143,12 @@ ai-agent-engineering/
 │   └── research_team.py      # Supervisor + workers
 ├── Week 6 - APIs/
 │   └── api_orchestrator.py   # Multi-API integration
+├── Week 7 - LLMOps/
+│   └── langsmith_deep_dive.py # Tracing & cost tracking
+├── Week 8 - Evaluation/
+│   └── evaluation_framework.py # Datasets & evaluators
+├── Week 9 - Monitoring/
+│   └── production_monitor.py  # A/B testing & alerts
 ├── .env.example              # API key template
 └── README.md
 ```
