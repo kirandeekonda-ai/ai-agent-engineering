@@ -1,0 +1,53 @@
+[
+  {
+    "timestamp": "2026-01-31T14:28:48.904809",
+    "action": "masked_for_llm",
+    "pii_types": [
+      "email"
+    ],
+    "user_id": "anonymous"
+  },
+  {
+    "timestamp": "2026-01-31T14:28:49.038211",
+    "action": "masked_for_llm",
+    "pii_types": [
+      "phone"
+    ],
+    "user_id": "anonymous"
+  },
+  {
+    "timestamp": "2026-01-31T14:28:49.280334",
+    "action": "masked_for_llm",
+    "pii_types": [
+      "ssn",
+      "phone",
+      "credit_card"
+    ],
+    "user_id": "anonymous"
+  },
+  {
+    "timestamp": "2026-01-31T14:28:49.520029",
+    "action": "masked_for_llm",
+    "pii_types": [
+      "date_of_birth"
+    ],
+    "user_id": "anonymous"
+  },
+  {
+    "timestamp": "2026-01-31T14:28:49.686615",
+    "action": "masked_for_llm",
+    "pii_types": [
+      "ip_address"
+    ],
+    "user_id": "anonymous"
+  },
+  {
+    "timestamp": "2026-01-31T14:38:01.723010",
+    "action": "masked_for_llm",
+    "pii_types": [
+      "ssn",
+      "email"
+    ],
+    "user_id": "anonymous"
+  }
+]

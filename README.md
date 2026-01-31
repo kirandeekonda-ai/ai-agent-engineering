@@ -19,6 +19,9 @@ This course takes you from zero to Staff/Principal-level AI engineering skills t
 | 7 | LangSmith Deep Dive | Tracing, cost tracking |
 | 8 | Evaluation Framework | Datasets, evaluators |
 | 9 | Production Monitor | A/B testing, alerts |
+| 10 | Prompt Injection Defense | Input validation, pattern detection |
+| 11 | PII Protection | Data privacy, masking |
+| 12 | Rate Limiter | Token budgets, guardrails |
 
 ---
 
@@ -123,6 +126,23 @@ python "Week 6 - APIs/api_orchestrator.py"
 - Quality scoring
 - Alerts and dashboards
 
+### Module 4: Security & Governance (Weeks 10-12)
+
+**Week 10: Prompt Injection Defense**
+- Input validation and sanitization
+- Pattern-based injection detection
+- Hardened system prompts
+
+**Week 11: Data Privacy & PII**
+- PII detection (email, phone, SSN, etc.)
+- Masking before LLM processing
+- Audit logging for compliance
+
+**Week 12: Rate Limiting & Guardrails**
+- Token budgets per user
+- Request rate limiting
+- Output content guardrails
+
 ---
 
 ## 🏗️ Project Structure
@@ -149,6 +169,12 @@ ai-agent-engineering/
 │   └── evaluation_framework.py # Datasets & evaluators
 ├── Week 9 - Monitoring/
 │   └── production_monitor.py  # A/B testing & alerts
+├── Week 10 - Security/
+│   └── prompt_injection_defense.py # Input validation
+├── Week 11 - Privacy/
+│   └── pii_protection.py     # PII masking
+├── Week 12 - Guardrails/
+│   └── rate_limiter.py       # Rate limiting & output guards
 ├── .env.example              # API key template
 └── README.md
 ```
