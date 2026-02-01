@@ -28,6 +28,9 @@ This course takes you from zero to Staff/Principal-level AI engineering skills t
 | 16 | LoRA Fine-tuning | PEFT, QLoRA, model adaptation |
 | 17 | Vector DB Deep Dive | Hybrid search, chunking |
 | 18 | Cloud ML Platforms | MLflow, CI/CD for ML |
+| 19 | System Design | Architecture, scalability |
+| 20 | ML Theory | Transformers, statistics |
+| 21 | Leadership Skills | Communication, business |
 
 ---
 
@@ -219,6 +222,23 @@ python "Week 18 - CloudML/cloud_ml_platforms.py"
 - MLflow experiment tracking
 - CI/CD for ML models
 
+### Module 7: Principal Engineer Skills (Weeks 19-21)
+
+**Week 19: System Design & Architecture**
+- Distributed systems fundamentals
+- AI-specific architecture patterns
+- Design practice problems (RAG, recommendations)
+
+**Week 20: AI/ML Theory & Foundations**
+- Transformer architecture deep dive
+- Probability and statistics essentials
+- LLM evaluation metrics
+
+**Week 21: Leadership, Communication & Business**
+- Technical writing and presentations
+- Mentoring and influence
+- ROI analysis and AI governance
+
 ---
 
 ## 🏗️ Project Structure
@@ -265,6 +285,12 @@ ai-agent-engineering/
 │   └── vector_db_deep_dive.py # DB comparison & search
 ├── Week 18 - CloudML/
 │   └── cloud_ml_platforms.py # MLflow & CI/CD
+├── Week 19 - System Design/
+│   └── README.md             # Architecture study guide
+├── Week 20 - ML Theory/
+│   └── README.md             # Transformers & stats guide
+├── Week 21 - Leadership/
+│   └── README.md             # Soft skills guide
 ├── .env.example              # API key template
 └── README.md
 ```
