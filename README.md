@@ -25,6 +25,9 @@ This course takes you from zero to Staff/Principal-level AI engineering skills t
 | 13 | Memory Agent | Conversation history, caching |
 | 14 | Streaming Agent | Real-time responses, progress |
 | 15 | Agent Server | FastAPI, Docker deployment |
+| 16 | LoRA Fine-tuning | PEFT, QLoRA, model adaptation |
+| 17 | Vector DB Deep Dive | Hybrid search, chunking |
+| 18 | Cloud ML Platforms | MLflow, CI/CD for ML |
 
 ---
 
@@ -98,6 +101,15 @@ python "Week 14 - Streaming/streaming_agent.py"
 
 # Week 15: Agent Server (starts API at localhost:8000)
 python "Week 15 - Deployment/agent_server.py"
+
+# Week 16: LoRA Fine-tuning
+python "Week 16 - Fine-tuning/lora_finetuning.py"
+
+# Week 17: Vector DB Deep Dive
+python "Week 17 - VectorDB/vector_db_deep_dive.py"
+
+# Week 18: Cloud ML Platforms
+python "Week 18 - CloudML/cloud_ml_platforms.py"
 ```
 
 ---
@@ -190,6 +202,23 @@ python "Week 15 - Deployment/agent_server.py"
 - Docker containerization
 - Health checks for load balancers
 
+### Module 6: Production ML/LLM Engineering (Weeks 16-18)
+
+**Week 16: LoRA Fine-tuning**
+- Low-Rank Adaptation (LoRA) concepts
+- QLoRA for memory efficiency
+- PEFT library for fine-tuning
+
+**Week 17: Vector Databases**
+- ChromaDB, Pinecone, Weaviate comparison
+- Hybrid search (semantic + keyword)
+- Chunking strategies
+
+**Week 18: Cloud ML Platforms**
+- AWS SageMaker, Azure ML, GCP Vertex AI
+- MLflow experiment tracking
+- CI/CD for ML models
+
 ---
 
 ## 🏗️ Project Structure
@@ -230,6 +259,12 @@ ai-agent-engineering/
 │   ├── agent_server.py       # FastAPI server
 │   ├── Dockerfile            # Container config
 │   └── requirements.txt      # Dependencies
+├── Week 16 - Fine-tuning/
+│   └── lora_finetuning.py    # LoRA/PEFT concepts
+├── Week 17 - VectorDB/
+│   └── vector_db_deep_dive.py # DB comparison & search
+├── Week 18 - CloudML/
+│   └── cloud_ml_platforms.py # MLflow & CI/CD
 ├── .env.example              # API key template
 └── README.md
 ```

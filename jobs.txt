@@ -1,0 +1,459 @@
+# Job 1
+
+## **About the job**
+
+At Kognitiv Inc., we’re redefining what it means to be a Workday partner. As one of the fastest-growing companies in the ecosystem, we bring deep expertise, innovative thinking, and a people-first mindset to everything we do. We’re not just building better Workday solutions—we’re building a company where talented people thrive.**Ready to do your best work? Join us.**
+
+The Principal AI Agent Architect & Strategy Consultant is a senior-level, client-facing expert responsible for establishing and accelerating the firm's Artificial Intelligence practice. This role requires deep technical expertise in advanced Generative AI architectures and autonomous agent development, combined with proven strategic consulting and client relationship management skills.The primary purpose is to define the firm's AI Point of View (POV), translate complex AI agent capabilities into viable business value propositions, lead high-stakes client strategy engagements, and oversee the architectural design of billable AI solutions.**Responsibilities**
+
+The individual must be able to perform the following duties, with or without reasonable accommodation:
+
+- Strategy & POV: Contribute to the firm's commercial and technical POV, policies, and architecture regarding AI, Generative AI, and autonomous agent systems to secure competitive advantage.
+- Client Consulting: Lead executive-level workshops to identify high-ROI AI use cases, assess organizational readiness, and develop ethical AI adoption roadmaps.
+- Solution Structuring: Translate high-level business problems into actionable technical roadmaps, ensuring alignment with client data governance, security, and compliance requirements (e.g., GDPR, local data laws).
+- Pre-Sales: Partner with sales and account teams to structure, scope, and estimate complex AI consulting engagements, acting as the definitive subject matter expert.
+- Practice Enablement: Support the firm's practice integrations by providing AI learning/training and developing expertise in platforms like Workday.
+- Agent Design: Design and architect multi-step, autonomous AI agent systems (leveraging LLMs, Vector Databases, and orchestration frameworks like LangChain/AutoGen), focusing on scalability, reliability, and observability.
+- Architecture Governance: Establish best practices, technical standards, and Quality Assurance processes for all AI and Machine Learning Operations (MLOps) workflows.
+- Tooling Evaluation: Continuously evaluate and recommend AI builder tools, platforms (Azure OpenAI, AWS Bedrock, Google Vertex AI, etc.), and infrastructure choices based on performance and Total Cost of Ownership (TCO).
+- Ethical Oversight: Ensure all AI strategies and architectural designs adhere to established ethical principles and minimize risks related to bias, transparency, and data privacy.
+- Documentation: Maintain comprehensive, accurate, and professional documentation of methodologies, architectures, and client recommendations.
+
+**Qualifications**
+
+- Proven mastery of technical consulting and AI architecture, typically gained over 10+ years of progressive experience, including:
+    - Technical Consulting or Professional Services experience, with a proven history as a billable, client-facing resource.
+    - Designing and deploying production-grade Generative AI applications and Large Language Model (LLM) workflows.
+    - Specific, demonstrable experience building and orchestrating autonomous AI agents (reasoning, tool-use, multi-step planning).
+- Expert-level proficiency in Python and relevant AI/ML frameworks.
+- Deep understanding of cloud computing platforms (AWS, Azure, or GCP) and related MLOps tooling.
+- Exceptional written and verbal communication skills, including the ability to present complex technical concepts to executive, non-technical audiences.
+- Experience with low-code/no-code AI agent builder tools (e.g., Flowise, LlamaIndex) is preferred.
+- Prior experience integrating AI/ML models within complex enterprise platforms is preferred.
+- Exposure to developing non-AI applications within complex enterprise platforms (e.g., Workday, Salesforce, SAP) in a consulting context is preferred.
+
+# Job 2
+
+**About The Job**
+
+The Digital workforce team is part of Red Hat’s Data and AI organization. The team is focused on building and delivering strategic AI agents designed to augment human capabilities, accelerate workflows, and scale operations across the enterprise.
+
+In this role, you will work as a member of a highly dynamic, and fast-paced team. As part of the development team, you’ll need to be creative, motivated, and proficient in architecting and designing cutting-edge applications that leverage Generative AI. You will work closely with different teams, stakeholders, product owners, and program managers to design, document, and develop solutions. We are seeking talented engineers to spearhead the technology and design of key components within Red Hat's Digital Workforce, shaping the future of digital agents. The ideal candidate will possess strong technical abilities, a commitment to quality and open source, a drive for innovation, excellent communication and teamwork skills, and will excel in a dynamic, startup-like setting.
+
+**What will you do?**
+
+- Architect, design, document, and develop applications in Python and frameworks like LangChain, LangGraph, LLamaStack.
+- Architect and lead the implementation of Agentic AI applications.
+- Architect and lead the implementation of scalable open-source solutions with distributed computing capabilities using Machine Learning models, running on OpenShift AI
+- Architect and design new features with RAG, RAFT, GraphRAG, InstructLab, and their pipelines
+- Develop and optimize retrieval-augmented generation (RAG) pipelines
+- Collaborate with product owners, program managers, different teams, and engineering managers to analyze and clarify business requirements to implement data models and business logic
+- Mentor, influence, and coach a distributed team of engineers
+- Effectively communicate to stakeholders and project team members to ensure proper visibility of development efforts
+- Review code merge requests from other team members for new features
+- Build and deploy applications to Red Hat OpenShift Platform-as-a-Service (PaaS), public clouds, i.e., Google Cloud Platform, AWS, etc.
+- Ensure non-functional requirements, including performance, scalability, resiliency, maintainability, security, etc., are met according to defined standards
+- Resolve bugs, performance problems, and other issues with production applications
+
+**What will you bring?**
+
+- Strong experience in a software engineering role
+- Bachelor's degree in Computer Science, Computer Engineering or related field
+- 12+ years of professional coding, at least 5 years using Python
+- Excellent communication skills, solid written and verbal communication skills in English; ability to communicate effectively in a global team
+- Experience with LangGraph, LangChain, Autogen and/or Python/Java-based AI libraries for GenAI applications
+- Demonstrated expertise in designing large scale distributed systems, cloud-native architectures, and enterprise-grade applications
+- Problem-solving and troubleshooting skills including performing root cause analysis
+- Understanding of web application infrastructure and fundamentals like REST and HTTP
+- Understanding of public cloud concepts and development practices
+- Experience with continuous delivery (CD) like to build and deploy pipelines like Jenkins, Platform-as-a-Service (PaaS) like OpenShift/Kubernetes
+- Presentations skills and public speaking skills for conferences and demos
+- Enjoys solving challenging problems and working with emerging technologies
+
+**The Following Are Considered a Plus**
+
+- Experience with AI Agentic frameworks
+- Experience with MCP servers
+- Experience working with LLMs
+- Experience in building Chatbots with Slack
+
+**Personal Qualities And Communication**
+
+- Communicate and influence for impact by bringing data to life via clear narratives and/or storytelling
+- Communication skills and experience in interacting with cross functional business and engineering teams
+- Capability in undertaking business needs analysis in direct consultation.
+- Be a self-starter, displaying initiative in seeing needs, building functionality and leading insights for organizational change.
+- Capability to develop a detailed understanding of our business requirements.
+- Excellent communication, presentation, and writing skills
+
+# Job 3
+
+## **About the job**
+
+Ignite the Future of Language with AI at Teradata!**What You'll Do: Shape the Way the World Understands Data**
+
+At Teradata, we're not just managing data; we're unleashing its full potential.  Our ClearScape Analytics™ platform and pioneering Enterprise Vector Store are empowering the world's largest enterprises to derive unprecedented value from their most complex data.  We're rapidly pushing the boundaries of what's possible with Artificial Intelligence, especially in the exciting realm of **autonomous and agentic systems**
+
+We’re building intelligent systems that go far beyond automation — they observe, reason, adapt, and drive complex decision-making across large-scale enterprise environments.  As a member of our AI engineering team, you’ll play a critical role in designing and deploying advanced AI agents that integrate deeply with business operations, turning data into insight, action, and measurable outcomes. In this role, you’ll architect foundational components for production-grade AI systems — from agent frameworks and LLM pipelines to observability and evaluation layers that ensure reliability, accountability, and performance.  You’ll be responsible not just for building models, but for making them measurable, debuggable, and trustworthy in real-world, high-stakes deployments. You’ll work alongside a high-caliber team of AI researchers, engineers, and data scientists tackling some of the hardest problems in AI and enterprise software — from scalable multi-agent coordination and fine-tuned LLM applications, to real-time monitoring, drift detection, and closed-loop retraining systems. If you're passionate about building intelligent systems that are not only powerful but observable, resilient, and production-ready, this role offers the opportunity to shape the future of enterprise AI from the ground up.**Who You'll Work With: Join Forces with the Best**
+
+Imagine collaborating daily with some of the brightest minds in the company – individuals who champion diversity, equity, and inclusion as fundamental to our success.  You'll be part of a cohesive force, laser-focused on delivering high-quality, critical, and highly visible AI/ML functionality within the Teradata Vantage platform.  Your insights will directly shape the future of our intelligent data solutions. You'll report directly to the inspiring Sr.  Manager, Software Engineering, who will champion your growth and empower your contributions.**What Makes You a Qualified Candidate: Skills in Action**
+
+- We’re seeking a hands-on, deeply technical Staff Engineer to lead innovation in the Agentic AI space.
+- You bring proven experience in the design, development, and deployment of intelligent agents that can reason, plan, and act autonomously—and critically, you’ve done so securely and responsibly at scale.
+- This role sits at the intersection of deep systems engineering, modern AI architectures, and the real-world operational challenges of deploying agents in enterprise environments.
+- At Teradata, you will be at the forefront of implementing agent management, governance, and compliance, solving some of the most complex problems in building safe and scalable Agentic AI systems.
+- You’ll work cross-functionally with product leaders, architects, and platform teams to define our next-generation agent platform.
+- Architect, design, and implement secure, scalable frameworks for autonomous AI agents.
+- Define and lead the technical roadmap for agent management—from discovery and provisioning to task orchestration and retirement.
+- Ensure AI agents are secure by design, with visibility, accountability, and guardrails baked in.
+- Collaborate with AI researchers, platform engineers, and product managers to bring cutting-edge agentic capabilities to production environments.
+- Build foundational infrastructure and tools to support multi-agent collaboration, memory/context management, and extensibility.
+- Drive adoption of AI agents across the enterprise by enabling easy integration and safe execution.
+- Serve as a thought leader on best practices for agent safety, observability, performance, and ethical deployment.
+
+**What You Bring: Passion and Potential**
+
+- A Bachelor's or Master's degree in Computer Science, Engineering, Data Science, or a related field – your academic foundation is key.
+- A genuine excitement for AI and large language models (LLMs) is a significant advantage – you'll be working at the cutting edge!
+- 8+ years of experience in software architecture, backend systems, or AI infrastructure.
+- Deep knowledge of autonomous agent frameworks (e. g. , LangChain, AutoGen, CrewAI) and AI orchestration models.
+- Experience with agent memory, planning loops, self-reflection, and execution chains.
+- Proven ability to build systems that solve for access control, identity management, and policy enforcement in the context of AI agents.
+- Proficiency with cloud-native platforms, distributed systems, and infrastructure design for scalability and security.
+- Experience building SDKs or APIs that expose agentic capabilities to developers or downstream applications.
+- Excellent collaboration and communication skills across technical and non-technical teams.
+- Proven ability to lead projects across large, distributed teams.
+- Strong knowledge of LLMs, RL, or cognitive architectures is highly desirable.
+- Experience with vector DBs, graph-based memory systems, or agentic frameworks.
+- Passion for building safe, human-aligned autonomous systems.
+- Experience in software development (Python, Go, or Java is preferred).
+- Familiarity with backend service development, APIs, and distributed systems.
+- Interest or experience in LLMs, autonomous agents, or AI tooling.
+- Familiar with CI/CD practices, testing, and observability.
+- You're knowledgeable about open-source tools and technologies and know how to leverage and extend them to build innovative solutions.
+- Passion for AI/ML, especially in building smart, agent-driven interfaces that feel human.
+- Ownership mindset — you build, deploy, iterate, and scale with a long-term view.
+- Bonus: Experience with knowledge graphs, graph-based identity modeling, or AI-native security analytics.
+- Bonus: Familiarity with zero-trust architectures, AI governance frameworks, or secure multi-tenancy.
+- Bonus: Contributions to open-source agent frameworks or LLM orchestration tooling.
+- Bonus: Background in identity security, compliance-driven environments, or enterprise SaaS platforms.
+
+# Job 4
+
+**About Position:**
+
+We are looking for a Principal GenAI Architect who can lead the design of scalable, enterprise-grade Generative AI solutions. The role requires strong architectural judgment, hands-on GenAI expertise, and the ability to guide teams toward technical excellence.
+
+- **Role: Principal Gen AI Architect**
+- **Location: Pune/Bangalore**
+- **Experience: 8+ Years**
+- **Job Type: Full Time Employment**
+
+**What You'll Do:**
+
+- Design and architect end-to-end generative AI solutions that meet business requirements and scale effectively.
+- Lead technical decision-making for GenAI platform architecture, including model selection, infrastructure decisions, and system integration patterns.
+- Provide technical leadership and mentorship to engineering teams delivering GenAI solutions.
+- Collaborate with product managers, data scientists, architects, and business stakeholders to translate business needs into scalable technical solutions.
+- Establish architectural standards, guidelines, and best practices for generative AI implementations across projects.
+- Ensure security, compliance, cost efficiency, and reliability of AI systems deployed in production.
+
+**Expertise You'll Bring:**
+
+- Strong understanding of GenAI fundamentals and hands-on experience with at least one leading GenAI platform (OpenAI, Anthropic, Azure OpenAI, AWS Bedrock, Google AI).
+- Proficiency in prompt engineering and LLM optimization techniques.
+- Strong analytical ability to evaluate trade-offs across design alternatives (performance, cost, scalability, maintainability, time-to-market).
+- Experience creating architecture documents, technical diagrams, and stakeholder presentations.
+- Cloud expertise with AWS / Azure / GCP, including serverless computing, containerization, cost optimization, and cloud security best practices.
+- Experience implementing CI/CD pipelines, automated testing strategies, and DevOps practices for AI/ML workloads.
+- Understanding of monitoring and observability tools (e.g., LangSmith, Langfuse) to productionize AI systems.
+- Strong grounding in software engineering best practices: coding standards, code reviews, documentation, and agile methodologies.
+- Knowledge of design patterns, clean architecture principles, and AI-specific testing approaches.
+- Proven experience in designing and deploying RAG architectures, including vector stores (Pinecone, Weaviate, ChromaDB), embedding strategies, chunking logic, semantic retrieval, and hybrid search.
+- Experience leading and mentoring engineering teams in complex technical environments.
+
+# Job 5
+
+## **About the job**
+
+**Senior Principal Systems Development Engineer** 
+
+Our customers’ system requirements are usually highly complex. Bringing together hardware and software systems design, Systems Development Engineering operates at the very cutting edge of technology to meet them. We design and develop electronic and electro-mechanical or systems-orientated products, conduct feasibility studies on engineering proposals and prepare installation, operation and maintenance specifications and instructions. We’re proud to deliver programs and products to the highest quality standards, on time and within budget.Join us to do the best work of your career and make a profound social impact as a **Senior Principal Systems Development Engineer** on our **Systems Development Engineering** Team in **Bangalore**.**What You’ll Achieve**
+
+We are seeking a Principal Systems Development Engineer to lead the design and implementation of AI-driven frameworks for Compute Systems Engineering ([Servers - Rack, Tower & Edge Servers | Dell India](https://www.linkedin.com/redir/redirect/?url=https%3A%2F%2Fwww%2Edell%2Ecom%2Fen-in%2Fshop%2Fscc%2Fsc%2Fservers%23portfolio&urlhash=58MS&isSdui=true)). This role focuses on leveraging Agentic AI frameworks to build intelligent, autonomous solutions that enhance quality and efficiency across our systems.**You will:**
+
+- Design and implement Agentic AI-based solutions using frameworks like LangChain, AutoGen, and others.
+- Architect and develop advanced frameworks for Dell server hardware and firmware portfolio.
+- Drive integration of AI-driven workflows into existing infrastructure for scalability and intelligence.
+- Collaborate with hardware, firmware, and software teams to define strategies and ensure compliance with quality standards.
+- Mentor and guide junior engineers on AI-driven automation best practices. Research emerging AI technologies and apply them to improve overall efficiency and coverage.
+
+**Take the first step towards your dream career**
+
+Every Dell Technologies team member brings something unique to the table. Here’s what we are looking for with this role:
+
+**Essential Requirements**
+
+- 13+ years of industry experience in in Servers / Storage Solutions and proven expertise in AI/Agentic framework.
+- Strong programming expertise in Python (preferred) or similar languages.
+- Hands-on experience with Agentic AI frameworks, including:
+    - LangChain
+    - AutoGen
+    - Haystack
+    - LlamaIndex
+    - CrewAI
+    - OpenAI Function Calling
+- Experience with AI/ML model deployment and monitoring, deep understanding of LLM-based automation, prompt engineering, and AI orchestration.
+- Experience with CI/CD pipelines, API integration, and workflow automation.
+
+**Desirable Requirements**
+
+- Exposure to cloud platforms (Azure, AWS, GCP), knowledge of containerization (Docker, Kubernetes).
+- Knowledge of server hardware architecture, firmware components, and validation methodologies.
+
+# Job 6
+
+## **About the job**
+
+A Principal Engineer at Razorpay is well-grounded - innovative, quality focussed, product thinker, business conscious - not mere coders, of course, with deeper technical context and experience to build quality software. You should be able to see nuances and elements that others might not. Engineering creates a significant impact across different areas, considering the scale of our software product outreach. You’re expected to be involved in almost every project and also influence the culture of the company and help shape it in the right way.
+
+**Roles and Responsibilities:**
+
+- Drive the technology and engineering best practices on different fronts like quality, performance, design, and operations at the organizational level
+- Responsible for design, architecture, and delivery of a feature or component/product with the highest quality with high-level directions from architects
+- Drive technology innovations & remaining ahead of the curve
+- Collaborate effectively with cross-functional teams to deliver end-to-end products & features
+- Demonstrate ability to multi-task and re-prioritize responsibilities based on changing requirements
+- Estimate efforts, identify risks, devices and meets project schedules
+- Runs review meetings effectively and drives the closure of all open issues on time
+- Provide functional, design, and code reviews in related areas of expertise within team and cross-team.
+- Mentor/coach engineers to facilitate their development and provide technical leadership to them
+- Rise above detail to see broader issues and implications for the whole product/team & Implement a long-term technology vision for your organization & team
+- Contribute to streamlining hiring challenges and helping hire high-quality engineers for the organization
+- Represent organization and team in external & internal forums, respectively
+
+**Mandatory Qualifications:**
+
+- 12+ years of strong design/development experience in building massively large-scale distributed internet systems and products
+- Deep expertise in more than one programming language and tech stack to write maintainable, scalable, unit-tested code
+- Experience leading & mentoring project teams
+- Strong Object-oriented skills, knowledge of design patterns, and uncanny ability to design intuitive modules and class-level interfaces.
+- Deep understanding of data-driven web application design and development
+- Superior organization, communication, interpersonal, and leadership skills
+- Must be a proven performer and team player that enjoys challenging assignments in a high-energy, fast-growing, and start-up workplace
+- Must be a self-starter who can work well with minimal guidance and in a fluid environment
+- Must be excited by challenges surrounding the development of massively scalable & distributed system
+- Agility and ability to adapt quickly to changing requirements and scope and priorities
+- The experience of having been a software engineer for at least 12 years.
+- Have a few weekend side projects up on GitHub
+- Have contributed to an open-source project
+- Have worked at a product company
+- Have a working knowledge of a backend programming language
+
+# Job 7
+
+## **About the job**
+
+Ciklum is looking for a **Principal AI Lead** to join our team full-time in India.
+
+**About the role:**
+
+As a **Principal AI Lead**, become a part of a cross-functional development team engineering experiences of tomorrow.
+
+**Responsibilities:**
+
+- Define and evolve Ciklum’s AI Engineering strategy, frameworks and best practices across clients and internal initiatives
+- Serve as the primary technical advisor to executive stakeholders (CTOs, CIOs, VPs of Engineering) on AI strategy and system architecture
+- Drive the vision and roadmap for enterprise AI adoption, guiding teams on architecture, governance, and value realization
+- Lead the design, development and deployment of advanced AI systems across Data Science and AI Engineering domains
+- Architect and implement scalable AI pipelines and LLM-driven applications, including retrieval-augmented generation (RAG), orchestration and multi-agent systems
+- Act as the overall AI architecture authority across multiple engagements, ensuring design excellence, scalability and alignment with client enterprise standards
+- Contribute hands-on to development activities, from experimentation and prototyping to production-grade implementation
+- Collaborate with cross-functional engineering, data and product teams to align technical solutions with client and business objectives
+- Apply MLOps and LLMOps best practices for CI/CD, observability, evaluation and continuous improvement of AI models and pipelines
+- Integrate AI services with enterprise platforms (e.g., Confluence, Jira, GitHub, CRM, ERP) and ensure seamless interoperability
+- Drive innovation through internal frameworks and accelerators
+- Ensure all AI solutions comply with security, data privacy and responsible-AI standards
+- Champion innovation in AI through the creation of reusable frameworks, accelerators, and reference architectures
+- Evangelize AI best practices internally and externally through publications, talks, and open-source contributions
+- Guide client and internal teams in adopting emerging AI paradigms such as agentic systems, RAG frameworks and autonomous orchestration
+- Lead and mentor senior AI engineers, fostering a culture of excellence, experimentation and continuous learning across teams and practices (e.g., contributing to Ciklum’s AI Academy)
+- Represent Ciklum’s AI capability in public forums, conferences, and strategic client discussions
+- Collaborate with marketing and partnerships teams to strengthen Ciklum’s brand as an AI thought leader
+
+**Commercial / Presales:**
+
+- Drive technical leadership in presales engagements, shaping AI strategies and architectures that align with client business objectives
+- Collaborate directly with C-suite and senior client executives to define AI roadmaps, value propositions, and investment priorities
+- Produce high-quality technical content for proposals, RFPs, whitepapers, and thought- leadership materials
+- Partner with delivery and commercial teams to identify new growth opportunities and establish Ciklum as a trusted AI partner
+
+**Leadership & Practice Development:**
+
+- Provide strategic and technical leadership to AI engineering teams across multiple projects and geographies
+- Shape hiring strategy and talent development plans to scale AI capabilities within Ciklum
+- Mentor, coach and review work of Expert-level engineers, ensuring consistent delivery quality and architectural rigor
+- Contribute to the definition and rollout of AI practice-wide standards, playbooks, and reusable components
+
+**Requirements:**
+
+We know that sometimes, you can’t tick every box. We would still love to hear from you if you think you’re a good fit!
+
+**General technical requirements:**
+
+- 10+ years of professional experience in software or data engineering, including at least 4–5 years in AI/ML solution architecture or AI leadership roles
+- Demonstrated experience leading cross-functional AI programs or large-scale AI solution deliveries
+- BSc, MSc, or PhD in Computer Science, Mathematics, Engineering or a related quantitative field
+- Deep understanding of probability, statistics and the mathematical foundations of machine learning and optimization
+- Proven experience architecting and scaling enterprise-grade AI systems, including LLM- driven and multimodal solutions, across production environments
+- Experience defining AI system blueprints, reference architectures, and integration patterns across multiple domains and client ecosystems
+- Exposure to agentic system design, retrieval-augmented generation (RAG) and prompt engineering techniques
+- Strong proficiency in Python and common AI/ML development frameworks (e.g., PyTorch, TensorFlow, LangChain, Hugging Face or equivalent)
+- Solid understanding of modern AI engineering practices, including model lifecycle management, observability, evaluation, versioning and continuous improvement
+- Familiarity with AI solution delivery methodologies (e.g., CRISP-ML(Q), TDSP or modern agile ML lifecycles)
+- Ability to visualize, interpret, and communicate model outputs and insights effectively using modern tools and dashboards
+
+**Specific technical requirements:**
+
+- Proven experience in architecting and implementing end-to-end AI/ML solutions — from data ingestion and model training to deployment, monitoring and optimization
+- Strong software engineering skills for AI system development, including data processing, API integration, and model serving (Python, SQL and optionally Java/Scala or similar)
+- Hands-on experience with cloud-native AI platforms and services (AWS SageMaker, Azure ML, GCP Vertex AI or NVIDIA AI stack)
+- Proficiency in designing scalable ML/LLM pipelines and applying MLOps/LLMOps best practices (CI/CD, orchestration, monitoring, versioning, and deployment automation)
+- Experience with diverse data modalities (structured, text, image, audio, video) and multimodal model integration
+- Familiarity with handling complex data scenarios such as class imbalance, time-series forecasting and anomaly detection
+- Understanding of security, data governance and compliance considerations in AI system design
+
+**Domain experience:**
+
+- Ability to advise senior stakeholders on AI opportunity assessment, ROI modeling and transformation strategies
+- Experience designing AI governance frameworks and compliance strategies in highly regulated industries
+- Broad exposure to enterprise-scale AI solution design across industries such as BFSI, Healthcare, Aerospace, Manufacturing, Energy, Telecom or Technology sectors
+- Proven ability to translate business and operational requirements into robust AI system architectures that deliver measurable impact
+- Familiarity with challenges of deploying AI in regulated environments and ensuring compliance with data privacy and protection frameworks (e.g., GDPR, CCPA, PCI DSS)
+- Experience managing sensitive or high-value data (PII, PHI), implementing strong security, governance and access control mechanisms
+- Understanding of enterprise data ecosystems and integration patterns (CRM, ERP, knowledge management or workflow systems)
+
+**Business-related requirements:**
+
+- Strong executive communication and storytelling ability, capable of influencing technical and business audiences alike
+- Proven record of representing organizations in external speaking engagements, conferences, or public panels
+- Demonstrated experience driving innovation initiatives and contributing to organizational AI strategy
+- Proven experience delivering production-grade AI solutions that achieve measurable business and operational outcomes
+- Strong ownership of the full AI engineering lifecycle — from problem framing and architecture design to deployment, optimization, and continuous improvement
+- Ability to align technical decisions with business priorities, ensuring scalability, reliability, and measurable value from AI initiatives
+- Excellent collaboration and communication skills to work effectively with cross-functional stakeholders, delivery teams, and clients
+- High degree of autonomy, accountability, and attention to detail in managing complex, multi-component AI systems
+
+**Desirable:**
+
+- Track record of AI thought leadership through publications, blogs, podcasts or open- source contributions
+- Recognized presence in professional or academic AI communities (e.g., conferences, research collaborations)
+- Experience building and scaling internal AI centers of excellence or practice communities
+- Strong background in software or solution architecture, ideally with previous experience as a Software or Data Architect
+- Proven ability to design scalable, distributed, and fault-tolerant AI architectures, integrating APIs, microservices, and event-driven components
+- Experience with MLOps and LLMOps practices, including pipeline automation, containerization (Docker, Kubernetes), and continuous deployment of AI models
+- Deep learning expertise using TensorFlow, PyTorch, or JAX, including fine-tuning and optimization of large models
+- Hands-on experience with Large Language Models (LLMs), Generative AI applications, and agentic or RAG-based systems
+- Advanced SQL and familiarity with modern data platforms (Databricks, Snowflake, or equivalent)
+- Experience with Big Data and streaming frameworks (Apache Spark, Kafka, Flink, etc.)
+- Understanding of NoSQL and graph databases (e.g., Cassandra, Neo4j) and their role in AI knowledge management
+- Experience with cloud-native architectures and certified expertise in AWS, Azure, or GCP AI/ML services
+- Exposure to research or innovation projects, with publications or open-source contributions considered an advantage
+
+# Job 8
+
+## **About the job**
+
+**Company Description**
+
+We are a Digital Product Engineering company that is scaling in a big way! We build products, services, and experiences that inspire, excite, and delight. We work at scale across all devices and digital mediums, and our people exist everywhere in the world (17500+ experts across 39 countries, to be exact). Our work culture is dynamic and non-hierarchical. We're looking for great new colleagues. That's where you come in!**Job Description
+
+REQUIREMENTS:**
+
+Total experience 13+ years.Deep understanding of LLMs (e.g., GPTs, Llama, Claude, Gemini, Qwen, Mistral, BERT-family models) and their architectures (Transformers)Should have expert-level prompt engineering skills and proven experience implementing RAG patternsHigh proficiency in Python and standard AI/ML libraries (e.g., LangChain, LlamaIndex, LangGraph, LangSmith, Hugging Face Transformers, Scikit-learn, PyTorch/TensorFlow).Experience implementing RAG architectures and prompt engineering.Strong experience with fine-tuning and distillation techniques and evaluation.Strong experience using managed AI/ML services on the target cloud platform (e.g., Azure Machine Learning Studio, AI Foundry).Strong understanding of vector databases (e.g., Weaviate, Neo4j)understanding of GenAI evaluation metrics (e.g., BLEU, ROUGE, perplexity, semantic similarity, human evaluation).Proven track record in deploying AI/ML solutions into production environments.Familiarity with MLOps pipelines for automation and monitoring.Experience working on generative AI applicationsExcellent communication skills and the ability to collaborate effectively with cross-functional teams.**RESPONSIBILITIES:**
+
+Understanding the client’s business use cases and technical requirements and be able to convert them into technical design which elegantly meets the requirements.Mapping decisions with requirements and be able to translate the same to developers.Identifying different solutions and being able to narrow down the best option that meets the clients’ requirements.Defining guidelines and benchmarks for NFR considerations during project implementation.Writing and reviewing design document explaining overall architecture, framework, and high-level design of the application for the developers.Reviewing architecture and design on various aspects like extensibility, scalability, security, design patterns, user experience, NFRs, etc., and ensure that all relevant best practices are followed.Developing and designing the overall solution for defined functional and non-functional requirements; and defining technologies, patterns, and frameworks to materialize it.Understanding and relating technology integration scenarios and applying these learnings in projects.Resolving issues that are raised during code/review, through exhaustive systematic analysis of the root cause, and being able to justify the decision taken.Carrying out POCs to make sure that suggested design/technologies meet the requirements.
+
+# Job 9
+
+## **About the job**
+
+This role has been designed as ‘’Onsite’ with an expectation that you will primarily work from an HPE office.**Who We Are**
+
+Hewlett Packard Enterprise is the global edge-to-cloud company advancing the way people live and work. We help companies connect, protect, analyze, and act on their data and applications wherever they live, from edge to cloud, so they can turn insights into outcomes at the speed required to thrive in today’s complex world. Our culture thrives on finding new and better ways to accelerate what’s next. We know varied backgrounds are valued and succeed here. We have the flexibility to manage our work and personal needs. We make bold moves, together, and are a force for good. If you are looking to stretch and grow your career our culture will embrace you. Open up opportunities with HPE.**Job Description**
+
+In the HPE **Hybrid Cloud**, we lead the innovation agenda and technology roadmap for all of HPE. This includes managing the design, development, and product portfolio of our next-generation cloud platform, Green Lake. Working with customers, we help them reimagine their information technology needs to deliver a simple, consumable solution that helps them drive their business results. Join us redefine what’s next for you.**Principal Generative AI Engineer** 
+
+As a Principal Generative AI Engineer, you will be responsible for driving the roadmap and building the next generation Generative AI Platform and GenAI Models/Algorithms that our userbase will leverage for years to come as we scale our efforts to implement GenAI in our Product. You should be comfortable with petabytes of data, writing crisp design documentation, and building, debugging, and maintaining highly available distributed systems. The GenAI platforms that you build will empower developers throughout HPE to build better AI products more quickly than ever before. You will be at the forefront of development, research, and implementation of innovative GenAI models, prompting strategies, agentic AI systems, and pipelines.The ideal candidate should have a strong background in applied generative AI approaches, large language models, multimodal AI, agentic AI, and production-level engineering. You should have excellent problem solving and communication skills, and be comfortable working with data scientists, product managers, and other engineers. You should have a passion for creating GenAI products and be able to think through the implications of the solutions you create. A successful candidate should have an advanced degree in computer science, mathematics, engineering, or a related field, and have a strong portfolio of GenAI/LLM projects.You should design and build highly scalable systems, generative AI algorithms, and deep learning applications. You should be able to execute tests and optimize GenAI models and prompt/agentic workflows. You should also be able to mentor and guide other GenAI Engineers in the team.**What You Will Do**
+
+- Experiment, design, develop and maintain generative AI models (e.g., LLMs, multimodal models), agentic AI architectures, and pipelines with high potential for value and scale.
+- Collaborate with other GenAI engineers, data scientists, product managers, and other engineers to ensure successful implementation of generative AI solutions.
+- Perform research and testing to develop or customize GenAI algorithms, prompt engineering strategies, and agentic workflows; conduct model training, fine-tuning, and evaluation as needed; integrate, test, tune and monitor the solutions developed.
+- Research and evaluate new technologies and tools for generative AI, including Retrieval-Augmented Generation (RAG), prompt orchestration, agentic AI frameworks, model evaluation and safety tools.
+- Maintain and update existing generative AI systems, including prompt libraries, agent workflows, and deployed models.
+- Troubleshoot and debug GenAI systems, including issues related to model outputs, prompt reliability, hallucinations, and agentic behaviors.
+- Work collaboratively with cross-functional partners and stakeholders, identify opportunities for business impact, understand, refine, and prioritize requirements for GenAI models and solutions, drive engineering decisions, and quantify impact.
+- Hands-on development, productionization, and operation of GenAI models, agents, and pipelines at scale, including both batch and real-time use cases.
+- Work with large scale structured and unstructured data, build and continuously improve cutting edge GenAI models, including LLMs, vision-language models, and agentic systems.
+- Provide technical guidance and mentorship to other team members and interns in GenAI best practices, prompting strategies, and agentic design.
+- Identify areas of improvement in existing GenAI systems, including prompt engineering, agent reliability, and model deployment.
+
+**What You Will Need**
+
+- B.E/B.Tech/M.Tech/M.E degree in Computer Science or equivalent
+- 10-12 years of industry experience in applied AI/GenAI, designing and developing scalable enterprise level solutions
+- Experience in architecting and building large, highly scalable systems & software applications (e.g., well-designed APIs, high volume data pipelines, efficient algorithms, agentic workflows, prompt orchestration)
+- Strong programming (Python / C++ or equivalent) and data engineering skills
+- Deep understanding of Generative AI best practices (e.g., prompt engineering, RAG, agentic design, model fine-tuning, optimization), LLMs, multimodal models, and deep learning basics.
+- Experience with these technologies: OpenAI GPT, Llama, Hugging Face Transformers, LangChain, DeepSpeed, Ray, Kubernetes, Spark, Kafka (or equivalent).
+- Industry experience building end-to-end GenAI infrastructure and/or building and productionizing Generative AI models, agents, and workflows
+- Experience with MLOps/LLMOps practices and tools (e.g., MLflow, Weights & Biases, DVC, SageMaker, Vertex AI)
+- Design, implement and integrate the next generation of Generative AI infrastructure to empower other Data Scientists and AI engineers to build GenAI models and agents that make real-time decisions.
+- You will collaborate with other engineers and data scientists to create optimal experiences on the Core GenAI platform, including but not limited to: prompt libraries, agentic orchestration, the real-time serving layer, and the offline training system
+- Strong collaboration and communication skills, both verbal and written
+- Bring a deep empathy for customer needs and insights as well as an intuitive grasp of the business problems we’re trying to solve
+
+**Good To Have**
+
+- Experience with traditional machine learning and deep learning frameworks and algorithms (e.g., RNNs, CNNs, Transformers, GANs)
+- Knowledge of reinforcement learning, transfer learning, and meta-learning concepts
+- Hands-on experience with TensorFlow, PyTorch, JAX, Keras
+- Familiarity with data labeling platforms, ML model monitoring and evaluation tools
+- Experience with MLOps/LLMOps practices and tools (e.g., MLflow, Weights & Biases, DVC, SageMaker, Vertex AI)
+- Exposure to model safety, bias detection, explainability, and responsible AI practices
+- Experience with cloud platforms (AWS, Azure, GCP) for scalable AI deployments
+- Contributions to open source GenAI/ML projects or research publications
+
+# Job 10
+
+## **About the job**
+
+**About Netskope**
+
+Today, there's more data and users outside the enterprise than inside, causing the network perimeter as we know it to dissolve. We realized a new perimeter was needed, one that is built in the cloud and follows and protects data wherever it goes, so we started Netskope to redefine Cloud, Network and Data Security.Since 2012, we have built the market-leading cloud security company and an award-winning culture powered by hundreds of employees spread across offices in Santa Clara, St. Louis, Bangalore, London, Paris, Melbourne, Taipei, and Tokyo. Our core values are openness, honesty, and transparency, and we purposely developed our open desk layouts and large meeting spaces to support and promote partnerships, collaboration, and teamwork. From catered lunches and office celebrations to employee recognition events and social professional groups such as the Awesome Women of Netskope (AWON), we strive to keep work fun, supportive and interactive. Visit us at [Netskope Careers.](https://www.linkedin.com/redir/redirect/?url=https%3A%2F%2Fwww%2Enetskope%2Ecom%2Fcompany%2Fcareers&urlhash=_u5g&isSdui=true) Please follow us on [LinkedIn](https://www.linkedin.com/company/netskope/) and Twitter[@Netskope](https://www.linkedin.com/redir/redirect/?url=https%3A%2F%2Ftwitter%2Ecom%2Fnetskope&urlhash=iwkO&isSdui=true).**About The Team**
+
+We are seeking an exceptional Principal Engineer to build next-generation security analytics and AI-powered capabilities within Netskope's platform. This is a high-impact individual contributor role for an engineer who excels at solving complex technical problems at the intersection of artificial intelligence, large-scale data systems, and cybersecurity.As a Principal Engineer, you will design and implement sophisticated systems that leverage cutting-edge AI/ML techniques, graph-based analytics, and real-time data processing to solve critical security challenges. You will work on problems spanning threat detection, risk assessment, behavioral analytics, and intelligent automation—building the systems that help security teams at the world's largest enterprises detect and respond to threats.**What's In It For You**
+
+This is your chance to work at the absolute intersection of Artificial Intelligence, large-scale Data Systems, and Cybersecurity. You won't just use existing tools; you will be designing and implementing sophisticated, cutting-edge systems that fundamentally change how enterprises detect and respond to threats.**What You Will Be Doing**
+
+- Drive the enhancement of Agentic AI security capabilities, by enabling the continuous detection and posture management of sensitive or risky data. This includes data utilized in (but not limited to) training private LLMs or accessed and acted upon by public or multi-agent LLM systems
+- Improve the Agentic AI platform to extend seamless support to all major cloud infrastructures, on-prem deployments, and any new upcoming data or AI-centric technologies.
+- Provide technical leadership in all phases of a project, from discovery and planning through implementation and delivery.
+- Contribute to product development: understand customer requirements and work with the product team to design, plan, and implement features.
+- Support customers by investigating and fixing production issues.
+- Help us improve our processes and make the right tradeoffs between agility, cost, and reliability.
+- Collaborate with the teams across geographies.
+
+**Required Skills And Experience**
+
+- 14+ years of software development experience with enterprise-grade software.
+- Must have experience in building scalable, high-performance cloud services.
+- Expert coding skills in Scala or Java.
+- Development on cloud platforms including AWS.
+- Deep knowledge on databases and data warehouses (OLTP, OLAP)
+- Analytical and troubleshooting skills.
+- Experience working with Docker and Kubernetes.
+- Able to multitask and wear many hats in a fast-paced environment. This week you might lead the design of a new feature, next week you are fixing a critical bug or improving our CI infrastructure.
+- Cybersecurity experience and adversarial thinking is a plus.
+- Expertise in building REST APIs.
+- Experience leveraging cloud-based AI services (e.g., AWS Bedrock, SageMaker), vector databases, and Retrieval Augmented Generation (RAG) architectures is a plus.

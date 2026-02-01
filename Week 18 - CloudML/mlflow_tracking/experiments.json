@@ -1,0 +1,56 @@
+[
+  {
+    "name": "sentiment-classifier",
+    "experiment_id": "exp_0",
+    "runs": [
+      {
+        "run_id": "run_0",
+        "experiment_id": "exp_0",
+        "start_time": "2026-02-01T06:32:41.377530",
+        "params": {
+          "learning_rate": "0.001",
+          "epochs": "3",
+          "model": "bert-base"
+        },
+        "metrics": {
+          "accuracy": 0.9018087719204775,
+          "loss": 0.5393497480903539
+        },
+        "model_path": "models/sentiment_v1",
+        "status": "FINISHED"
+      },
+      {
+        "run_id": "run_1",
+        "experiment_id": "exp_0",
+        "start_time": "2026-02-01T06:32:41.380541",
+        "params": {
+          "learning_rate": "0.002",
+          "epochs": "4",
+          "model": "bert-base"
+        },
+        "metrics": {
+          "accuracy": 0.8635025034905179,
+          "loss": 0.40996227664282975
+        },
+        "model_path": "models/sentiment_v2",
+        "status": "FINISHED"
+      },
+      {
+        "run_id": "run_2",
+        "experiment_id": "exp_0",
+        "start_time": "2026-02-01T06:32:41.382540",
+        "params": {
+          "learning_rate": "0.003",
+          "epochs": "5",
+          "model": "bert-base"
+        },
+        "metrics": {
+          "accuracy": 0.8518692714485739,
+          "loss": 0.3798506583979481
+        },
+        "model_path": "models/sentiment_v3",
+        "status": "FINISHED"
+      }
+    ]
+  }
+]
