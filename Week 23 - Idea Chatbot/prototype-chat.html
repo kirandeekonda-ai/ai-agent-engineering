@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idea Assistant - Chat</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --text-primary: #202124;
+            --text-secondary: #5f6368;
+            --border-color: #e0e0e0;
+            --accent: #1a73e8;
+            --sidebar-bg: #ffffff;
+            --input-bg: #f1f3f4;
+        }
+
+        [data-theme="dark"] {
+            --bg-primary: #1a1a1a;
+            --bg-secondary: #242424;
+            --text-primary: #e8eaed;
+            --text-secondary: #9aa0a6;
+            --border-color: #3c4043;
+            --accent: #8ab4f8;
+            --sidebar-bg: #1a1a1a;
+            --input-bg: #303134;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+        }
+
+        .app-container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        /* Navigation Bar */
+        .nav-bar {
+            height: 60px;
+            background: var(--sidebar-bg);
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 24px;
+        }
+
+        .nav-brand {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 8px;
+        }
+
+        .nav-link {
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .nav-link:hover {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+        }
+
+        .nav-link.active {
+            background: var(--accent);
+            color: white;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 60px;
+            background: var(--sidebar-bg);
+            border-right: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .sidebar-logo {
+            width: 32px;
+            height: 32px;
+            background: var(--accent);
+            border-radius: 8px;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .sidebar-item {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            color: var(--text-secondary);
+            transition: all 0.2s;
+        }
+
+        .sidebar-item:hover {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+        }
+
+        .sidebar-item.active {
+            background: var(--bg-secondary);
+            color: var(--accent);
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 60px 40px;
+            overflow-y: auto;
+        }
+
+        .chat-container {
+            width: 100%;
+            max-width: 720px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .welcome-screen {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .welcome-title {
+            font-size: 48px;
+            font-weight: 400;
+            margin-bottom: 40px;
+            letter-spacing: -0.5px;
+        }
+
+        .chat-messages {
+            flex: 1;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .message {
+            margin-bottom: 24px;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .message.user {
+            color: var(--text-primary);
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .message.assistant {
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.6;
+            padding: 16px;
+            background: var(--bg-secondary);
+            border-radius: 12px;
+        }
+
+        /* Input Area */
+        .input-container {
+            position: relative;
+            width: 100%;
+        }
+
+        .input-wrapper {
+            position: relative;
+            background: var(--input-bg);
+            border-radius: 24px;
+            padding: 4px;
+            transition: all 0.2s;
+            border: 2px solid transparent;
+        }
+
+        .input-wrapper:focus-within {
+            background: var(--bg-primary);
+            border-color: var(--border-color);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .chat-input {
+            width: 100%;
+            border: none;
+            outline: none;
+            background: transparent;
+            padding: 14px 50px 14px 20px;
+            font-size: 15px;
+            color: var(--text-primary);
+            resize: none;
+            font-family: inherit;
+            max-height: 200px;
+        }
+
+        .chat-input::placeholder {
+            color: var(--text-secondary);
+        }
+
+        .send-button {
+            position: absolute;
+            right: 12px;
+            bottom: 12px;
+            width: 32px;
+            height: 32px;
+            background: var(--accent);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        .send-button:hover {
+            transform: scale(1.05);
+        }
+
+        .send-button:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            border: none;
+            background: var(--bg-secondary);
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-primary);
+            transition: all 0.2s;
+        }
+
+        .theme-toggle:hover {
+            background: var(--border-color);
+        }
+
+        /* Suggestion Pills */
+        .suggestions {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 24px;
+            max-width: 600px;
+        }
+
+        .suggestion-pill {
+            padding: 16px 20px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: left;
+            font-size: 14px;
+            color: var(--text-primary);
+        }
+
+        .suggestion-pill:hover {
+            border-color: var(--accent);
+            background: var(--bg-primary);
+        }
+
+        /* Submit Idea Button (NEW in Module 5) */
+        .submit-idea-btn {
+            position: fixed;
+            bottom: 100px;
+            right: 40px;
+            padding: 14px 28px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 24px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            opacity: 0;
+            transform: translateY(20px);
+            pointer-events: none;
+        }
+
+        .submit-idea-btn.visible {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: all;
+        }
+
+        .submit-idea-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+        }
+
+        .submit-idea-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        /* Loading State */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+        }
+
+        .loading-overlay.active {
+            display: flex;
+        }
+
+        .loading-card {
+            background: var(--bg-primary);
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            max-width: 400px;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 20px;
+            border: 4px solid var(--border-color);
+            border-top-color: var(--accent);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Success Modal */
+        .success-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+        }
+
+        .success-modal.active {
+            display: flex;
+        }
+
+        .success-card {
+            background: var(--bg-primary);
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            max-width: 500px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .success-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 20px;
+            background: #10b981;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 32px;
+        }
+
+        .success-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .success-message {
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+        }
+
+        .idea-id-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--accent);
+            color: white;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+        .success-actions {
+            margin-top: 24px;
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .success-btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .success-btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .success-btn-secondary {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+        }
+
+        .success-btn:hover {
+            transform: translateY(-1px);
+            opacity: 0.9;
+        }
+
+        /* Toast Notification (NEW in Module 5.5) */
+        .toast-notification {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 16px 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 15px;
+            font-weight: 500;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+            z-index: 3000;
+        }
+
+        .toast-notification.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .toast-icon {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+    </button>
+
+    <div class="app-container">
+        <!-- Navigation Bar -->
+        <nav class="nav-bar">
+            <div class="nav-brand">💡 Idea Assistant</div>
+            <div class="nav-links">
+                <a href="prototype-chat.html" class="nav-link active">💬 Chat</a>
+                <a href="prototype-dashboard.html" class="nav-link">📋 Dashboard</a>
+            </div>
+        </nav>
+
+        <div class="content-wrapper">
+            <aside class="sidebar">
+                <div class="sidebar-logo">IA</div>
+                <div class="sidebar-item active">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                    </svg>
+                </div>
+                <a href="prototype-dashboard.html" style="text-decoration: none; color: inherit;">
+                    <div class="sidebar-item" title="View Dashboard">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7" />
+                            <rect x="14" y="3" width="7" height="7" />
+                            <rect x="14" y="14" width="7" height="7" />
+                            <rect x="3" y="14" width="7" height="7" />
+                        </svg>
+                    </div>
+                </a>
+            </aside>
+
+            <main class="main-content">
+                <div class="chat-container">
+                    <div class="welcome-screen" id="welcomeScreen">
+                        <h1 class="welcome-title">Share your ideas</h1>
+                        <div class="suggestions">
+                            <div class="suggestion-pill"
+                                onclick="fillInput('What manual tasks take up most of your time?')">
+                                What manual tasks slow you down?
+                            </div>
+                            <div class="suggestion-pill" onclick="fillInput('What process could be automated?')">
+                                What could be automated?
+                            </div>
+                            <div class="suggestion-pill" onclick="fillInput('How can we improve team collaboration?')">
+                                Improve team collaboration
+                            </div>
+                            <div class="suggestion-pill" onclick="fillInput('What tools are we missing?')">
+                                What tools are missing?
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chat-messages" id="chatMessages"></div>
+
+                    <div class="input-container">
+                        <div class="input-wrapper">
+                            <textarea class="chat-input" id="chatInput"
+                                placeholder="Describe your idea or ask a question..." rows="1"
+                                oninput="autoResize(this)"></textarea>
+                            <button class="send-button" onclick="sendMessage()">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- Submit Idea Button - Hidden by default, AI auto-submits instead -->
+        <!-- Kept for manual fallback if needed -->
+        <button class="submit-idea-btn" id="submitIdeaBtn" onclick="submitIdea()" style="display: none;">
+            ✨ Submit Idea
+        </button>
+
+        <!-- Loading Overlay -->
+        <div class="loading-overlay" id="loadingOverlay">
+            <div class="loading-card">
+                <div class="spinner"></div>
+                <h3 style="margin-bottom: 8px; color: var(--text-primary);">Analyzing your idea...</h3>
+                <p style="color: var(--text-secondary); font-size: 14px;">This may take a few seconds</p>
+            </div>
+        </div>
+
+        <!-- Success Modal -->
+        <div class="success-modal" id="successModal">
+            <div class="success-card">
+                <div class="success-icon">✓</div>
+                <h2 class="success-title">Idea Submitted Successfully!</h2>
+                <p class="success-message" id="successIdeaTitle">Report Automation API</p>
+                <span class="idea-id-badge" id="successIdeaId">Idea #1</span>
+                <div class="success-actions">
+                    <button class="success-btn success-btn-primary" onclick="startNewIdea()">Submit Another
+                        Idea</button>
+                    <button class="success-btn success-btn-secondary" onclick="closeSuccessModal()">Close</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toast Notification for Auto-Save (NEW in Module 5.5) -->
+        <div class="toast-notification" id="toastNotification">
+            <span class="toast-icon">✅</span>
+            <span id="toastMessage">Idea saved automatically!</span>
+        </div>
+
+        <script>
+            function toggleTheme() {
+                const html = document.documentElement;
+                const currentTheme = html.getAttribute('data-theme');
+                html.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
+            }
+
+            function autoResize(textarea) {
+                textarea.style.height = 'auto';
+                textarea.style.height = textarea.scrollHeight + 'px';
+            }
+
+            function fillInput(text) {
+                document.getElementById('chatInput').value = text;
+                document.getElementById('chatInput').focus();
+            }
+
+            // Configuration
+            const API_URL = 'http://localhost:8000';
+            let sessionId = null;
+
+            async function sendMessage() {
+                const input = document.getElementById('chatInput');
+                const message = input.value.trim();
+                if (!message) return;
+
+                const welcomeScreen = document.getElementById('welcomeScreen');
+                const chatMessages = document.getElementById('chatMessages');
+
+                // Show chat area if first message
+                if (welcomeScreen.style.display !== 'none') {
+                    welcomeScreen.style.display = 'none';
+                    chatMessages.style.display = 'block';
+                }
+
+                // Display user message
+                const userMsg = document.createElement('div');
+                userMsg.className = 'message user';
+                userMsg.textContent = message;
+                chatMessages.appendChild(userMsg);
+
+                // Clear input
+                input.value = '';
+                input.style.height = 'auto';
+
+                // Show loading indicator
+                const loadingMsg = document.createElement('div');
+                loadingMsg.className = 'message assistant';
+                loadingMsg.textContent = '...';
+                loadingMsg.id = 'loading';
+                chatMessages.appendChild(loadingMsg);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+
+                try {
+                    // Call the real API
+                    const response = await fetch(`${API_URL}/chat`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            content: message,
+                            session_id: sessionId
+                        })
+                    });
+
+                    const data = await response.json();
+
+                    // Store session ID
+                    if (data.session_id) {
+                        sessionId = data.session_id;
+                    }
+
+                    // Remove loading indicator
+                    const loading = document.getElementById('loading');
+                    if (loading) loading.remove();
+
+                    // Display AI response
+                    const assistantMsg = document.createElement('div');
+                    assistantMsg.className = 'message assistant';
+                    assistantMsg.textContent = data.message;
+                    chatMessages.appendChild(assistantMsg);
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+
+                    // NEW in Module 5.5: Check if idea was auto-saved
+                    if (data.auto_saved && data.idea_id) {
+                        showToast(`✨ Idea #${data.idea_id} saved automatically!`);
+
+                        // Hide submit button since idea is already saved
+                        const submitBtn = document.getElementById('submitIdeaBtn');
+                        if (submitBtn) {
+                            submitBtn.classList.remove('visible');
+                        }
+                    }
+
+                } catch (error) {
+                    // Remove loading indicator
+                    const loading = document.getElementById('loading');
+                    if (loading) loading.remove();
+
+                    // Show error message
+                    const errorMsg = document.createElement('div');
+                    errorMsg.className = 'message assistant';
+                    errorMsg.textContent = '❌ Error: Could not connect to the API. Make sure the backend is running on http://localhost:8000';
+                    chatMessages.appendChild(errorMsg);
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+
+                    console.error('API Error:', error);
+                }
+            }
+
+            // NEW in Module 5: Submit the idea for extraction
+            async function submitIdea() {
+                if (!sessionId) {
+                    alert('No active conversation session found!');
+                    return;
+                }
+
+                // Show loading
+                const loadingOverlay = document.getElementById('loadingOverlay');
+                loadingOverlay.classList.add('active');
+
+                // Hide submit button during extraction
+                const submitBtn = document.getElementById('submitIdeaBtn');
+                submitBtn.disabled = true;
+
+                try {
+                    // Call /extract endpoint
+                    const response = await fetch(`${API_URL}/extract`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            session_id: sessionId
+                        })
+                    });
+
+                    const data = await response.json();
+
+                    // Hide loading
+                    loadingOverlay.classList.remove('active');
+
+                    if (data.error) {
+                        // Show error
+                        alert(`Error: ${data.error}`);
+                        submitBtn.disabled = false;
+                    } else {
+                        // Show success modal
+                        document.getElementById('successIdeaTitle').textContent = data.title || 'Your Idea';
+                        document.getElementById('successIdeaId').textContent = `Idea #${data.id || '?'}`;
+                        document.getElementById('successModal').classList.add('active');
+                    }
+
+                } catch (error) {
+                    loadingOverlay.classList.remove('active');
+                    alert('Failed to submit idea. Make sure the backend is running.');
+                    submitBtn.disabled = false;
+                    console.error('Submit error:', error);
+                }
+            }
+
+            // NEW in Module 5: Close success modal
+            function closeSuccessModal() {
+                document.getElementById('successModal').classList.remove('active');
+                document.getElementById('submitIdeaBtn').disabled = false;
+            }
+
+            // NEW in Module 5: Start a new idea
+            function startNewIdea() {
+                // Clear the chat
+                document.getElementById('chatMessages').innerHTML = '';
+                document.getElementById('welcomeScreen').style.display = 'flex';
+                document.getElementById('chatMessages').style.display = 'none';
+
+                // Hide submit button
+                document.getElementById('submitIdeaBtn').classList.remove('visible');
+                document.getElementById('submitIdeaBtn').disabled = false;
+
+                // Reset session
+                sessionId = null;
+
+                // Close modal
+                closeSuccessModal();
+            }
+
+            // NEW in Module 5.5: Show toast notification
+            function showToast(message) {
+                const toast = document.getElementById('toastNotification');
+                const toastMessage = document.getElementById('toastMessage');
+
+                toastMessage.textContent = message;
+                toast.classList.add('show');
+
+                // Hide after 5 seconds
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 5000);
+            }
+
+            document.getElementById('chatInput').addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    sendMessage();
+                }
+            });
+        </script>
+</body>
+
+</html>
