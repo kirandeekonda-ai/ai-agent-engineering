@@ -7,6 +7,45 @@
 from groq import Groq
 from typing import List, Dict
 import os
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
+
+# ==============================================================================
+# LangSmith Tracing Setup (for observability)
+# ==============================================================================
+# Enables tracking of all LLM calls in LangSmith dashboard
+
+# Configure LangSmith environment
+os.environ["LANGCHAIN_TRACING_V2"] = "true"
+os.environ["LANGCHAIN_PROJECT"] = "idea-chatbot"
+
+# Set endpoint from .env if available (for EU region)
+langchain_endpoint = os.getenv("LANGCHAIN_ENDPOINT")
+if langchain_endpoint:
+    os.environ["LANGCHAIN_ENDPOINT"] = langchain_endpoint
+    print(f"[OK] LangSmith endpoint: {langchain_endpoint}")
+
+# Check if LangSmith is configured
+LANGSMITH_ENABLED = bool(os.getenv("LANGCHAIN_API_KEY"))
+if LANGSMITH_ENABLED:
+    print("[OK] LangSmith tracing enabled")
+else:
+    print("[WARNING] LangSmith not configured - no tracing")
+
+# Import LangSmith for tracing (native integration)
+try:
+    from langsmith import traceable
+    LANGSMITH_AVAILABLE = True
+except ImportError:
+    # Create a no-op decorator if langsmith is not installed
+    def traceable(*args, **kwargs):
+        def decorator(func):
+            return func
+        return decorator
+    LANGSMITH_AVAILABLE = False
+    print("[WARNING] LangSmith not installed - tracing disabled")
 
 
 # ------------------------------------------------------------------------------
@@ -197,6 +236,15 @@ class GroqClient:
         # - 6K tokens per minute
         # Better at understanding context and extracting ideas
         
+        "classify": "llama-3.1-8b-instant",
+        # Lightweight model for quick classifications (~10 tokens)
+        # Used for: research need, market maturity
+        # Fast and cheap
+        
+        "enrich": "meta-llama/llama-4-scout-17b-16e-instruct",
+        # Reasoning model for enriching ideas with research data
+        # Extracts alternatives, synthesizes market context
+        
         "evaluate": "meta-llama/llama-guard-4-12b"
         # Specialized model for content evaluation
         # - 14.4K requests per day
@@ -214,6 +262,7 @@ class GroqClient:
         self.client = Groq(api_key=api_key)
     
     
+    @traceable(name="chat")
     def chat(self, message: str, conversation_history: List[Dict] = None, detected_domain: str = None) -> str:
         """
         Send a message to the chatbot and get a response.
@@ -252,7 +301,7 @@ class GroqClient:
             
             # Log the detected domain for debugging
             if domain != "general":
-                print(f"🎯 Detected domain: {domain}")
+                print(f" Detected domain: {domain}")
         
         # Add the current user message
         messages.append({
@@ -513,6 +562,370 @@ Respond with ONLY this JSON format (no markdown, no explanation):
         """
         # TODO: Implement in future lessons if needed
         pass
+    
+    
+    def classify_research_need(self, idea_title: str) -> str:
+        """
+        Determine if an idea needs market research.
+        
+        Uses a lightweight prompt (~10 tokens) to classify:
+        - YES: Established market with known alternatives
+        - MAYBE: Niche market, might have some tools
+        - NO: Internal process or proprietary concept
+        
+        Args:
+            idea_title: The title/name of the idea
+        
+        Returns:
+            str: "YES", "MAYBE", or "NO"
+        """
+        prompt = f"""Does this idea likely have existing commercial software alternatives?
+Idea: "{idea_title}"
+
+Respond with ONLY one word: YES, MAYBE, or NO"""
+        
+        try:
+            completion = self.client.chat.completions.create(
+                model=self.MODELS["classify"],
+                messages=[{"role": "user", "content": prompt}],
+                temperature=0.1,
+                max_tokens=5,
+                top_p=1
+            )
+            
+            response = completion.choices[0].message.content.strip().upper()
+            
+            # Normalize response
+            if "YES" in response:
+                return "YES"
+            elif "MAYBE" in response:
+                return "MAYBE"
+            else:
+                return "NO"
+                
+        except Exception as e:
+            print(f"Error classifying research need: {e}")
+            return "NO"  # Default to skipping research on error
+    
+    
+    def classify_market_maturity(self, domain: str) -> str:
+        """
+        Classify the market maturity for cache duration.
+        
+        Args:
+            domain: The market/domain (e.g., "email systems", "AI agents")
+        
+        Returns:
+            str: "STABLE", "EVOLVING", "FAST", or "TRENDING"
+        """
+        prompt = f"""How quickly does the market for "{domain}" change?
+
+- STABLE: Established for 10+ years (email, CRM, spreadsheets)
+- EVOLVING: Mature but new players emerge (CI/CD, cloud hosting)
+- FAST: Rapidly changing, new tools weekly (AI tools, LLMs)
+- TRENDING: Cutting edge, changes daily (AI agents, RAG)
+
+Respond with ONLY one word: STABLE, EVOLVING, FAST, or TRENDING"""
+        
+        try:
+            completion = self.client.chat.completions.create(
+                model=self.MODELS["classify"],
+                messages=[{"role": "user", "content": prompt}],
+                temperature=0.1,
+                max_tokens=5,
+                top_p=1
+            )
+            
+            response = completion.choices[0].message.content.strip().upper()
+            
+            # Normalize response
+            for maturity in ["STABLE", "EVOLVING", "FAST", "TRENDING"]:
+                if maturity in response:
+                    return maturity
+            
+            return "EVOLVING"  # Default
+                
+        except Exception as e:
+            print(f"Error classifying market maturity: {e}")
+            return "EVOLVING"
+    
+    
+    def enrich_with_research(self, idea: Dict, research_results: Dict) -> Dict:
+        """
+        Enrich an idea with market research data.
+        
+        Analyzes research results and extracts:
+        - List of alternatives/competitors
+        - Pricing information
+        - Market context summary
+        
+        Args:
+            idea: The extracted idea dict
+            research_results: Raw results from Tavily search
+        
+        Returns:
+            Dict: Enriched idea with market_alternatives field
+        """
+        enrich_prompt = f"""Analyze this market research and extract competitor information.
+
+Idea: {idea.get('title', 'Unknown')}
+Description: {idea.get('description', 'No description')}
+
+Research Results:
+{research_results.get('answer', 'No summary available')}
+
+Sources:
+{self._format_sources(research_results.get('sources', []))}
+
+Return ONLY valid JSON (no markdown, no explanation):
+{{
+    "market_alternatives": [
+        {{
+            "name": "Tool/Product Name",
+            "pricing": "Pricing info if found, or 'Unknown'",
+            "differentiator": "How the user's idea differs"
+        }}
+    ],
+    "market_summary": "1-2 sentence summary of the competitive landscape",
+    "recommendation": "proceed|research_more|consider_existing - brief recommendation"
+}}
+
+Limit to top 3-5 most relevant alternatives."""
+        
+        try:
+            completion = self.client.chat.completions.create(
+                model=self.MODELS["enrich"],
+                messages=[{"role": "user", "content": enrich_prompt}],
+                temperature=0.3,
+                max_tokens=800,
+                top_p=1
+            )
+            
+            response_text = completion.choices[0].message.content.strip()
+            
+            # Parse JSON
+            import json
+            if response_text.startswith("```"):
+                lines = response_text.split("\n")
+                response_text = "\n".join(lines[1:-1])
+            
+            enrichment = json.loads(response_text)
+            
+            # Merge with original idea
+            enriched_idea = idea.copy()
+            enriched_idea["market_alternatives"] = enrichment.get("market_alternatives", [])
+            enriched_idea["market_summary"] = enrichment.get("market_summary", "")
+            enriched_idea["market_recommendation"] = enrichment.get("recommendation", "")
+            enriched_idea["research_sources"] = [
+                s.get("url", "") for s in research_results.get("sources", [])
+            ]
+            
+            return enriched_idea
+            
+        except Exception as e:
+            print(f"Error enriching idea: {e}")
+            # Return original idea without enrichment
+            return idea
+    
+    
+    def _format_sources(self, sources: List[Dict]) -> str:
+        """Format sources for the enrichment prompt."""
+        if not sources:
+            return "No sources found"
+        
+        formatted = []
+        for i, src in enumerate(sources[:5], 1):
+            formatted.append(f"{i}. {src.get('title', 'Unknown')}: {src.get('snippet', '')}")
+        
+        return "\n".join(formatted)
+    
+    
+    # ==========================================================================
+    # NEW: Proactive Research & Validation Methods (Module 9)
+    # ==========================================================================
+    
+    @traceable(name="detect_idea_in_message")
+    def detect_idea_in_message(self, message: str, history: List[Dict] = None) -> Dict:
+        """
+        Detect if the user is describing a product/software idea.
+        
+        Args:
+            message: The user's current message
+            history: Previous conversation messages
+            
+        Returns:
+            Dict: {
+                "is_idea": True/False,
+                "idea_summary": "Brief summary of the idea",
+                "confidence": 0.0-1.0
+            }
+        """
+        context = ""
+        if history:
+            recent = history[-4:] if len(history) > 4 else history
+            context = "\n".join([f"{m['role']}: {m['content']}" for m in recent])
+        
+        prompt = f"""Is the user describing a product, app, or software idea they want to build?
+
+Recent conversation:
+{context}
+
+Current message: "{message}"
+
+Respond with ONLY valid JSON:
+{{"is_idea": true/false, "idea_summary": "brief summary or empty", "confidence": 0.0-1.0}}"""
+        
+        try:
+            completion = self.client.chat.completions.create(
+                model=self.MODELS["classify"],
+                messages=[{"role": "user", "content": prompt}],
+                temperature=0.1,
+                max_tokens=100,
+                top_p=1
+            )
+            
+            import json
+            response = completion.choices[0].message.content.strip()
+            if response.startswith("```"):
+                response = "\n".join(response.split("\n")[1:-1])
+            
+            return json.loads(response)
+            
+        except Exception as e:
+            print(f"[AI] Error detecting idea: {e}")
+            return {"is_idea": False, "idea_summary": "", "confidence": 0.0}
+    
+    
+    @traceable(name="chat_with_research")
+    def chat_with_research(self, message: str, history: List[Dict], research_data: Dict, research_state: Dict) -> str:
+        """
+        Generate a chat response that incorporates market research proactively.
+        
+        This is used when we've found market alternatives and want to:
+        1. Share them with the user
+        2. Challenge the user to differentiate their idea
+        
+        Args:
+            message: User's current message
+            history: Conversation history
+            research_data: Results from Tavily search
+            research_state: Current research/validation state
+            
+        Returns:
+            str: Response that includes alternatives and challenges user
+        """
+        alternatives = research_data.get("alternatives", [])
+        alt_text = "\n".join([f"- {a.get('name', 'Unknown')}" for a in alternatives[:5]])
+        
+        if research_state.get("awaiting_differentiation"):
+            # User is responding to our challenge - analyze their differentiation
+            system_prompt = """You are an Idea Validation Assistant. The user just described what makes their idea unique.
+
+Evaluate their response:
+1. If they provide a GENUINE differentiator (unique feature, underserved market, novel approach) - acknowledge it positively
+2. If their differentiation is weak or already exists - push back gently but firmly
+3. Always be constructive and helpful
+
+Keep your response to 2-3 sentences."""
+        else:
+            # First time showing alternatives
+            system_prompt = f"""You are an Idea Validation Assistant. You've just researched the market and found these existing solutions:
+
+{alt_text}
+
+Your job:
+1. Briefly mention that alternatives exist (don't list all, just 2-3 key ones)
+2. Ask the user: "What makes YOUR idea different from these?"
+3. Be supportive but thorough - we only save truly unique ideas
+
+Keep response to 3-4 sentences. Be conversational, not confrontational."""
+        
+        messages = [{"role": "system", "content": system_prompt}]
+        messages.extend(history[-6:] if len(history) > 6 else history)
+        messages.append({"role": "user", "content": message})
+        
+        try:
+            completion = self.client.chat.completions.create(
+                model=self.MODELS["chat"],
+                messages=messages,
+                temperature=0.7,
+                max_tokens=300,
+                top_p=0.9
+            )
+            
+            return completion.choices[0].message.content.strip()
+            
+        except Exception as e:
+            print(f"[AI] Error in research chat: {e}")
+            return "I found some existing alternatives. What makes your idea unique?"
+    
+    
+    @traceable(name="validate_idea_uniqueness")
+    def validate_idea_uniqueness(self, idea_summary: str, research_data: Dict, differentiation_response: str) -> Dict:
+        """
+        Validate whether the user's idea is truly unique based on their differentiation.
+        
+        Args:
+            idea_summary: Brief summary of the user's idea
+            research_data: Market research results
+            differentiation_response: User's explanation of what's unique
+            
+        Returns:
+            Dict: {
+                "validated": True/False,
+                "reason": "Why it passed or failed validation",
+                "confidence": 0.0-1.0,
+                "recommendation": "proceed" | "iterate" | "reconsider"
+            }
+        """
+        alternatives = research_data.get("alternatives", [])
+        alt_text = "\n".join([f"- {a.get('name', 'Unknown')}: {a.get('snippet', '')[:100]}" for a in alternatives[:5]])
+        
+        prompt = f"""Evaluate if this idea is unique enough to proceed:
+
+IDEA: {idea_summary}
+
+EXISTING ALTERNATIVES:
+{alt_text}
+
+USER'S DIFFERENTIATION: "{differentiation_response}"
+
+Criteria for validation:
+- PASS if: User identifies genuine unique value (new feature, underserved market, novel tech, specific niche)
+- FAIL if: Differentiation is vague, already exists, or trivial
+
+Respond with ONLY valid JSON:
+{{
+    "validated": true/false,
+    "reason": "Clear explanation",
+    "confidence": 0.0-1.0,
+    "recommendation": "proceed|iterate|reconsider"
+}}"""
+        
+        try:
+            completion = self.client.chat.completions.create(
+                model=self.MODELS["enrich"],
+                messages=[{"role": "user", "content": prompt}],
+                temperature=0.2,
+                max_tokens=200,
+                top_p=1
+            )
+            
+            import json
+            response = completion.choices[0].message.content.strip()
+            if response.startswith("```"):
+                response = "\n".join(response.split("\n")[1:-1])
+            
+            return json.loads(response)
+            
+        except Exception as e:
+            print(f"[AI] Error validating uniqueness: {e}")
+            return {
+                "validated": False,
+                "reason": "Validation error",
+                "confidence": 0.0,
+                "recommendation": "iterate"
+            }
 
 
 # ------------------------------------------------------------------------------

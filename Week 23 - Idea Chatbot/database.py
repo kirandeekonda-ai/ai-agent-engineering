@@ -92,8 +92,10 @@ def save_idea(idea_data: Dict) -> int:
                 INSERT INTO ideas (
                     session_id, title, description, problem_solved,
                     time_estimate, cost_estimate, resources_needed,
-                    impact, complexity, domain, status, created_at
-                ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                    impact, complexity, domain, status, created_at,
+                    market_alternatives, market_maturity, market_summary,
+                    market_recommendation, research_sources
+                ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
                 RETURNING id
             """, (
                 idea_data.get('session_id'),
@@ -107,7 +109,12 @@ def save_idea(idea_data: Dict) -> int:
                 idea_data.get('complexity'),
                 idea_data.get('domain'),
                 idea_data.get('status', 'pending'),
-                datetime.now()
+                datetime.now(),
+                json.dumps(idea_data.get('market_alternatives', [])) if isinstance(idea_data.get('market_alternatives'), list) else idea_data.get('market_alternatives'),
+                idea_data.get('market_maturity'),
+                idea_data.get('market_summary'),
+                idea_data.get('market_recommendation'),
+                json.dumps(idea_data.get('research_sources', [])) if isinstance(idea_data.get('research_sources'), list) else idea_data.get('research_sources')
             ))
             
             idea_id = cursor.fetchone()[0]

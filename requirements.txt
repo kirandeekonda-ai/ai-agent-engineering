@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+sqlalchemy
+httpx
+playwright
+python-dotenv
+openai
+langsmith
+pytest
+pytest-playwright

@@ -7,7 +7,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/u
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { getIdeas } from '@/lib/api';
 import type { Idea } from '@/lib/types';
-import { ArrowLeft, Sparkles, MessageSquare, Clock, DollarSign, Layers, Target, Calendar, X } from 'lucide-react';
+import { ArrowLeft, Sparkles, MessageSquare, Clock, DollarSign, Layers, Target, Calendar, X, Globe, TrendingUp, AlertTriangle } from 'lucide-react';
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, Legend, AreaChart, Area, CartesianGrid } from 'recharts';
 
 const DOMAIN_COLORS: Record<string, string> = {
@@ -130,8 +130,8 @@ export default function DashboardPage() {
                                     key={f}
                                     onClick={() => setFilter(f)}
                                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${filter === f
-                                            ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow-lg shadow-indigo-500/25'
-                                            : 'glass-card hover:bg-white/5'
+                                        ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow-lg shadow-indigo-500/25'
+                                        : 'glass-card hover:bg-white/5'
                                         }`}
                                 >
                                     {f.charAt(0).toUpperCase() + f.slice(1)}
@@ -349,12 +349,77 @@ export default function DashboardPage() {
                                 <div className="flex items-center gap-4 pt-4 border-t border-white/10">
                                     <span className="text-sm text-muted-foreground">Complexity:</span>
                                     <span className={`px-3 py-1 rounded-full text-xs font-medium ${selectedIdea.complexity === 'low' ? 'bg-emerald-500/20 text-emerald-400' :
-                                            selectedIdea.complexity === 'medium' ? 'bg-yellow-500/20 text-yellow-400' :
-                                                'bg-red-500/20 text-red-400'
+                                        selectedIdea.complexity === 'medium' ? 'bg-yellow-500/20 text-yellow-400' :
+                                            'bg-red-500/20 text-red-400'
                                         }`}>
                                         {selectedIdea.complexity}
                                     </span>
                                 </div>
+
+                                {/* Market Context Section */}
+                                {(selectedIdea.market_alternatives || selectedIdea.market_summary) && (
+                                    <div className="pt-4 border-t border-white/10 space-y-4">
+                                        <h4 className="text-sm font-medium text-muted-foreground flex items-center gap-2">
+                                            <Globe className="w-4 h-4" /> Market Context
+                                        </h4>
+
+                                        {selectedIdea.market_summary && (
+                                            <p className="text-foreground text-sm leading-relaxed bg-indigo-500/10 rounded-xl p-4 border border-indigo-500/20">
+                                                {selectedIdea.market_summary}
+                                            </p>
+                                        )}
+
+                                        {selectedIdea.market_recommendation && (
+                                            <div className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm ${selectedIdea.market_recommendation === 'proceed' ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20' :
+                                                    selectedIdea.market_recommendation === 'consider_existing' ? 'bg-yellow-500/10 text-yellow-400 border border-yellow-500/20' :
+                                                        'bg-blue-500/10 text-blue-400 border border-blue-500/20'
+                                                }`}>
+                                                {selectedIdea.market_recommendation === 'proceed' && <TrendingUp className="w-4 h-4" />}
+                                                {selectedIdea.market_recommendation === 'consider_existing' && <AlertTriangle className="w-4 h-4" />}
+                                                <span className="capitalize font-medium">
+                                                    {String(selectedIdea.market_recommendation).replace(/_/g, ' ')}
+                                                </span>
+                                            </div>
+                                        )}
+
+                                        {selectedIdea.market_maturity && (
+                                            <div className="flex items-center gap-2">
+                                                <span className="text-xs text-muted-foreground">Market Maturity:</span>
+                                                <span className={`px-2 py-1 rounded-full text-xs font-medium ${selectedIdea.market_maturity === 'stable' ? 'bg-emerald-500/20 text-emerald-400' :
+                                                        selectedIdea.market_maturity === 'evolving' ? 'bg-blue-500/20 text-blue-400' :
+                                                            selectedIdea.market_maturity === 'fast' ? 'bg-orange-500/20 text-orange-400' :
+                                                                'bg-purple-500/20 text-purple-400'
+                                                    }`}>
+                                                    {selectedIdea.market_maturity}
+                                                </span>
+                                            </div>
+                                        )}
+
+                                        {selectedIdea.market_alternatives && (
+                                            <div>
+                                                <h5 className="text-xs font-medium text-muted-foreground mb-2">Market Alternatives</h5>
+                                                <div className="space-y-2">
+                                                    {(typeof selectedIdea.market_alternatives === 'string'
+                                                        ? JSON.parse(selectedIdea.market_alternatives)
+                                                        : selectedIdea.market_alternatives
+                                                    ).slice(0, 5).map((alt: { name: string; pricing?: string; differentiator?: string }, idx: number) => (
+                                                        <div key={idx} className="glass-card rounded-lg p-3 text-sm">
+                                                            <div className="flex items-center justify-between mb-1">
+                                                                <span className="font-medium text-foreground">{alt.name}</span>
+                                                                {alt.pricing && (
+                                                                    <span className="text-xs text-muted-foreground">{alt.pricing}</span>
+                                                                )}
+                                                            </div>
+                                                            {alt.differentiator && (
+                                                                <p className="text-xs text-muted-foreground">{alt.differentiator}</p>
+                                                            )}
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        )}
+                                    </div>
+                                )}
                             </div>
                         </>
                     )}

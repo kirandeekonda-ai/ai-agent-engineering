@@ -22,6 +22,13 @@ class ConversationManager:
         # Dictionary mapping session_id -> list of messages
         # Format: {"session-123": [{"role": "user", "content": "..."}, ...]}
         self.conversations: Dict[str, List[Dict]] = {}
+        
+        # Track saved ideas per session to prevent duplicates
+        self.saved_ideas: Dict[str, List[str]] = {}
+        
+        # Track research state per session for mid-conversation research
+        # Format: {"session-123": {"researched": True, "alternatives": [...], "awaiting_differentiation": True}}
+        self.research_state: Dict[str, Dict] = {}
     
     
     def get_history(self, session_id: str) -> List[Dict]:
@@ -80,6 +87,10 @@ class ConversationManager:
         """
         if session_id in self.conversations:
             del self.conversations[session_id]
+        if session_id in self.saved_ideas:
+            del self.saved_ideas[session_id]
+        if session_id in self.research_state:
+            del self.research_state[session_id]
     
     
     def get_session_count(self) -> int:
@@ -93,6 +104,61 @@ class ConversationManager:
             >>> print(manager.get_session_count())  # 5
         """
         return len(self.conversations)
+    
+    
+    # ----------------------------------
+    # NEW: Duplicate Prevention Methods
+    # ----------------------------------
+    
+    def is_idea_saved(self, session_id: str, idea_title: str) -> bool:
+        """Check if an idea with this title was already saved in this session."""
+        saved = self.saved_ideas.get(session_id, [])
+        # Normalize for comparison
+        normalized_title = idea_title.lower().strip()
+        return any(t.lower().strip() == normalized_title for t in saved)
+    
+    
+    def mark_idea_saved(self, session_id: str, idea_title: str):
+        """Mark an idea as saved for this session."""
+        if session_id not in self.saved_ideas:
+            self.saved_ideas[session_id] = []
+        self.saved_ideas[session_id].append(idea_title)
+    
+    
+    # ----------------------------------
+    # NEW: Research State Methods
+    # ----------------------------------
+    
+    def get_research_state(self, session_id: str) -> Dict:
+        """Get the research state for a session."""
+        return self.research_state.get(session_id, {
+            "researched": False,
+            "alternatives": [],
+            "awaiting_differentiation": False,
+            "validated": False
+        })
+    
+    
+    def set_research_state(self, session_id: str, state: Dict):
+        """Set the research state for a session."""
+        self.research_state[session_id] = state
+    
+    
+    def mark_researched(self, session_id: str, alternatives: List[Dict]):
+        """Mark that research was done and we're awaiting user differentiation."""
+        self.research_state[session_id] = {
+            "researched": True,
+            "alternatives": alternatives,
+            "awaiting_differentiation": True,
+            "validated": False
+        }
+    
+    
+    def mark_validated(self, session_id: str, validated: bool):
+        """Mark whether the idea passed validation."""
+        if session_id in self.research_state:
+            self.research_state[session_id]["validated"] = validated
+            self.research_state[session_id]["awaiting_differentiation"] = False
     
     
     def get_message_count(self, session_id: str) -> int:

@@ -43,17 +43,29 @@ from conversation_manager import conversation_manager
 # Database functions for persistent storage (NEW in Lesson 4.1)
 from database import save_idea, get_all_ideas, get_idea_by_id, get_idea_count
 
+# Web research for market context (NEW in Module 7)
+from web_research import get_web_research_client
+from research_cache import cache_research, get_cached_research, cleanup_expired
+
 # Load .env file
 load_dotenv()
 
 # Initialize the Groq client (will read GROQ_API_KEY from .env)
 try:
     groq_client = get_groq_client()
-    print("✅ Groq client initialized successfully")
+    print("[OK] Groq client initialized successfully")
 except ValueError as e:
-    print(f"⚠️  Warning: {e}")
+    print(f"[WARNING] {e}")
     print("   The API will run but chat responses will be placeholder text.")
     groq_client = None
+
+# Initialize the web research client (NEW in Module 7)
+try:
+    research_client = get_web_research_client()
+    print("[OK] Web research client initialized")
+except Exception as e:
+    print(f"[WARNING] Web research disabled: {e}")
+    research_client = None
 
 # ------------------------------------------------------------------------------
 # STEP 2: Define Pydantic Models (NEW in Lesson 1.2)
@@ -241,12 +253,14 @@ def health_check():
 @app.post("/chat")
 def chat(message: ChatMessage) -> ChatResponse:
     """
-    Chat endpoint with conversation memory.
+    Chat endpoint with conversation memory and proactive idea validation.
     
-    Now supports multi-turn conversations:
-    - Remembers previous messages in the session
-    - AI has context from earlier in the conversation
-    - Each session maintains its own history
+    NEW in Module 9:
+    - Detects when user describes an idea
+    - Proactively researches market alternatives
+    - Shares alternatives with user
+    - Challenges user to differentiate
+    - Only saves validated, unique ideas
     
     Args:
         message (ChatMessage): The validated message from the user
@@ -260,75 +274,179 @@ def chat(message: ChatMessage) -> ChatResponse:
     # Get conversation history for this session
     history = conversation_manager.get_history(session)
     
-    # Get AI response with conversation context
+    # Get research state for this session
+    research_state = conversation_manager.get_research_state(session)
+    
+    # Initialize response variables
+    ai_response = ""
+    auto_saved = False
+    saved_idea_id = None
+    
     if groq_client:
         try:
-            # Pass the conversation history to maintain context
-            ai_response = groq_client.chat(
-                message=message.content,
-                conversation_history=history
-            )
+            # ================================================================
+            # NEW FLOW: Proactive Research & Validation (Module 9)
+            # ================================================================
             
-            # Add user message to history
-            conversation_manager.add_message(session, "user", message.content)
+            # DEBUG: Log current state
+            print(f"\n{'='*60}")
+            print(f"[DEBUG] Session: {session}")
+            print(f"[DEBUG] Message: {message.content[:50]}...")
+            print(f"[DEBUG] History length: {len(history)}")
+            print(f"[DEBUG] Research state: {research_state}")
+            print(f"{'='*60}\n")
             
-            # Add assistant response to history
-            conversation_manager.add_message(session, "assistant", ai_response)
-            
-            # NEW in Module 5.5: AI-powered auto-submission
-            # Check if idea is ready to be saved (intelligent evaluation, no hard rules)
-            auto_saved = False
-            saved_idea_id = None
-            
-            try:
-                # Get updated history (with current exchange)
-                current_history = conversation_manager.get_history(session)
+            # Check if we're in the middle of a research/validation flow
+            if research_state.get("awaiting_differentiation"):
+                # User is responding to our challenge about differentiation
+                print("[VALIDATION] User responding to differentiation challenge...")
                 
-                # Only check readiness if we have at least 2 exchanges (4 messages)
-                if len(current_history) >= 4:
-                    readiness_check = groq_client.check_idea_readiness(current_history)
+                research_data = {"alternatives": research_state.get("alternatives", [])}
+                
+                # Validate their differentiation
+                validation = groq_client.validate_idea_uniqueness(
+                    research_state.get("idea_summary", ""),
+                    research_data,
+                    message.content
+                )
+                
+                print(f"[VALIDATION] Result: {validation.get('validated')} - {validation.get('reason')}")
+                
+                if validation.get("validated"):
+                    # Idea passed validation! Generate positive response and save
+                    ai_response = groq_client.chat_with_research(
+                        message.content, history, research_data, research_state
+                    )
+                    ai_response += f"\n\nGreat! Your idea has a clear differentiator. I'm saving it to the dashboard."
                     
-                    print(f"🤖 Readiness check: {readiness_check['ready']} - {readiness_check['reason']}")
+                    # Add messages to history
+                    conversation_manager.add_message(session, "user", message.content)
+                    conversation_manager.add_message(session, "assistant", ai_response)
                     
-                    if readiness_check.get('ready', False):
-                        # Idea is ready! Auto-extract and save
-                        print("✨ Auto-extracting and saving idea...")
+                    # Extract and save the idea
+                    current_history = conversation_manager.get_history(session)
+                    extracted_data = groq_client.extract_idea(current_history)
+                    
+                    if 'error' not in extracted_data:
+                        extracted_data['session_id'] = session
                         
-                        try:
-                            extracted_data = groq_client.extract_idea(current_history)
-                            
-                            if 'error' not in extracted_data:
-                                # Add session_id
-                                extracted_data['session_id'] = session
-                                
-                                # Save to database
-                                idea_id = save_idea(extracted_data)
-                                print(f"✅ Idea auto-saved with ID: {idea_id}")
-                                
-                                auto_saved = True
-                                saved_idea_id = idea_id
-                            else:
-                                print(f"⚠️ Extraction failed: {extracted_data.get('error')}")
+                        # Enrich with research data
+                        extracted_data = groq_client.enrich_with_research(extracted_data, research_data)
                         
-                        except Exception as extract_error:
-                            print(f"⚠️ Auto-save failed: {extract_error}")
+                        # Check for duplicates before saving
+                        idea_title = extracted_data.get('title', '')
+                        if not conversation_manager.is_idea_saved(session, idea_title):
+                            idea_id = save_idea(extracted_data)
+                            conversation_manager.mark_idea_saved(session, idea_title)
+                            print(f"[OK] Validated idea saved with ID: {idea_id}")
+                            auto_saved = True
+                            saved_idea_id = idea_id
+                        else:
+                            print(f"[SKIP] Idea already saved: {idea_title}")
+                    
+                    # Clear research state
+                    conversation_manager.mark_validated(session, True)
+                else:
+                    # Idea needs more work
+                    ai_response = f"I see, but {validation.get('reason', 'that differentiation might not be strong enough')}. "
+                    ai_response += "Can you think of what else makes your idea unique or how it could be improved?"
+                    
+                    conversation_manager.add_message(session, "user", message.content)
+                    conversation_manager.add_message(session, "assistant", ai_response)
             
-            except Exception as readiness_error:
-                # Don't fail the chat if readiness check fails
-                print(f"⚠️ Readiness check error: {readiness_error}")
+            else:
+                # Normal chat - but check if user is describing an idea
+                idea_detection = groq_client.detect_idea_in_message(message.content, history)
+                
+                if idea_detection.get("is_idea") and idea_detection.get("confidence", 0) > 0.6:
+                    # User is describing an idea - research it BEFORE responding
+                    print(f"[AI] Idea detected: {idea_detection.get('idea_summary')}")
+                    
+                    idea_summary = idea_detection.get("idea_summary", message.content)
+                    
+                    # Check if research is needed
+                    if research_client and research_client.client:
+                        research_need = groq_client.classify_research_need(idea_summary)
+                        print(f"[RESEARCH] Need: {research_need}")
+                        
+                        if research_need in ["YES", "MAYBE"]:
+                            # Check cache first
+                            cached = get_cached_research(idea_summary)
+                            
+                            if cached:
+                                print("[RESEARCH] Cache hit!")
+                                research_results = cached
+                            else:
+                                # Run Tavily search
+                                print("[RESEARCH] Searching web for alternatives...")
+                                research_results = research_client.search_competitors(idea_summary)
+                                
+                                # Cache the results
+                                maturity = groq_client.classify_market_maturity(idea_summary)
+                                ttl_days = research_client.get_cache_duration(maturity)
+                                cache_research(idea_summary, research_results, ttl_days, maturity)
+                                print(f"[RESEARCH] Cached for {ttl_days} days")
+                            
+                            alternatives = research_results.get("alternatives", [])
+                            
+                            if alternatives:
+                                # Found alternatives - challenge the user
+                                print(f"[RESEARCH] Found {len(alternatives)} alternatives, challenging user...")
+                                
+                                # Mark that we're awaiting differentiation
+                                conversation_manager.mark_researched(session, alternatives)
+                                conversation_manager.set_research_state(session, {
+                                    "researched": True,
+                                    "alternatives": alternatives,
+                                    "awaiting_differentiation": True,
+                                    "validated": False,
+                                    "idea_summary": idea_summary
+                                })
+                                
+                                # Generate research-aware response
+                                ai_response = groq_client.chat_with_research(
+                                    message.content, history, research_results, 
+                                    {"awaiting_differentiation": False}  # First time showing
+                                )
+                                
+                                conversation_manager.add_message(session, "user", message.content)
+                                conversation_manager.add_message(session, "assistant", ai_response)
+                            else:
+                                # No alternatives found - proceed normally
+                                print("[RESEARCH] No alternatives found, proceeding with normal chat")
+                                ai_response = groq_client.chat(message.content, history)
+                                conversation_manager.add_message(session, "user", message.content)
+                                conversation_manager.add_message(session, "assistant", ai_response)
+                        else:
+                            # Internal/proprietary idea - skip research
+                            print("[RESEARCH] Skipped (internal idea)")
+                            ai_response = groq_client.chat(message.content, history)
+                            conversation_manager.add_message(session, "user", message.content)
+                            conversation_manager.add_message(session, "assistant", ai_response)
+                    else:
+                        # No research client - normal chat
+                        ai_response = groq_client.chat(message.content, history)
+                        conversation_manager.add_message(session, "user", message.content)
+                        conversation_manager.add_message(session, "assistant", ai_response)
+                else:
+                    # Not an idea description - normal chat
+                    ai_response = groq_client.chat(message.content, history)
+                    conversation_manager.add_message(session, "user", message.content)
+                    conversation_manager.add_message(session, "assistant", ai_response)
             
         except Exception as e:
+            print(f"[ERROR] Chat error: {e}")
             ai_response = f"Sorry, I'm having trouble thinking right now. Error: {str(e)}"
     else:
-        ai_response = "⚠️ Groq API key not configured. Please add GROQ_API_KEY to your .env file."
+        ai_response = "[WARNING] Groq API key not configured. Please add GROQ_API_KEY to your .env file."
     
     # Create structured response
     response = ChatResponse(
         message=ai_response,
         session_id=session,
         timestamp=datetime.now().isoformat(),
-        auto_saved=auto_saved if 'auto_saved' in locals() else False,
-        idea_id=saved_idea_id if 'saved_idea_id' in locals() else None
+        auto_saved=auto_saved,
+        idea_id=saved_idea_id
     )
     
     return response
