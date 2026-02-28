@@ -11,6 +11,7 @@ from dotenv import load_dotenv
 
 import database
 import models
+import memory # Added import for memory
 from agents import (
     query_planner_agent,
     orchestrator_agent,
@@ -80,6 +81,29 @@ async def start_research(query: str, db: Session = Depends(database.get_db)):
         iteration = 0
         cache_lock = asyncio.Lock()     # Prevents race conditions when appending to cache
 
+        # Check Persistent Memory FIRST
+        yield emit("log", message=f"[Memory] Querying ChromaDB for past verified sources on '{query}'...")
+        raw_memory_hits = memory.search_memory(query, n_results=3)
+        
+        if raw_memory_hits:
+            yield emit("log", message=f"[Memory] Found {len(raw_memory_hits)} potential matches. Verifying relevance to exact query...")
+            for hit in raw_memory_hits:
+                if len(cache) >= min_sources:
+                    break
+                
+                yield emit("log", message=f"[Judge] Verifying Memory: {hit['title'][:40]}...")
+                judgment = await asyncio.get_event_loop().run_in_executor(
+                    None, relevance_judge_agent, query, hit["url"], hit["content"]
+                )
+                
+                if judgment.get("verdict") == "KEEP":
+                    hit["score"] = judgment.get('score', 10)
+                    hit["reason"] = judgment.get('reason', 'Retrieved from memory')
+                    cache.append(hit)
+                    yield emit("log", message=f"🧠 [Memory] Verified! Added to cache (Score {hit['score']})")
+                else:
+                    yield emit("log", message=f"⚠️ [Memory] Discarded: Not relevant to exact query.")
+
         # Helper function to process a single URL concurrently
         async def process_url(url: str, title: str, queue: asyncio.Queue):
             async with cache_lock:
@@ -109,12 +133,17 @@ async def start_research(query: str, db: Session = Depends(database.get_db)):
                                 "score": score,
                                 "reason": judgment.get("reason", ""),
                             })
-                            # Persist to DB
+                            # Persist to local sqlite
                             db.add(models.ScrapedContent(
                                 session_id=new_session.id,
                                 url=url,
                                 content=content,
                             ))
+                            
+                            # Add to persistent vector memory
+                            await asyncio.get_event_loop().run_in_executor(
+                                None, memory.add_to_memory, url, title, content
+                            )
                 else:
                     await queue.put(emit("log", message=f"❌ [Judge] Discarded source (Score {judgment.get('score', 0)})"))
 
