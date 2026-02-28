@@ -49,12 +49,17 @@ export default function SourceGrid({ sources }: SourceGridProps) {
                             )}
 
                             <div className="flex items-center gap-2 mb-2 pr-20">
-                                <div className="w-6 h-6 rounded bg-slate-800 flex items-center justify-center overflow-hidden shrink-0">
+                                {/* Numerical Citation Badge */}
+                                <div className="w-6 h-6 rounded bg-purple-500 flex items-center justify-center shrink-0 shadow-[0_0_8px_rgba(168,85,247,0.5)]">
+                                    <span className="text-[11px] font-bold text-white">{i + 1}</span>
+                                </div>
+
+                                <div className="w-5 h-5 rounded bg-slate-800 flex items-center justify-center overflow-hidden shrink-0 opacity-80">
                                     {hostname && (
                                         <img
                                             src={`https://www.google.com/s2/favicons?domain=${hostname}&sz=32`}
                                             alt="icon"
-                                            className="w-4 h-4"
+                                            className="w-3.5 h-3.5"
                                         />
                                     )}
                                 </div>

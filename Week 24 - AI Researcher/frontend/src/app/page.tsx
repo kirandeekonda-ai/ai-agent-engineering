@@ -18,30 +18,48 @@ export default function Home() {
     setIsSearching(true);
     setReport(null);
     setSources([]);
+    setLogs(["Connecting to Research Agents..."]);
 
-    // Show incremental log steps while the real API call runs in the background
-    setLogs(["Initializing Tavily Search..."]);
-
-    // Kick off the real API call
-    const apiPromise = fetch(`http://localhost:8000/research?query=${encodeURIComponent(query)}`, {
-      method: "POST",
-    }).then(res => {
-      if (!res.ok) throw new Error(`API error: ${res.status}`);
-      return res.json();
-    });
-
-    // Show log progression while waiting
     try {
-      await new Promise(r => setTimeout(r, 1500));
-      setLogs(prev => [...prev, "Browsing top sources via Playwright..."]);
-      await new Promise(r => setTimeout(r, 1500));
-      setLogs(prev => [...prev, "Synthesizing report with LLM..."]);
+      const res = await fetch(`http://localhost:8000/research?query=${encodeURIComponent(query)}`, {
+        method: "POST",
+      });
 
-      // Await the real result
-      const data = await apiPromise;
+      if (!res.ok) throw new Error(`API error: ${res.status}`);
+      if (!res.body) throw new Error("No response body");
 
-      setReport(data.summary);
-      setSources(data.sources || []);
+      const reader = res.body.getReader();
+      const decoder = new TextDecoder("utf-8");
+      let buffer = "";
+
+      while (true) {
+        const { value, done } = await reader.read();
+        if (done) break;
+
+        buffer += decoder.decode(value, { stream: true });
+
+        // SSE messages are separated by \n\n
+        const parts = buffer.split("\n\n");
+        buffer = parts.pop() || ""; // keep the last partial chunk in the buffer
+
+        for (const part of parts) {
+          if (part.startsWith("data: ")) {
+            const dataStr = part.slice(6);
+            try {
+              const data = JSON.parse(dataStr);
+              if (data.type === "log") {
+                setLogs(prev => [...prev, data.message]);
+              } else if (data.type === "result") {
+                setReport(data.summary);
+                setSources(data.sources || []);
+              }
+            } catch (err) {
+              console.error("Failed to parse SSE JSON:", err);
+            }
+          }
+        }
+      }
+
       setIsSearching(false);
     } catch (err: any) {
       console.error(err);

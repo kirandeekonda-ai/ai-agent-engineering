@@ -9,6 +9,7 @@ Each agent is a focused LLM call with a dedicated model and role:
 """
 
 import json
+from datetime import datetime
 from langsmith import traceable
 from llm import call_model
 
@@ -31,11 +32,14 @@ def query_planner_agent(raw_query: str) -> list[str]:
 
     Returns: list of 3 search query strings
     """
+    today = datetime.now().strftime("%B %d, %Y")
     system = (
         "You are a search query specialist. Your job is to take a user's raw "
         "research topic and produce exactly 3 highly specific, targeted search "
         "queries that will surface the most relevant and up-to-date information. "
-        "Focus on specificity: include year, product names, technical terms. "
+        f"Today's date is {today}. If the user asks for 'latest' or 'recent', "
+        "always include the current year or month in your search queries.\n"
+        "Focus on specificity: include product names, technical terms. "
         "Return ONLY a valid JSON array of 3 strings. No explanation, no markdown."
     )
     user = f'Expand this research topic into 3 targeted search queries: "{raw_query}"'
@@ -174,23 +178,28 @@ def synthesis_agent(query: str, cache: list[dict], synthesis_model: str) -> str:
     context_parts = []
     for i, item in enumerate(cache, 1):
         context_parts.append(
-            f"### Source {i}: {item.get('title', item['url'])}\n"
+            f"### Source [{i}]: {item.get('title', item['url'])}\n"
             f"URL: {item['url']}\n"
             f"Relevance Score: {item.get('score', 'N/A')}/10\n\n"
             f"{item['content'][:4000]}\n"  # 4K chars per source
         )
     context = "\n---\n".join(context_parts)
 
+    today = datetime.now().strftime("%B %d, %Y")
     system = (
         "You are an elite AI research analyst. You synthesize information from "
         "multiple verified sources into a comprehensive, well-structured report. "
         "Use markdown formatting: ## for sections, **bold** for key terms, "
-        "numbered lists for findings, bullet points for details. "
-        "Always cite your sources by name or URL. Be specific — include dates, "
-        "numbers, and technical details from the sources. No hallucination."
+        "numbered lists for findings, bullet points for details.\n\n"
+        "**CRITICAL CITATION RULES:**\n"
+        "1. You MUST cite your sources using strict numerical brackets at the end of EVERY factual claim.\n"
+        "2. The citations MUST be clickable markdown links formatted exactly like this: `[[1]](URL)`\n"
+        "3. Example: 'The GPU market grew by 20% [[1]](https://example.com).' or 'New cooling systems are required [[1]](https://ex1.com)[[2]](https://ex2.com).'\n"
+        "4. NEVER use generic links like [source]. ONLY use the strict numbers [[1]](URL), [[2]](URL), [[3]](URL) corresponding to the provided sources.\n"
+        "5. Never hallucinate facts. Only state what is explicitly in the sources."
     )
     user = (
-        f'Produce a comprehensive research report for the query: "{query}"\n\n'
+        f'Today is {today}. Produce a comprehensive research report for the query: "{query}"\n\n'
         f'You have {len(cache)} verified, high-quality sources:\n\n'
         f'{context}'
     )
