@@ -1,0 +1,603 @@
+{
+  "file": "QualityInspection_Sheet.pdf",
+  "file_path": "C:\\Users\\Kiran\\AI Practice\\solidworks-change-analyzer\\test_data\\QualityInspection_Sheet.pdf",
+  "total_pages": 1,
+  "extraction": {
+    "pdfplumber": {
+      "file": "QualityInspection_Sheet.pdf",
+      "pages": [
+        {
+          "page_number": 1,
+          "text": "REVISION HISTORY\nINCOMING QUALITY INSPECTION REPORT\nREV DESCRIPTION DATE APPROVED\n# INSPECTION PARAMETER SPECIFICATION NOMINAL TOLERANCE MIN MAX PARMTE:A SAULRLEODY RRIMES U1L6T x 8J I|N S PTRAURMETN NTO: TR-16-001 | SUPPLIER: ALCOA INDIA A INITIAL QC SHEET FOR 16\" RIM 2025-03-01 QM\n406.4 mm n PASS B ADDED HARDNESS TEST FOR 16\" RIM 2025-07-15 QM\n1 Rim Diameter As per DWG TR-16-001 ± 0.05 mm 406.35 406.45 CMM\n(16.00 in) n FAIL C UPDATED TOLERANCES PER ECO-2025-089 2026-01-10 QM\n203.2 mm n PASS\n2 Rim Width As per DWG TR-16-001 ± 0.05 mm 203.15 203.25 CMM\n(8.00 in) n FAIL\nn PASS\n3 PCD (Bolt Circle) As per DWG TR-16-001 120.00 mm ± 0.03 mm 119.97 120.03 CMM\nn FAIL\nn PASS\n4 Center Bore Dia As per DWG TR-16-001 67.10 mm +0.00/-0.02 67.08 67.10 BORE GAUGE\nn FAIL\nn PASS\n5 Bolt Hole Dia (x5) As per DWG TR-16-001 14.00 mm ± 0.02 mm 13.98 14.02 PIN GAUGE\nn FAIL\nn PASS\n6 Offset (ET) As per DWG TR-16-001 45.0 mm ± 0.5 mm 44.5 45.5 CMM\nn FAIL\nn PASS\n7 Radial Runout ISO 1101 0.00 mm MAX 0.3 mm 0.00 0.30 DIAL GAUGE\nn FAIL\nn PASS\n8 Lateral Runout ISO 1101 0.00 mm MAX 0.25 mm 0.00 0.25 DIAL GAUGE\nn FAIL\nn PASS\n9 Weight As per BOM 9.50 kg ± 0.3 kg 9.20 9.80 SCALE\nn FAIL\nn PASS\n10 Surface Finish MIL-A-8625 Ra 1.6 mm MAX Ra 2.0 - 2.0 PROFILOMETER\nn FAIL\nNo cracks, porosity, ZERO n PASS\n11 Visual Inspection - - - VISUAL\nor casting defects DEFECTS n FAIL\nn PASS HARDNESS\n12 Hardness Test ASTM E18 95 HRB ± 5 HRB 90 100\nn FAIL TESTER\nINSPECTION SIGN-OFF\nInspector Name: ____________________ Signature: ____________________ Date: ____/____/______\nACME AUTOMOTIVE COMPONENTS PVT. LTD.\nQC Manager: ____________________ Signature: ____________________ Date: ____/____/______\nLot Size: ________ Sample Size: ________ AQL: 1.0 Sampling Plan: ISO 2859-1 Level II PART NAME DRAWN BY\nQC INSP - RIM 16 INCH K. DEEKONDA\nNOTES:\n1. THIS INSPECTION SHEET IS FOR 16 INCH RIM (PART NO: TR-16-001) ONLY\n2. ALL DIMENSIONS REFERENCE DRAWING TR-16-001 REV E PART NUMBER DATE\n3. REJECT ENTIRE LOT IF ANY CRITICAL DIMENSION (ITEMS 1-6) FAILS QC-TR-16-001 2026-03-05\nMATERIAL SCALE\nN/A (INSPECTION DOC) 1:2\nREV SHEET\nC 1 OF 1",
+          "tables": [
+            [
+              [
+                "REVISION HISTORY\nINCOMING QUALITY INSPECTION REPORT\nREV DESCRIPTION DATE APPROVED\n# INSPECTION PARAMETER SPECIFICATION NOMINAL TOLERANCE MIN MAX PARMTE:A SAULRLEODY RRIMES U1L6T x 8J I|N S PTRAURMETN NTO: TR-16-001 | SUPPLIER: ALCOA INDIA A INITIAL QC SHEET FOR 16\" RIM 2025-03-01 QM\n406.4 mm n PASS B ADDED HARDNESS TEST FOR 16\" RIM 2025-07-15 QM\n1 Rim Diameter As per DWG TR-16-001 ± 0.05 mm 406.35 406.45 CMM\n(16.00 in) n FAIL C UPDATED TOLERANCES PER ECO-2025-089 2026-01-10 QM\n203.2 mm n PASS\n2 Rim Width As per DWG TR-16-001 ± 0.05 mm 203.15 203.25 CMM\n(8.00 in) n FAIL\nn PASS\n3 PCD (Bolt Circle) As per DWG TR-16-001 120.00 mm ± 0.03 mm 119.97 120.03 CMM\nn FAIL\nn PASS\n4 Center Bore Dia As per DWG TR-16-001 67.10 mm +0.00/-0.02 67.08 67.10 BORE GAUGE\nn FAIL\nn PASS\n5 Bolt Hole Dia (x5) As per DWG TR-16-001 14.00 mm ± 0.02 mm 13.98 14.02 PIN GAUGE\nn FAIL\nn PASS\n6 Offset (ET) As per DWG TR-16-001 45.0 mm ± 0.5 mm 44.5 45.5 CMM\nn FAIL\nn PASS\n7 Radial Runout ISO 1101 0.00 mm MAX 0.3 mm 0.00 0.30 DIAL GAUGE\nn FAIL\nn PASS\n8 Lateral Runout ISO 1101 0.00 mm MAX 0.25 mm 0.00 0.25 DIAL GAUGE\nn FAIL\nn PASS\n9 Weight As per BOM 9.50 kg ± 0.3 kg 9.20 9.80 SCALE\nn FAIL\nn PASS\n10 Surface Finish MIL-A-8625 Ra 1.6 mm MAX Ra 2.0 - 2.0 PROFILOMETER\nn FAIL\nNo cracks, porosity, ZERO n PASS\n11 Visual Inspection - - - VISUAL\nor casting defects DEFECTS n FAIL\nn PASS HARDNESS\n12 Hardness Test ASTM E18 95 HRB ± 5 HRB 90 100\nn FAIL TESTER\nINSPECTION SIGN-OFF\nInspector Name: ____________________ Signature: ____________________ Date: ____/____/______\nACME AUTOMOTIVE COMPONENTS PVT. LTD.\nQC Manager: ____________________ Signature: ____________________ Date: ____/____/______\nLot Size: ________ Sample Size: ________ AQL: 1.0 Sampling Plan: ISO 2859-1 Level II PART NAME DRAWN BY\nQC INSP - RIM 16 INCH K. DEEKONDA\nNOTES:\n1. THIS INSPECTION SHEET IS FOR 16 INCH RIM (PART NO: TR-16-001) ONLY\n2. ALL DIMENSIONS REFERENCE DRAWING TR-16-001 REV E PART NUMBER DATE\n3. REJECT ENTIRE LOT IF ANY CRITICAL DIMENSION (ITEMS 1-6) FAILS QC-TR-16-001 2026-03-05\nMATERIAL SCALE\nN/A (INSPECTION DOC) 1:2\nREV SHEET\nC 1 OF 1",
+                "",
+                ""
+              ],
+              [
+                "",
+                "PART NAME\nQC INSP - RIM 16 INCH",
+                "DRAWN BY\nK. DEEKONDA"
+              ],
+              [
+                "",
+                "PART NUMBER\nQC-TR-16-001",
+                "DATE\n2026-03-05"
+              ],
+              [
+                "",
+                "MATERIAL\nN/A (INSPECTION DOC)",
+                "SCALE\n1:2"
+              ],
+              [
+                "",
+                "REV\nC",
+                "SHEET\n1 OF 1"
+              ]
+            ],
+            [
+              [
+                "REV",
+                "DESCRIPTION",
+                "DATE",
+                "APPROVED"
+              ],
+              [
+                "A",
+                "INITIAL QC SHEET FOR 16\" RIM",
+                "2025-03-01",
+                "QM"
+              ],
+              [
+                "B",
+                "ADDED HARDNESS TEST FOR 16\" RIM",
+                "2025-07-15",
+                "QM"
+              ],
+              [
+                "C",
+                "UPDATED TOLERANCES PER ECO-2025-089",
+                "2026-01-10",
+                "QM"
+              ]
+            ],
+            [
+              [
+                "#",
+                "INSPECTION PARAMETER",
+                "SPECIFICATION",
+                "NOMINAL",
+                "TOLERANCE",
+                "MIN",
+                "MAX PA",
+                "RMTE:A SAULRLEODY R",
+                "RIMES U1L6T x 8J",
+                "I|N S PTRAURMETN NTO: T"
+              ],
+              [
+                "1",
+                "Rim Diameter",
+                "As per DWG TR-16-001",
+                "406.4 mm\n(16.00 in)",
+                "± 0.05 mm",
+                "406.35",
+                "406.45",
+                "",
+                "n PASS\nn FAIL",
+                "CMM"
+              ],
+              [
+                "2",
+                "Rim Width",
+                "As per DWG TR-16-001",
+                "203.2 mm\n(8.00 in)",
+                "± 0.05 mm",
+                "203.15",
+                "203.25",
+                "",
+                "n PASS\nn FAIL",
+                "CMM"
+              ],
+              [
+                "3",
+                "PCD (Bolt Circle)",
+                "As per DWG TR-16-001",
+                "120.00 mm",
+                "± 0.03 mm",
+                "119.97",
+                "120.03",
+                "",
+                "n PASS\nn FAIL",
+                "CMM"
+              ],
+              [
+                "4",
+                "Center Bore Dia",
+                "As per DWG TR-16-001",
+                "67.10 mm",
+                "+0.00/-0.02",
+                "67.08",
+                "67.10",
+                "",
+                "n PASS\nn FAIL",
+                "BORE GAUGE"
+              ],
+              [
+                "5",
+                "Bolt Hole Dia (x5)",
+                "As per DWG TR-16-001",
+                "14.00 mm",
+                "± 0.02 mm",
+                "13.98",
+                "14.02",
+                "",
+                "n PASS\nn FAIL",
+                "PIN GAUGE"
+              ],
+              [
+                "6",
+                "Offset (ET)",
+                "As per DWG TR-16-001",
+                "45.0 mm",
+                "± 0.5 mm",
+                "44.5",
+                "45.5",
+                "",
+                "n PASS\nn FAIL",
+                "CMM"
+              ],
+              [
+                "7",
+                "Radial Runout",
+                "ISO 1101",
+                "0.00 mm",
+                "MAX 0.3 mm",
+                "0.00",
+                "0.30",
+                "",
+                "n PASS\nn FAIL",
+                "DIAL GAUGE"
+              ],
+              [
+                "8",
+                "Lateral Runout",
+                "ISO 1101",
+                "0.00 mm",
+                "MAX 0.25 mm",
+                "0.00",
+                "0.25",
+                "",
+                "n PASS\nn FAIL",
+                "DIAL GAUGE"
+              ],
+              [
+                "9",
+                "Weight",
+                "As per BOM",
+                "9.50 kg",
+                "± 0.3 kg",
+                "9.20",
+                "9.80",
+                "",
+                "n PASS\nn FAIL",
+                "SCALE"
+              ],
+              [
+                "10",
+                "Surface Finish",
+                "MIL-A-8625",
+                "Ra 1.6 mm",
+                "MAX Ra 2.0",
+                "-",
+                "2.0",
+                "",
+                "n PASS\nn FAIL",
+                "PROFILOMETER"
+              ],
+              [
+                "11",
+                "Visual Inspection",
+                "No cracks, porosity,\nor casting defects",
+                "ZERO\nDEFECTS",
+                "-",
+                "-",
+                "-",
+                "",
+                "n PASS\nn FAIL",
+                "VISUAL"
+              ],
+              [
+                "12",
+                "Hardness Test",
+                "ASTM E18",
+                "95 HRB",
+                "± 5 HRB",
+                "90",
+                "100",
+                "",
+                "n PASS\nn FAIL",
+                "HARDNESS\nTESTER"
+              ]
+            ]
+          ]
+        }
+      ],
+      "total_pages": 1
+    },
+    "vision": {
+      "file": "QualityInspection_Sheet.pdf",
+      "pages": [
+        {
+          "dimensions": [
+            {
+              "label": "Rim Diameter",
+              "value": "406.4",
+              "unit": "mm",
+              "context": "specification table"
+            },
+            {
+              "label": "Rim Diameter",
+              "value": "16.00",
+              "unit": "in",
+              "context": "specification table"
+            },
+            {
+              "label": "Rim Width",
+              "value": "203.2",
+              "unit": "mm",
+              "context": "specification table"
+            },
+            {
+              "label": "Rim Width",
+              "value": "8.00",
+              "unit": "in",
+              "context": "specification table"
+            },
+            {
+              "label": "PCD (Bolt Circle)",
+              "value": "120.00",
+              "unit": "mm",
+              "context": "specification table"
+            },
+            {
+              "label": "Center Bore Dia",
+              "value": "87.10",
+              "unit": "mm",
+              "context": "specification table"
+            },
+            {
+              "label": "Bolt Hole Dia (x5)",
+              "value": "14.00",
+              "unit": "mm",
+              "context": "specification table"
+            },
+            {
+              "label": "Offset (ET)",
+              "value": "45.0",
+              "unit": "mm",
+              "context": "specification table"
+            },
+            {
+              "label": "Radial Runout",
+              "value": "0.00",
+              "unit": "mm",
+              "context": "specification table"
+            },
+            {
+              "label": "Radial Runout",
+              "value": "0.3",
+              "unit": "mm",
+              "context": "specification table"
+            },
+            {
+              "label": "Lateral Runout",
+              "value": "0.00",
+              "unit": "mm",
+              "context": "specification table"
+            },
+            {
+              "label": "Lateral Runout",
+              "value": "0.25",
+              "unit": "mm",
+              "context": "specification table"
+            },
+            {
+              "label": "Weight",
+              "value": "9.50",
+              "unit": "kg",
+              "context": "specification table"
+            },
+            {
+              "label": "Surface Finish",
+              "value": "2.0",
+              "unit": "Ra μm",
+              "context": "specification table"
+            },
+            {
+              "label": "Hardness Test",
+              "value": "95",
+              "unit": "HRB",
+              "context": "specification table"
+            },
+            {
+              "label": "Tolerance for Rim Diameter",
+              "value": "±0.05",
+              "unit": "mm",
+              "context": "specification table"
+            },
+            {
+              "label": "Tolerance for Rim Width",
+              "value": "±0.05",
+              "unit": "mm",
+              "context": "specification table"
+            },
+            {
+              "label": "Tolerance for PCD (Bolt Circle)",
+              "value": "±0.03",
+              "unit": "mm",
+              "context": "specification table"
+            },
+            {
+              "label": "Tolerance for Center Bore Dia",
+              "value": "+0.00-0.02",
+              "unit": "mm",
+              "context": "specification table"
+            },
+            {
+              "label": "Tolerance for Bolt Hole Dia (x5)",
+              "value": "±0.02",
+              "unit": "mm",
+              "context": "specification table"
+            },
+            {
+              "label": "Tolerance for Offset (ET)",
+              "value": "±0.5",
+              "unit": "mm",
+              "context": "specification table"
+            },
+            {
+              "label": "Tolerance for Weight",
+              "value": "±0.3",
+              "unit": "kg",
+              "context": "specification table"
+            },
+            {
+              "label": "Tolerance for Hardness Test",
+              "value": "±5",
+              "unit": "HRB",
+              "context": "specification table"
+            }
+          ],
+          "tables": [
+            {
+              "title": "Inspection Parameter Table",
+              "headers": [
+                "#",
+                "Inspection Parameter",
+                "Specification",
+                "Nominal",
+                "Tolerance",
+                "Min",
+                "Max",
+                "Measured",
+                "Result",
+                "Instrument"
+              ],
+              "rows": [
+                [
+                  "1",
+                  "Rim Diameter",
+                  "As per DWG TR-16-001",
+                  "406.4 mm (16.00 in)",
+                  "±0.05 mm",
+                  "406.35",
+                  "406.45",
+                  "",
+                  "[ ] PASS [ ] FAIL",
+                  "CMM"
+                ],
+                [
+                  "2",
+                  "Rim Width",
+                  "As per DWG TR-16-001",
+                  "203.2 mm (8.00 in)",
+                  "±0.05 mm",
+                  "203.15",
+                  "203.25",
+                  "",
+                  "[ ] PASS [ ] FAIL",
+                  "CMM"
+                ],
+                [
+                  "3",
+                  "PCD (Bolt Circle)",
+                  "As per DWG TR-16-001",
+                  "120.00 mm",
+                  "±0.03 mm",
+                  "119.97",
+                  "120.03",
+                  "",
+                  "[ ] PASS [ ] FAIL",
+                  "CMM"
+                ],
+                [
+                  "4",
+                  "Center Bore Dia",
+                  "As per DWG TR-16-001",
+                  "87.10 mm",
+                  "+0.00-0.02",
+                  "87.08",
+                  "87.10",
+                  "",
+                  "[ ] PASS [ ] FAIL",
+                  "BORE GAUGE"
+                ],
+                [
+                  "5",
+                  "Bolt Hole Dia (x5)",
+                  "As per DWG TR-16-001",
+                  "14.00 mm",
+                  "±0.02 mm",
+                  "13.98",
+                  "14.02",
+                  "",
+                  "[ ] PASS [ ] FAIL",
+                  "PIN GAUGE"
+                ],
+                [
+                  "6",
+                  "Offset (ET)",
+                  "As per DWG TR-16-001",
+                  "45.0 mm",
+                  "±0.5 mm",
+                  "44.5",
+                  "45.5",
+                  "",
+                  "[ ] PASS [ ] FAIL",
+                  "CMM"
+                ],
+                [
+                  "7",
+                  "Radial Runout",
+                  "ISO 1101",
+                  "0.00 mm",
+                  "MAX 0.3 mm",
+                  "0.00",
+                  "0.30",
+                  "",
+                  "[ ] PASS [ ] FAIL",
+                  "DIAL GAUGE"
+                ],
+                [
+                  "8",
+                  "Lateral Runout",
+                  "ISO 1101",
+                  "0.00 mm",
+                  "MAX 0.25 mm",
+                  "0.00",
+                  "0.25",
+                  "",
+                  "[ ] PASS [ ] FAIL",
+                  "DIAL GAUGE"
+                ],
+                [
+                  "9",
+                  "Weight",
+                  "As per BOM",
+                  "9.50 kg",
+                  "±0.3 kg",
+                  "9.20",
+                  "9.80",
+                  "",
+                  "[ ] PASS [ ] FAIL",
+                  "SCALE"
+                ],
+                [
+                  "10",
+                  "Surface Finish",
+                  "MLA-8625",
+                  "Ra 1.6 μm",
+                  "MAX Ra 2.0",
+                  "",
+                  "2.0",
+                  "",
+                  "[ ] PASS [ ] FAIL",
+                  "PROFILOMETER"
+                ],
+                [
+                  "11",
+                  "Visual Inspection",
+                  "No cracks, porosity, or casting defects",
+                  "ZERO DEFECTS",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "[ ] PASS [ ] FAIL",
+                  "VISUAL"
+                ],
+                [
+                  "12",
+                  "Hardness Test",
+                  "ASTM E18",
+                  "95 HRB",
+                  "±5 HRB",
+                  "90",
+                  "100",
+                  "",
+                  "[ ] PASS [ ] FAIL",
+                  "HARDNESS TESTER"
+                ]
+              ]
+            },
+            {
+              "title": "Revision History",
+              "headers": [
+                "REV",
+                "DESCRIPTION",
+                "DATE",
+                "APPROVED"
+              ],
+              "rows": [
+                [
+                  "A",
+                  "INITIAL QC SHEET FOR 16\" RIM",
+                  "2025-03-01",
+                  "QM"
+                ],
+                [
+                  "B",
+                  "ADDED HARDNESS TEST FOR 16\" RIM",
+                  "2025-07-15",
+                  "QM"
+                ],
+                [
+                  "C",
+                  "UPDATED TOLERANCES PER ECO-2025-089",
+                  "2026-01-10",
+                  "QM"
+                ]
+              ]
+            }
+          ],
+          "notes": [
+            "THIS INSPECTION SHEET IS FOR 16 INCH RIM (PART NO: TR-16-001) ONLY",
+            "ALL DIMENSIONS REFERENCE DRAWING TR-16-001 REV E",
+            "REJECT ENTIRE LOT IF ANY CRITICAL DIMENSION (ITEMS 1-6) FAILS"
+          ],
+          "title_block": {
+            "part_name": "RIM 16 INCH",
+            "part_number": "QC-TR-16-001",
+            "revision": "C",
+            "material": "N/A (INSPECTION DOC)",
+            "drawn_by": "K. DEEKONDA",
+            "date": "2026-03-05"
+          },
+          "revision_history": [
+            {
+              "rev": "A",
+              "description": "INITIAL QC SHEET FOR 16\" RIM",
+              "date": "2025-03-01",
+              "approved_by": "QM"
+            },
+            {
+              "rev": "B",
+              "description": "ADDED HARDNESS TEST FOR 16\" RIM",
+              "date": "2025-07-15",
+              "approved_by": "QM"
+            },
+            {
+              "rev": "C",
+              "description": "UPDATED TOLERANCES PER ECO-2025-089",
+              "date": "2026-01-10",
+              "approved_by": "QM"
+            }
+          ],
+          "page_number": 1
+        }
+      ]
+    }
+  }
+}

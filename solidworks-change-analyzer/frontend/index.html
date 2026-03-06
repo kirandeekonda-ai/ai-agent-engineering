@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolidWorks Change Impact Analyzer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <rect width="32" height="32" rx="8" fill="url(#grad)" />
+                        <path d="M8 16h16M16 8v16M10 10l12 12M22 10L10 22" stroke="white" stroke-width="1.5"
+                            stroke-linecap="round" />
+                        <defs>
+                            <linearGradient id="grad" x1="0" y1="0" x2="32" y2="32">
+                                <stop stop-color="#6366f1" />
+                                <stop offset="1" stop-color="#8b5cf6" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div>
+                    <h1>Change Impact Analyzer</h1>
+                    <p class="subtitle">AI-Powered Engineering Document Analysis</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <span class="badge" id="doc-count">0 Documents</span>
+                <span class="badge badge-green" id="status-badge">Ready</span>
+                <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle Light/Dark Theme">
+                    <svg id="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                    <svg id="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" style="display:none">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Step 1: Upload -->
+            <section class="card" id="upload-section">
+                <div class="card-header">
+                    <div class="step-number">1</div>
+                    <div>
+                        <h2>Upload Engineering Drawings</h2>
+                        <p>Upload PDF files from the vault for AI analysis</p>
+                    </div>
+                </div>
+                <div class="upload-area" id="drop-zone">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.5">
+                        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12" />
+                    </svg>
+                    <p>Drag & drop PDF files here, or <label for="file-input" class="upload-link">browse</label></p>
+                    <input type="file" id="file-input" multiple accept=".pdf" hidden>
+                </div>
+                <div id="upload-progress" class="upload-progress hidden"></div>
+            </section>
+
+            <!-- Step 2: Documents Overview -->
+            <section class="card" id="docs-section">
+                <div class="card-header">
+                    <div class="step-number">2</div>
+                    <div>
+                        <h2>Processed Documents</h2>
+                        <p>Documents analyzed by AI — dimensions and tables extracted</p>
+                    </div>
+                    <button class="btn btn-secondary" onclick="loadDocuments()">Refresh</button>
+                </div>
+                <div id="documents-list" class="documents-grid"></div>
+            </section>
+
+            <!-- Step 3: Change Request -->
+            <section class="card" id="change-section">
+                <div class="card-header">
+                    <div class="step-number">3</div>
+                    <div>
+                        <h2>Submit Design Change</h2>
+                        <p>Specify the parameter change to analyze across all documents</p>
+                    </div>
+                </div>
+                <form id="change-form" class="change-form" onsubmit="submitChange(event)">
+                    <div class="form-group">
+                        <label for="param-name">Parameter Name</label>
+                        <input type="text" id="param-name" placeholder="e.g., Rim Diameter" value="Rim Diameter"
+                            required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="old-value">Current Value</label>
+                            <input type="text" id="old-value" placeholder="e.g., 16" value="16" required>
+                        </div>
+                        <div class="arrow-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </div>
+                        <div class="form-group">
+                            <label for="new-value">New Value</label>
+                            <input type="text" id="new-value" placeholder="e.g., 17" value="17" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="analyze-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                        </svg>
+                        Analyze Impact
+                    </button>
+                </form>
+            </section>
+
+            <!-- Step 4: Visual Impact Report -->
+            <section class="card hidden" id="report-section">
+                <div class="card-header">
+                    <div class="step-number">4</div>
+                    <div>
+                        <h2>Impact Analysis Report</h2>
+                        <p id="report-subtitle"></p>
+                    </div>
+                </div>
+
+                <!-- Summary Cards -->
+                <div class="summary-grid" id="summary-cards"></div>
+
+                <!-- Color Legend -->
+                <div class="legend">
+                    <span class="legend-title">AI Classification:</span>
+                    <span class="legend-item"><span class="legend-dot" style="background:#22c55e"></span>Needs Update
+                        (related to parameter)</span>
+                    <span class="legend-item"><span class="legend-dot" style="background:#f59e0b"></span>Review
+                        (possibly related)</span>
+                    <span class="legend-item"><span class="legend-dot" style="background:#6b7280"></span>Unrelated (part
+                        number, date, etc.)</span>
+                </div>
+
+                <!-- File Tabs -->
+                <div class="file-tabs" id="file-tabs"></div>
+
+                <!-- Visual Viewer: Side-by-side PDF + Match List -->
+                <div class="visual-viewer" id="visual-viewer"></div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>SolidWorks Change Impact Analyzer POC v2 — AI Vision (Groq Llama 4 Scout) + pdfplumber</p>
+        </footer>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="overlay hidden" id="loading-overlay">
+        <div class="loader">
+            <div class="spinner"></div>
+            <p id="loading-text">Processing...</p>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+
+</html>

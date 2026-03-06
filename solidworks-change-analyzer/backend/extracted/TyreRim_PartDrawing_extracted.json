@@ -1,0 +1,377 @@
+{
+  "file": "TyreRim_PartDrawing.pdf",
+  "file_path": "test_data\\TyreRim_PartDrawing.pdf",
+  "total_pages": 1,
+  "extraction": {
+    "pdfplumber": {
+      "file": "TyreRim_PartDrawing.pdf",
+      "pages": [
+        {
+          "page_number": 1,
+          "text": "Ø406.4 (16.00 in)\nFRONT VIEW\nSECTION VIEW A-A\n5X Ø14.0 BOLT HOLES\nTYRE RIM - DETAIL DRAWING EQUALLY SPACED ON PCD 120\nØ67.1 (CENTER BORE)\n203.2 (8.00 in) RIM WIDTH\nPCD 120.00 (BOLT CIRCLE)\nHTPED\nMIR\n0.021\nREVISION HISTORY\nREV DESCRIPTION DATE APPROVED\nA INITIAL RELEASE 2025-01-15 JK\nB UPDATED RIM DIA TO 16.00 IN 2025-03-22 JK FLANGE: 3.5 mm\nC ADDED BOLT HOLE TOLERANCES 2025-06-10 RD\nD CHANGED SPOKE COUNT FROM 6 TO 5 2025-09-01 JK\nE UPDATED SURFACE FINISH SPEC 2026-01-20 RD\nOFFSET: 45.0 mm (ET45)\nSPECIFICATIONS\nPARAMETER VALUE TOLERANCE\nRim Diameter 16.00 inches (406.4 mm) ± 0.05 mm\nRim Width 8.00 inches (203.2 mm) ± 0.05 mm\nBolt Pattern 5 x 120 mm PCD -\nCenter Bore Ø67.1 mm +0.00 / -0.02 mm\nBolt Hole Dia Ø14.0 mm ± 0.02 mm\nOffset (ET) 45.0 mm ± 0.5 mm\nWeight (Target) 9.5 kg ± 0.3 kg ACME AUTOMOTIVE COMPONENTS PVT. LTD.\nMaterial Aluminum 6061-T6 -\nPART NAME DRAWN BY\nTYRE RIM 16 INCH K. DEEKONDA\nSurface Finish Ra 1.6 mm (machined) -\nNumber of Spokes 5 -\nPART NUMBER DATE\nTR-16-001 2026-03-05\nNOTES:\nMATERIAL SCALE\n1. ALL DIMENSIONS IN MM UNLESS OTHERWISE STATED\nAluminum Alloy 6061-T6 1:2\n2. RIM DIAMETER 16 INCHES - VERIFY AGAINST 3D MODEL REF: MDL-TR-001\nREV SHEET\n3. BREAK ALL SHARP EDGES 0.5 mm MAX E 1 OF 1\n4. SURFACE TREATMENT: ANODIZE PER MIL-A-8625 TYPE III",
+          "tables": [
+            [
+              [
+                "5X Ø14.0 BOLT HOLES\nREVISION HISTORY\nTYRE RIM - DETAIL DRAWING EQUALLY SPACED ON PCD 120\nREV DESCRIPTION DATE APPROVED\nA INITIAL RELEASE 2025-01-15 JK\nB UPDATED RIM DIA TO 16.00 IN 2025-03-22 JK\nC ADDED BOLT HOLE TOLERANCES 2025-06-10 RD\nD CHANGED SPOKE COUNT FROM 6 TO 5 2025-09-01 JK\nE UPDATED SURFACE FINISH SPEC 2026-01-20 RD\nØ67.1 (CENTER BORE)\nPCD 120.00 (BOLT CIRCLE)\nSPECIFICATIONS\nPARAMETER VALUE TOLERANCE\nRim Diameter 16.00 inches (406.4 mm) ± 0.05 mm\nRim Width 8.00 inches (203.2 mm) ± 0.05 mm\nBolt Pattern 5 x 120 mm PCD -\nCenter Bore Ø67.1 mm +0.00 / -0.02 mm\nBolt Hole Dia Ø14.0 mm ± 0.02 mm\nOffset (ET) 45.0 mm ± 0.5 mm\nWeight (Target) 9.5 kg ± 0.3 kg ACME AUTOMOTIVE COMPONENTS PVT. LTD.\nMaterial Aluminum 6061-T6 -\nPART NAME DRAWN BY\nTYRE RIM 16 INCH K. DEEKONDA\nSurface Finish Ra 1.6 mm (machined) -\nNumber of Spokes 5 -\nPART NUMBER DATE\nTR-16-001 2026-03-05\nNOTES:\nMATERIAL SCALE\n1. ALL DIMENSIONS IN MM UNLESS OTHERWISE STATED\nAluminum Alloy 6061-T6 1:2\n2. RIM DIAMETER 16 INCHES - VERIFY AGAINST 3D MODEL REF: MDL-TR-001\nREV SHEET\n3. BREAK ALL SHARP EDGES 0.5 mm MAX E 1 OF 1\n4. SURFACE TREATMENT: ANODIZE PER MIL-A-8625 TYPE III",
+                "",
+                ""
+              ],
+              [
+                "",
+                "PART NAME\nTYRE RIM 16 INCH",
+                "DRAWN BY\nK. DEEKONDA"
+              ],
+              [
+                "",
+                "PART NUMBER\nTR-16-001",
+                "DATE\n2026-03-05"
+              ],
+              [
+                "",
+                "MATERIAL\nAluminum Alloy 6061-T6",
+                "SCALE\n1:2"
+              ],
+              [
+                "",
+                "REV\nE",
+                "SHEET\n1 OF 1"
+              ]
+            ],
+            [
+              [
+                "Y SPACED O\nREV",
+                "N PCD 120\nDESCRIPTION",
+                "DATE",
+                "APPROVED"
+              ],
+              [
+                "A",
+                "INITIAL RELEASE",
+                "2025-01-15",
+                "JK"
+              ],
+              [
+                "B",
+                "UPDATED RIM DIA TO 16.00 IN",
+                "2025-03-22",
+                "JK"
+              ],
+              [
+                "C",
+                "ADDED BOLT HOLE TOLERANCES",
+                "2025-06-10",
+                "RD"
+              ],
+              [
+                "D",
+                "CHANGED SPOKE COUNT FROM 6 TO 5",
+                "2025-09-01",
+                "JK"
+              ],
+              [
+                "E",
+                "UPDATED SURFACE FINISH SPEC",
+                "2026-01-20",
+                "RD"
+              ]
+            ],
+            [
+              [
+                "PARAMETER",
+                "VALUE",
+                "TOLERANCE"
+              ],
+              [
+                "Rim Diameter",
+                "16.00 inches (406.4 mm)",
+                "± 0.05 mm"
+              ],
+              [
+                "Rim Width",
+                "8.00 inches (203.2 mm)",
+                "± 0.05 mm"
+              ],
+              [
+                "Bolt Pattern",
+                "5 x 120 mm PCD",
+                "-"
+              ],
+              [
+                "Center Bore",
+                "Ø67.1 mm",
+                "+0.00 / -0.02 mm"
+              ],
+              [
+                "Bolt Hole Dia",
+                "Ø14.0 mm",
+                "± 0.02 mm"
+              ],
+              [
+                "Offset (ET)",
+                "45.0 mm",
+                "± 0.5 mm"
+              ],
+              [
+                "Weight (Target)",
+                "9.5 kg",
+                "± 0.3 kg"
+              ],
+              [
+                "Material",
+                "Aluminum 6061-T6",
+                "-"
+              ],
+              [
+                "Surface Finish",
+                "Ra 1.6 mm (machined)",
+                "-"
+              ],
+              [
+                "Number of Spokes",
+                "5",
+                "-"
+              ]
+            ]
+          ]
+        }
+      ],
+      "total_pages": 1
+    },
+    "vision": {
+      "file": "TyreRim_PartDrawing.pdf",
+      "pages": [
+        {
+          "dimensions": [
+            {
+              "label": "Rim Diameter",
+              "value": "16.00",
+              "unit": "inches",
+              "context": "specification table"
+            },
+            {
+              "label": "Rim Diameter",
+              "value": "406.4",
+              "unit": "mm",
+              "context": "specification table"
+            },
+            {
+              "label": "Rim Width",
+              "value": "8.00",
+              "unit": "inches",
+              "context": "specification table"
+            },
+            {
+              "label": "Rim Width",
+              "value": "203.2",
+              "unit": "mm",
+              "context": "specification table"
+            },
+            {
+              "label": "Bolt Pattern",
+              "value": "5 x 120",
+              "unit": "mm PCD",
+              "context": "specification table"
+            },
+            {
+              "label": "Center Bore",
+              "value": "67.1",
+              "unit": "mm",
+              "context": "specification table"
+            },
+            {
+              "label": "Bolt Hole Dia",
+              "value": "14.0",
+              "unit": "mm",
+              "context": "specification table"
+            },
+            {
+              "label": "Offset (ET)",
+              "value": "45.0",
+              "unit": "mm",
+              "context": "specification table"
+            },
+            {
+              "label": "Weight (Target)",
+              "value": "9.5",
+              "unit": "kg",
+              "context": "specification table"
+            },
+            {
+              "label": "Rim Diameter",
+              "value": "16",
+              "unit": "inches",
+              "context": "part name"
+            },
+            {
+              "label": "PCD",
+              "value": "120.00",
+              "unit": "mm",
+              "context": "dimension line"
+            },
+            {
+              "label": "Center Bore",
+              "value": "67.1",
+              "unit": "mm",
+              "context": "dimension line"
+            },
+            {
+              "label": "Bolt Hole Diameter",
+              "value": "14.0",
+              "unit": "mm",
+              "context": "specification table"
+            }
+          ],
+          "tables": [
+            {
+              "title": "Specifications",
+              "headers": [
+                "Parameter",
+                "Value",
+                "Tolerance"
+              ],
+              "rows": [
+                [
+                  "Rim Diameter",
+                  "16.00 inches (406.4 mm)",
+                  "± 0.05 mm"
+                ],
+                [
+                  "Rim Width",
+                  "8.00 inches (203.2 mm)",
+                  "± 0.05 mm"
+                ],
+                [
+                  "Bolt Pattern",
+                  "5 x 120 mm PCD",
+                  "-"
+                ],
+                [
+                  "Center Bore",
+                  "67.1 mm",
+                  "+0.00 / -0.02 mm"
+                ],
+                [
+                  "Bolt Hole Dia",
+                  "Ø14.0 mm",
+                  "± 0.02 mm"
+                ],
+                [
+                  "Offset (ET)",
+                  "45.0 mm",
+                  "± 0.5 mm"
+                ],
+                [
+                  "Weight (Target)",
+                  "9.5 kg",
+                  "± 0.3 kg"
+                ],
+                [
+                  "Material",
+                  "Aluminum 6061-T6",
+                  "-"
+                ],
+                [
+                  "Surface Finish",
+                  "Ra 1.6 µm (machined)",
+                  "-"
+                ],
+                [
+                  "Number of Spokes",
+                  "5",
+                  "-"
+                ]
+              ]
+            },
+            {
+              "title": "Revision History",
+              "headers": [
+                "Rev",
+                "Description",
+                "Date",
+                "Approved By"
+              ],
+              "rows": [
+                [
+                  "A",
+                  "Initial Release",
+                  "2025-01-15",
+                  "JK"
+                ],
+                [
+                  "B",
+                  "Updated Rim Dia to 16.00 In",
+                  "2025-03-22",
+                  "JK"
+                ],
+                [
+                  "C",
+                  "Added Bolt Hole Tolerances",
+                  "2025-06-10",
+                  "RD"
+                ],
+                [
+                  "D",
+                  "Changed Spoke Count from 6 to 5",
+                  "2025-09-01",
+                  "JK"
+                ],
+                [
+                  "E",
+                  "Updated Surface Finish Spec",
+                  "2026-01-20",
+                  "RD"
+                ]
+              ]
+            }
+          ],
+          "notes": [
+            "ALL DIMENSIONS IN MM UNLESS OTHERWISE STATED",
+            "RIM DIAMETER '16 INCHES - VERIFY AGAINST 3D MODEL REF: MDL-TR-001'",
+            "BREAK ALL SHARP EDGES 0.5 mm MAX"
+          ],
+          "title_block": {
+            "part_name": "TYRE RIM 16 INCH",
+            "part_number": "TR-16-001",
+            "revision": "E",
+            "material": "Aluminum Alloy 6061-T6",
+            "drawn_by": "K. DEEKONDA",
+            "date": "2026-03-05"
+          },
+          "revision_history": [
+            {
+              "rev": "A",
+              "description": "Initial Release",
+              "date": "2025-01-15",
+              "approved_by": "JK"
+            },
+            {
+              "rev": "B",
+              "description": "Updated Rim Dia to 16.00 In",
+              "date": "2025-03-22",
+              "approved_by": "JK"
+            },
+            {
+              "rev": "C",
+              "description": "Added Bolt Hole Tolerances",
+              "date": "2025-06-10",
+              "approved_by": "RD"
+            },
+            {
+              "rev": "D",
+              "description": "Changed Spoke Count from 6 to 5",
+              "date": "2025-09-01",
+              "approved_by": "JK"
+            },
+            {
+              "rev": "E",
+              "description": "Updated Surface Finish Spec",
+              "date": "2026-01-20",
+              "approved_by": "RD"
+            }
+          ],
+          "page_number": 1
+        }
+      ]
+    }
+  }
+}

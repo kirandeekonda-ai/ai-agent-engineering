@@ -1,0 +1,556 @@
+{
+  "file": "BOM_WheelAssembly.pdf",
+  "file_path": "C:\\Users\\Kiran\\AI Practice\\solidworks-change-analyzer\\test_data\\BOM_WheelAssembly.pdf",
+  "total_pages": 1,
+  "extraction": {
+    "pdfplumber": {
+      "file": "BOM_WheelAssembly.pdf",
+      "pages": [
+        {
+          "page_number": 1,
+          "text": "REVISION HISTORY\nBILL OF MATERIALS - WHEEL ASSEMBLY (16 INCH CONFIGURATION)\nREV DESCRIPTION DATE APPROVED\nA INITIAL BOM RELEASE 2025-02-10 JK\nProject: ACME Sedan MY2026 | Assembly: WA-16-001 | Configuration: 16 INCH RIM\nB UPDATED FOR 16\" RIM CONFIG 2025-05-01 RD\nC ADDED TPMS SENSOR FOR 16\" RIM 2025-11-15 JK\nD ADDED CENTER CAP & REPAIR KIT 2026-02-01 RD\nITEM PART NUMBER DESCRIPTION REVISION QTY UNIT MATERIAL WEIGHT (kg) SUPPLIER UNIT COST (n) STATUS\n1 TR-16-001 ALLOY RIM 16 x 8J E 4 EA AL 6061-T6 9.5 ALCOA INDIA 4,500.00 RELEASED\n2 TR-225-50R16 TYRE 225/50R16 97W B 4 EA RUBBER COMP 12.0 MRF LTD 6,200.00 RELEASED\n3 HA-005 HUB ASSEMBLY (FOR 16\" RIM) C 4 EA AISI 4140 3.2 BHARAT FORGE 2,800.00 RELEASED\n4 LN-M14-15 LUG NUT M14x1.5 GR10.9 A 20 EA STEEL 10.9 0.045 SUNDRAM FAST 45.00 RELEASED\n5 VS-STD-01 VALVE STEM (TUBELESS) A 4 EA BRASS/RUBBER 0.015 SCHRADER 120.00 RELEASED\n6 WB-16-01 WHEEL BALANCE WEIGHT KIT A 4 SET ZINC ALLOY 0.060 WEGMANN AUTO 85.00 RELEASED\n7 TP-16-SEN TPMS SENSOR (16\" RIM) B 4 EA ELECTRONIC 0.035 CONTINENTAL 950.00 RELEASED\n8 CC-16-ABS CENTER CAP (16\" RIM) A 4 EA ABS PLASTIC 0.025 ACME MOLDING 150.00 PENDING\n9 WS-M14-FL WHEEL STUD M14 FLANGED A 20 EA STEEL 12.9 0.085 KAMAX 65.00 RELEASED\n10 RP-16-KIT REPAIR KIT (16\" TYRE) A 1 SET MIXED 0.500 SLIME AUTO 350.00 RELEASED\nASSEMBLY SUMMARY BOM NOTES:\nPARAMETER VALUE\nTotal Assembly Weight (per wheel) 24.8 kg 1. ALL QUANTITIES ARE PER VEHICLE (4 WHEEL POSITIONS)\nTotal Assembly Weight (4 wheels) 99.2 kg 2. THIS BOM IS FOR 16 INCH RIM CONFIGURATION ONLY\nRim Configuration 16 x 8J 3. TPMS SENSOR CALIBRATED FOR 16\" RIM DIAMETER\nRim Diameter 16 inches 4. CENTER CAP DESIGN SPECIFIC TO 16 INCH RIM MODEL\nTotal Unique Parts 10 5. PRICES AS OF Q1 2026, SUBJECT TO REVISION\nTotal Part Count (4 wheels) 65 items\nEstimated Cost per Wheel n15,265.00\nEstimated Cost (4 wheels) n61,060.00\nACME AUTOMOTIVE COMPONENTS PVT. LTD.\nPART NAME DRAWN BY\nBOM - WHEEL ASSY 16 IN K. DEEKONDA\nPART NUMBER DATE\nBOM-WA-16-001 2026-03-05\nMATERIAL SCALE\nMULTI (SEE TABLE) 1:2\nREV SHEET\nD 1 OF 1",
+          "tables": [
+            [
+              [
+                "REVISION HISTORY\nBILL OF MATERIALS - WHEEL ASSEMBLY (16 INCH CONFIGURATION)\nREV DESCRIPTION DATE APPROVED\nA INITIAL BOM RELEASE 2025-02-10 JK\nProject: ACME Sedan MY2026 | Assembly: WA-16-001 | Configuration: 16 INCH RIM\nB UPDATED FOR 16\" RIM CONFIG 2025-05-01 RD\nC ADDED TPMS SENSOR FOR 16\" RIM 2025-11-15 JK\nD ADDED CENTER CAP & REPAIR KIT 2026-02-01 RD\nITEM PART NUMBER DESCRIPTION REVISION QTY UNIT MATERIAL WEIGHT (kg) SUPPLIER UNIT COST (n) STATUS\n1 TR-16-001 ALLOY RIM 16 x 8J E 4 EA AL 6061-T6 9.5 ALCOA INDIA 4,500.00 RELEASED\n2 TR-225-50R16 TYRE 225/50R16 97W B 4 EA RUBBER COMP 12.0 MRF LTD 6,200.00 RELEASED\n3 HA-005 HUB ASSEMBLY (FOR 16\" RIM) C 4 EA AISI 4140 3.2 BHARAT FORGE 2,800.00 RELEASED\n4 LN-M14-15 LUG NUT M14x1.5 GR10.9 A 20 EA STEEL 10.9 0.045 SUNDRAM FAST 45.00 RELEASED\n5 VS-STD-01 VALVE STEM (TUBELESS) A 4 EA BRASS/RUBBER 0.015 SCHRADER 120.00 RELEASED\n6 WB-16-01 WHEEL BALANCE WEIGHT KIT A 4 SET ZINC ALLOY 0.060 WEGMANN AUTO 85.00 RELEASED\n7 TP-16-SEN TPMS SENSOR (16\" RIM) B 4 EA ELECTRONIC 0.035 CONTINENTAL 950.00 RELEASED\n8 CC-16-ABS CENTER CAP (16\" RIM) A 4 EA ABS PLASTIC 0.025 ACME MOLDING 150.00 PENDING\n9 WS-M14-FL WHEEL STUD M14 FLANGED A 20 EA STEEL 12.9 0.085 KAMAX 65.00 RELEASED\n10 RP-16-KIT REPAIR KIT (16\" TYRE) A 1 SET MIXED 0.500 SLIME AUTO 350.00 RELEASED\nASSEMBLY SUMMARY BOM NOTES:\nPARAMETER VALUE\nTotal Assembly Weight (per wheel) 24.8 kg 1. ALL QUANTITIES ARE PER VEHICLE (4 WHEEL POSITIONS)\nTotal Assembly Weight (4 wheels) 99.2 kg 2. THIS BOM IS FOR 16 INCH RIM CONFIGURATION ONLY\nRim Configuration 16 x 8J 3. TPMS SENSOR CALIBRATED FOR 16\" RIM DIAMETER\nRim Diameter 16 inches 4. CENTER CAP DESIGN SPECIFIC TO 16 INCH RIM MODEL\nTotal Unique Parts 10 5. PRICES AS OF Q1 2026, SUBJECT TO REVISION\nTotal Part Count (4 wheels) 65 items\nEstimated Cost per Wheel n15,265.00\nEstimated Cost (4 wheels) n61,060.00\nACME AUTOMOTIVE COMPONENTS PVT. LTD.\nPART NAME DRAWN BY\nBOM - WHEEL ASSY 16 IN K. DEEKONDA\nPART NUMBER DATE\nBOM-WA-16-001 2026-03-05\nMATERIAL SCALE\nMULTI (SEE TABLE) 1:2\nREV SHEET\nD 1 OF 1",
+                "",
+                ""
+              ],
+              [
+                "",
+                "PART NAME\nBOM - WHEEL ASSY 16 IN",
+                "DRAWN BY\nK. DEEKONDA"
+              ],
+              [
+                "",
+                "PART NUMBER\nBOM-WA-16-001",
+                "DATE\n2026-03-05"
+              ],
+              [
+                "",
+                "MATERIAL\nMULTI (SEE TABLE)",
+                "SCALE\n1:2"
+              ],
+              [
+                "",
+                "REV\nD",
+                "SHEET\n1 OF 1"
+              ]
+            ],
+            [
+              [
+                "TION)\nREV",
+                "DESCRIPTION",
+                "DATE",
+                "APPROVED"
+              ],
+              [
+                "A",
+                "INITIAL BOM RELEASE",
+                "2025-02-10",
+                "JK"
+              ],
+              [
+                "B",
+                "UPDATED FOR 16\" RIM CONFIG",
+                "2025-05-01",
+                "RD"
+              ],
+              [
+                "C",
+                "ADDED TPMS SENSOR FOR 16\" RIM",
+                "2025-11-15",
+                "JK"
+              ],
+              [
+                "D",
+                "ADDED CENTER CAP & REPAIR KIT",
+                "2026-02-01",
+                "RD"
+              ]
+            ],
+            [
+              [
+                "ITEM",
+                "PART NUMBER",
+                "DESCRIPTION",
+                "REVISION",
+                "QTY",
+                "UNIT",
+                "MATERIAL",
+                "WEIGHT (kg)",
+                "SUPPLIER",
+                "UNIT COST (n)",
+                "STATUS"
+              ],
+              [
+                "1",
+                "TR-16-001",
+                "ALLOY RIM 16 x 8J",
+                "E",
+                "4",
+                "EA",
+                "AL 6061-T6",
+                "9.5",
+                "ALCOA INDIA",
+                "4,500.00",
+                "RELEASED"
+              ],
+              [
+                "2",
+                "TR-225-50R16",
+                "TYRE 225/50R16 97W",
+                "B",
+                "4",
+                "EA",
+                "RUBBER COMP",
+                "12.0",
+                "MRF LTD",
+                "6,200.00",
+                "RELEASED"
+              ],
+              [
+                "3",
+                "HA-005",
+                "HUB ASSEMBLY (FOR 16\" RIM)",
+                "C",
+                "4",
+                "EA",
+                "AISI 4140",
+                "3.2",
+                "BHARAT FORGE",
+                "2,800.00",
+                "RELEASED"
+              ],
+              [
+                "4",
+                "LN-M14-15",
+                "LUG NUT M14x1.5 GR10.9",
+                "A",
+                "20",
+                "EA",
+                "STEEL 10.9",
+                "0.045",
+                "SUNDRAM FAST",
+                "45.00",
+                "RELEASED"
+              ],
+              [
+                "5",
+                "VS-STD-01",
+                "VALVE STEM (TUBELESS)",
+                "A",
+                "4",
+                "EA",
+                "BRASS/RUBBER",
+                "0.015",
+                "SCHRADER",
+                "120.00",
+                "RELEASED"
+              ],
+              [
+                "6",
+                "WB-16-01",
+                "WHEEL BALANCE WEIGHT KIT",
+                "A",
+                "4",
+                "SET",
+                "ZINC ALLOY",
+                "0.060",
+                "WEGMANN AUTO",
+                "85.00",
+                "RELEASED"
+              ],
+              [
+                "7",
+                "TP-16-SEN",
+                "TPMS SENSOR (16\" RIM)",
+                "B",
+                "4",
+                "EA",
+                "ELECTRONIC",
+                "0.035",
+                "CONTINENTAL",
+                "950.00",
+                "RELEASED"
+              ],
+              [
+                "8",
+                "CC-16-ABS",
+                "CENTER CAP (16\" RIM)",
+                "A",
+                "4",
+                "EA",
+                "ABS PLASTIC",
+                "0.025",
+                "ACME MOLDING",
+                "150.00",
+                "PENDING"
+              ],
+              [
+                "9",
+                "WS-M14-FL",
+                "WHEEL STUD M14 FLANGED",
+                "A",
+                "20",
+                "EA",
+                "STEEL 12.9",
+                "0.085",
+                "KAMAX",
+                "65.00",
+                "RELEASED"
+              ],
+              [
+                "10",
+                "RP-16-KIT",
+                "REPAIR KIT (16\" TYRE)",
+                "A",
+                "1",
+                "SET",
+                "MIXED",
+                "0.500",
+                "SLIME AUTO",
+                "350.00",
+                "RELEASED"
+              ]
+            ],
+            [
+              [
+                "ASSEMBLY SUMMARY\nPARAMETER",
+                "VALUE"
+              ],
+              [
+                "Total Assembly Weight (per wheel)",
+                "24.8 kg"
+              ],
+              [
+                "Total Assembly Weight (4 wheels)",
+                "99.2 kg"
+              ],
+              [
+                "Rim Configuration",
+                "16 x 8J"
+              ],
+              [
+                "Rim Diameter",
+                "16 inches"
+              ],
+              [
+                "Total Unique Parts",
+                "10"
+              ],
+              [
+                "Total Part Count (4 wheels)",
+                "65 items"
+              ],
+              [
+                "Estimated Cost per Wheel",
+                "n15,265.00"
+              ],
+              [
+                "Estimated Cost (4 wheels)",
+                "n61,060.00"
+              ]
+            ]
+          ]
+        }
+      ],
+      "total_pages": 1
+    },
+    "vision": {
+      "file": "BOM_WheelAssembly.pdf",
+      "pages": [
+        {
+          "dimensions": [
+            {
+              "label": "Rim Diameter",
+              "value": "16",
+              "unit": "inches",
+              "context": "BOM Summary table"
+            },
+            {
+              "label": "Rim Configuration",
+              "value": "16 x 8J",
+              "unit": "",
+              "context": "BOM Summary table"
+            },
+            {
+              "label": "TPMS Sensor Diameter",
+              "value": "16",
+              "unit": "inches",
+              "context": "BOM Notes"
+            }
+          ],
+          "tables": [
+            {
+              "title": "BILL OF MATERIALS",
+              "headers": [
+                "ITEM",
+                "PART NUMBER",
+                "DESCRIPTION",
+                "REVISION",
+                "QTY",
+                "UNIT",
+                "MATERIAL",
+                "WEIGHT (kg)",
+                "SUPPLIER",
+                "UNIT COST (₦)",
+                "STATUS"
+              ],
+              "rows": [
+                [
+                  "1",
+                  "TR-16-001",
+                  "ALLOY RIM 16 x 8J",
+                  "E",
+                  "4",
+                  "EA",
+                  "AL 6061-T6",
+                  "9.5",
+                  "ALCOA INDIA",
+                  "4,500.00",
+                  "RELEASED"
+                ],
+                [
+                  "2",
+                  "TR-225-50R16",
+                  "TYRE 225/50R16 97W",
+                  "B",
+                  "4",
+                  "EA",
+                  "RUBBER COMP",
+                  "12.0",
+                  "MRF LTD",
+                  "6,200.00",
+                  "RELEASED"
+                ],
+                [
+                  "3",
+                  "HA-305",
+                  "HUB ASSEMBLY (FOR 16\" RIM)",
+                  "C",
+                  "4",
+                  "EA",
+                  "AISI 4140",
+                  "3.2",
+                  "BHARAT FORGE",
+                  "2,800.00",
+                  "RELEASED"
+                ],
+                [
+                  "4",
+                  "LN-M14-15",
+                  "LUG NUT M14x1.5 GR10.9",
+                  "A",
+                  "20",
+                  "EA",
+                  "STEEL 10.9",
+                  "0.045",
+                  "SUNDRAM FAST",
+                  "45.00",
+                  "RELEASED"
+                ],
+                [
+                  "5",
+                  "VS-STD-01",
+                  "VALVE STEM (TUBELESS)",
+                  "A",
+                  "4",
+                  "EA",
+                  "BRASS/RUBBER",
+                  "0.015",
+                  "SCHRADER",
+                  "120.00",
+                  "RELEASED"
+                ],
+                [
+                  "6",
+                  "WB-16-01",
+                  "WHEEL BALANCE WEIGHT KIT",
+                  "A",
+                  "4",
+                  "SET",
+                  "ZINC ALLOY",
+                  "0.060",
+                  "WEGMANN AUTO",
+                  "85.00",
+                  "RELEASED"
+                ],
+                [
+                  "7",
+                  "TP-16-SEN",
+                  "TPMS SENSOR (16\" RIM)",
+                  "B",
+                  "4",
+                  "EA",
+                  "ELECTRONIC",
+                  "0.035",
+                  "CONTINENTAL",
+                  "950.00",
+                  "RELEASED"
+                ],
+                [
+                  "8",
+                  "CC-16-ABS",
+                  "CENTER CAP (16\" RIM)",
+                  "A",
+                  "4",
+                  "EA",
+                  "ABS PLASTIC",
+                  "0.025",
+                  "ACME MOLDING",
+                  "150.00",
+                  "PENDING"
+                ],
+                [
+                  "9",
+                  "WS-M14-FL",
+                  "WHEEL STUD M14 FLANGED",
+                  "A",
+                  "20",
+                  "EA",
+                  "STEEL 12.9",
+                  "0.085",
+                  "KAMAX",
+                  "65.00",
+                  "RELEASED"
+                ],
+                [
+                  "10",
+                  "RP-16-KIT",
+                  "REPAIR KIT (16\" TYRE)",
+                  "A",
+                  "1",
+                  "SET",
+                  "MIXED",
+                  "0.500",
+                  "SLIME AUTO",
+                  "350.00",
+                  "RELEASED"
+                ]
+              ]
+            },
+            {
+              "title": "ASSEMBLY SUMMARY",
+              "headers": [
+                "PARAMETER",
+                "VALUE"
+              ],
+              "rows": [
+                [
+                  "Total Assembly Weight (per wheel)",
+                  "24.8 kg"
+                ],
+                [
+                  "Total Assembly Weight (4 wheels)",
+                  "99.2 kg"
+                ],
+                [
+                  "Rim Configuration",
+                  "16 x 8J"
+                ],
+                [
+                  "Rim Diameter",
+                  "16 inches"
+                ],
+                [
+                  "Total Unique Parts",
+                  "10"
+                ],
+                [
+                  "Total Part Count (4 wheels)",
+                  "65 items"
+                ],
+                [
+                  "Estimated Cost per Wheel",
+                  "₦15,285.00"
+                ],
+                [
+                  "Estimated Cost (4 wheels)",
+                  "₦61,060.00"
+                ]
+              ]
+            },
+            {
+              "title": "REVISION HISTORY",
+              "headers": [
+                "",
+                "DESCRIPTION",
+                "DATE",
+                "APPROVED"
+              ],
+              "rows": [
+                [
+                  "A",
+                  "INITIAL BOM RELEASE",
+                  "2025-02-10",
+                  "JK"
+                ],
+                [
+                  "B",
+                  "UPDATED FOR 16\" RIM CONFIG",
+                  "2025-05-01",
+                  "RD"
+                ],
+                [
+                  "C",
+                  "ADDED TPMS SENSOR FOR 16\" RIM",
+                  "2025-11-15",
+                  "JK"
+                ],
+                [
+                  "D",
+                  "ADDED CENTER CAP & REPAIR KIT",
+                  "2026-02-01",
+                  "RD"
+                ]
+              ]
+            }
+          ],
+          "notes": [
+            "ALL QUANTITIES ARE PER VEHICLE (4 WHEEL POSITIONS)",
+            "THIS BOM IS FOR 16 INCH RIM CONFIGURATION ONLY",
+            "TPMS SENSOR CALIBRATED FOR 16\" RIM DIAMETER",
+            "CENTER CAP DESIGN SPECIFIC TO 16 INCH RIM MODEL",
+            "PRICES AS OF Q1 2026, SUBJECT TO REVISION"
+          ],
+          "title_block": {
+            "part_name": "BOM - WHEEL ASSY 16 IN",
+            "part_number": "BOM-WA-16-001",
+            "revision": "D",
+            "material": "MULTI (SEE TABLE)",
+            "drawn_by": "K. DEEKONDA",
+            "date": "2026-03-05"
+          },
+          "revision_history": [
+            {
+              "rev": "A",
+              "description": "INITIAL BOM RELEASE",
+              "date": "2025-02-10",
+              "approved_by": "JK"
+            },
+            {
+              "rev": "B",
+              "description": "UPDATED FOR 16\" RIM CONFIG",
+              "date": "2025-05-01",
+              "approved_by": "RD"
+            },
+            {
+              "rev": "C",
+              "description": "ADDED TPMS SENSOR FOR 16\" RIM",
+              "date": "2025-11-15",
+              "approved_by": "JK"
+            },
+            {
+              "rev": "D",
+              "description": "ADDED CENTER CAP & REPAIR KIT",
+              "date": "2026-02-01",
+              "approved_by": "RD"
+            }
+          ],
+          "page_number": 1
+        }
+      ]
+    }
+  }
+}

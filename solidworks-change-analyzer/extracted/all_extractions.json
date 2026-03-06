@@ -1,0 +1,590 @@
+[
+  {
+    "file": "SupplierSpec_TyreRim.pdf",
+    "file_path": "C:\\Users\\Kiran\\AI Practice\\solidworks-change-analyzer\\test_data\\SupplierSpec_TyreRim.pdf",
+    "total_pages": 1,
+    "extraction": {
+      "pdfplumber": {
+        "file": "SupplierSpec_TyreRim.pdf",
+        "pages": [
+          {
+            "page_number": 1,
+            "text": "REVISION HISTORY\nSUPPLIER SPECIFICATION - ALLOY RIM 16 INCH\nREV DESCRIPTION DATE APPROVED\nA INITIAL SUPPLIER SPEC FOR 16\" RIM 2025-03-15 PURCH\nSUPPLIER: ALCOA INDIA PVT LTD | PURCHASE ORDER REF: PO-2026-TR16-0045 | DELIVERY: CIF PUNE B UPDATED PRICING FOR 16\" RIM 2025-09-01 PURCH\nC ADDED DELIVERY SCHEDULE 2026 2026-01-15 PURCH\n1. PRODUCT SPECIFICATION 4. DELIVERY SCHEDULE (16\" RIM)\nPARAMETER REQUIREMENT REFERENCE\nMONTH QTY (UNITS) PART NUMBER DESTINATION\nProduct Alloy Wheel Rim As per 3D Model MDL-TR-001\nAPR 2026 2,000 TR-16-001 ACME PUNE PLANT\nRim Diameter 16.00 inches (406.4 mm) Drawing TR-16-001 Rev E\nMAY 2026 2,500 TR-16-001 ACME PUNE PLANT\nRim Width 8.00 inches (203.2 mm) Drawing TR-16-001 Rev E\nJUN 2026 3,000 TR-16-001 ACME PUNE PLANT\nRim Type J-Type Flange JWL Standard\nJUL 2026 3,000 TR-16-001 ACME PUNE PLANT\nBolt Pattern 5 x 120 mm PCD Drawing TR-16-001 Rev E\nAUG 2026 2,500 TR-16-001 ACME PUNE PLANT\nCenter Bore 67.1 mm (Hub-Centric) Drawing TR-16-001 Rev E\nSEP 2026 2,000 TR-16-001 ACME PUNE PLANT\nOffset ET45 (45.0 mm) Drawing TR-16-001 Rev E\nNumber of Spokes 5 Drawing TR-16-001 Rev E\nWeight (per rim) 9.5 kg (max 9.8 kg) BOM-WA-16-001\n5. PRICING (16\" RIM)\nDESCRIPTION UNIT PRICE (n) ANNUAL QTY ANNUAL VALUE (n)\n2. MATERIAL SPECIFICATION\nPROPERTY REQUIREMENT TEST METHOD Alloy Rim 16x8J (TR-16-001) 4,500.00 15,000 6,75,00,000\nAlloy Grade 6061-T6 ASTM B221 Tooling (one-time) 12,00,000 1 12,00,000\nTensile Strength ‡ 310 MPa ASTM E8 Packaging (per unit) 85.00 15,000 12,75,000\nYield Strength ‡ 276 MPa ASTM E8\nElongation ‡ 12% ASTM E8\nHardness 95 ± 5 HRB ASTM E18\nDensity 2.70 g/cm³ ASTM B311\n3. PACKAGING & SHIPPING (FOR 16 INCH RIM)\n3.1 Each 16\" rim to be individually wrapped in VCI paper\n3.2 Carton box size: 450 x 450 x 250 mm (sized for 16\" rim)\nSUPPLIER NOTES:\n3.3 Maximum stacking: 4 cartons high\n3.4 Pallet configuration: 16 rims per pallet (4x4 arrangement) 1. THIS SPECIFICATION IS FOR 16 INCH RIM ONLY\n3.5 Each carton labeled with: Part No TR-16-001, Lot No, Date of Mfg 2. SUPPLIER TO MAINTAIN 16\" RIM TOOLING IN GOOD CONDITION\n3.6 Include material test certificate per lot\n3. ANY DEVIATION FROM 16\" SPEC REQUIRES WRITTEN APPROVAL\nACME AUTOMOTIVE COMPONENTS PVT. LTD.\n4. PPAP SUBMISSION REQUIRED BEFORE FIRST DELIVERY\nPART NAME DRAWN BY\nSUPPLIER SPEC RIM 16\" K. DEE5.K ROEFNEDRA TO DRAWING TR-16-001 REV E FOR ALL DIMENSIONS\nPART NUMBER DATE\nSS-TR-16-001 2026-03-05\nMATERIAL SCALE\nAL 6061-T6 (REF) 1:2\nREV SHEET\nC 1 OF 1",
+            "tables": [
+              [
+                [
+                  "REVISION HISTORY\nSUPPLIER SPECIFICATION - ALLOY RIM 16 INCH\nREV DESCRIPTION DATE APPROVED\nA INITIAL SUPPLIER SPEC FOR 16\" RIM 2025-03-15 PURCH\nSUPPLIER: ALCOA INDIA PVT LTD | PURCHASE ORDER REF: PO-2026-TR16-0045 | DELIVERY: CIF PUNE B UPDATED PRICING FOR 16\" RIM 2025-09-01 PURCH\nC ADDED DELIVERY SCHEDULE 2026 2026-01-15 PURCH\n1. PRODUCT SPECIFICATION 4. DELIVERY SCHEDULE (16\" RIM)\nPARAMETER REQUIREMENT REFERENCE\nMONTH QTY (UNITS) PART NUMBER DEST\nProduct Alloy Wheel Rim As per 3D Model MDL-TR-001\nAPR 2026 2,000 TR-16-001 ACME\nRim Diameter 16.00 inches (406.4 mm) Drawing TR-16-001 Rev E\nMAY 2026 2,500 TR-16-001 ACME\nRim Width 8.00 inches (203.2 mm) Drawing TR-16-001 Rev E\nJUN 2026 3,000 TR-16-001 ACME\nRim Type J-Type Flange JWL Standard\nJUL 2026 3,000 TR-16-001 ACME\nBolt Pattern 5 x 120 mm PCD Drawing TR-16-001 Rev E\nAUG 2026 2,500 TR-16-001 ACME\nCenter Bore 67.1 mm (Hub-Centric) Drawing TR-16-001 Rev E\nSEP 2026 2,000 TR-16-001 ACME\nOffset ET45 (45.0 mm) Drawing TR-16-001 Rev E\nNumber of Spokes 5 Drawing TR-16-001 Rev E\nWeight (per rim) 9.5 kg (max 9.8 kg) BOM-WA-16-001\n5. PRICING (16\" RIM)\nDESCRIPTION UNIT PRICE (n) ANNUA\n2. MATERIAL SPECIFICATION\nPROPERTY REQUIREMENT TEST METHOD Alloy Rim 16x8J (TR-16-001) 4,500.00 15,000\nAlloy Grade 6061-T6 ASTM B221 Tooling (one-time) 12,00,000 1\nTensile Strength ‡ 310 MPa ASTM E8 Packaging (per unit) 85.00 15,000\nYield Strength ‡ 276 MPa ASTM E8\nElongation ‡ 12% ASTM E8\nHardness 95 ± 5 HRB ASTM E18\nDensity 2.70 g/cm³ ASTM B311\n3. PACKAGING & SHIPPING (FOR 16 INCH RIM)\n3.1 Each 16\" rim to be individually wrapped in VCI paper\n3.2 Carton box size: 450 x 450 x 250 mm (sized for 16\" rim)\nSUPPLIER NOTES:\n3.3 Maximum stacking: 4 cartons high\n3.4 Pallet configuration: 16 rims per pallet (4x4 arrangement) 1. THIS SPECIFICATION IS FOR 16 INCH RIM ONLY\n3.5 Each carton labeled with: Part No TR-16-001, Lot No, Date of Mfg 2. SUPPLIER TO MAINTAIN 16\" RIM TOOLING IN GOOD CONDITION\n3.6 Include material test certificate per lot\n3. ANY DEVIATION FROM 16\" SPEC REQUIRES WRITTEN APPROVA\nACME AUTOMOTIVE COMPONENTS PVT. LTD.\n4. PPAP SUBMISSION REQUIRED BEFORE FIRST DELIVERY\nPART NAME DRAWN BY\nSUPPLIER SPEC RIM 16\" K. DEE5.K ROEFNEDRA TO DRAWING TR-16-001 REV E FOR ALL DIMENSIONS\nPART NUMBER DATE\nSS-TR-16-001 2026-03-05\nMATERIAL SCALE\nAL 6061-T6 (REF) 1:2\nREV SHEET\nC 1 OF 1",
+                  "",
+                  ""
+                ],
+                [
+                  "",
+                  "PART NAME\nSUPPLIER SPEC RIM 16\"",
+                  "DRAWN BY\nK. DEE5.K ROEFNEDRA TO DRAWING TR-16-001 REV E FOR ALL DIMENSIONS"
+                ],
+                [
+                  "",
+                  "PART NUMBER\nSS-TR-16-001",
+                  "DATE\n2026-03-05"
+                ],
+                [
+                  "",
+                  "MATERIAL\nAL 6061-T6 (REF)",
+                  "SCALE\n1:2"
+                ],
+                [
+                  "",
+                  "REV\nC",
+                  "SHEET\n1 OF 1"
+                ]
+              ],
+              [
+                [
+                  "REV",
+                  "DESCRIPTION",
+                  "DATE",
+                  "APPROVED"
+                ],
+                [
+                  "A",
+                  "INITIAL SUPPLIER SPEC FOR 16\" RIM",
+                  "2025-03-15",
+                  "PURCH"
+                ],
+                [
+                  "B",
+                  "UPDATED PRICING FOR 16\" RIM",
+                  "2025-09-01",
+                  "PURCH"
+                ],
+                [
+                  "C",
+                  "ADDED DELIVERY SCHEDULE 2026",
+                  "2026-01-15",
+                  "PURCH"
+                ]
+              ],
+              [
+                [
+                  "PARAMETER",
+                  "REQUIREMENT",
+                  "REFERENCE"
+                ],
+                [
+                  "Product",
+                  "Alloy Wheel Rim",
+                  "As per 3D Model MDL-TR-001"
+                ],
+                [
+                  "Rim Diameter",
+                  "16.00 inches (406.4 mm)",
+                  "Drawing TR-16-001 Rev E"
+                ],
+                [
+                  "Rim Width",
+                  "8.00 inches (203.2 mm)",
+                  "Drawing TR-16-001 Rev E"
+                ],
+                [
+                  "Rim Type",
+                  "J-Type Flange",
+                  "JWL Standard"
+                ],
+                [
+                  "Bolt Pattern",
+                  "5 x 120 mm PCD",
+                  "Drawing TR-16-001 Rev E"
+                ],
+                [
+                  "Center Bore",
+                  "67.1 mm (Hub-Centric)",
+                  "Drawing TR-16-001 Rev E"
+                ],
+                [
+                  "Offset",
+                  "ET45 (45.0 mm)",
+                  "Drawing TR-16-001 Rev E"
+                ],
+                [
+                  "Number of Spokes",
+                  "5",
+                  "Drawing TR-16-001 Rev E"
+                ],
+                [
+                  "Weight (per rim)",
+                  "9.5 kg (max 9.8 kg)",
+                  "BOM-WA-16-001"
+                ]
+              ],
+              [
+                [
+                  "MONTH",
+                  "QTY (UNITS)",
+                  "PART NUMBER",
+                  "DEST",
+                  "INATION"
+                ],
+                [
+                  "APR 2026",
+                  "2,000",
+                  "TR-16-001",
+                  "ACME",
+                  "PUNE PLANT"
+                ],
+                [
+                  "MAY 2026",
+                  "2,500",
+                  "TR-16-001",
+                  "ACME",
+                  "PUNE PLANT"
+                ],
+                [
+                  "JUN 2026",
+                  "3,000",
+                  "TR-16-001",
+                  "ACME",
+                  "PUNE PLANT"
+                ],
+                [
+                  "JUL 2026",
+                  "3,000",
+                  "TR-16-001",
+                  "ACME",
+                  "PUNE PLANT"
+                ],
+                [
+                  "AUG 2026",
+                  "2,500",
+                  "TR-16-001",
+                  "ACME",
+                  "PUNE PLANT"
+                ],
+                [
+                  "SEP 2026",
+                  "2,000",
+                  "TR-16-001",
+                  "ACME",
+                  "PUNE PLANT"
+                ]
+              ],
+              [
+                [
+                  "DESCRIPTION",
+                  "UNIT PRICE (n)",
+                  "ANNUA",
+                  "L QTY",
+                  "ANNUAL VALUE (n)"
+                ],
+                [
+                  "Alloy Rim 16x8J (TR-16-001)",
+                  "4,500.00",
+                  "15,000",
+                  "",
+                  "6,75,00,000"
+                ],
+                [
+                  "Tooling (one-time)",
+                  "12,00,000",
+                  "1",
+                  "",
+                  "12,00,000"
+                ],
+                [
+                  "Packaging (per unit)",
+                  "85.00",
+                  "15,000",
+                  "",
+                  "12,75,000"
+                ]
+              ],
+              [
+                [
+                  "PROPERTY",
+                  "REQUIREMENT",
+                  "TEST METHOD"
+                ],
+                [
+                  "Alloy Grade",
+                  "6061-T6",
+                  "ASTM B221"
+                ],
+                [
+                  "Tensile Strength",
+                  "‡ 310 MPa",
+                  "ASTM E8"
+                ],
+                [
+                  "Yield Strength",
+                  "‡ 276 MPa",
+                  "ASTM E8"
+                ],
+                [
+                  "Elongation",
+                  "‡ 12%",
+                  "ASTM E8"
+                ],
+                [
+                  "Hardness",
+                  "95 ± 5 HRB",
+                  "ASTM E18"
+                ],
+                [
+                  "Density",
+                  "2.70 g/cm³",
+                  "ASTM B311"
+                ]
+              ]
+            ]
+          }
+        ],
+        "total_pages": 1
+      },
+      "vision": {
+        "file": "SupplierSpec_TyreRim.pdf",
+        "pages": [
+          {
+            "dimensions": [
+              {
+                "label": "Rim Diameter",
+                "value": "16.00",
+                "unit": "inches",
+                "context": "Product Specification table"
+              },
+              {
+                "label": "Rim Diameter",
+                "value": "406.4",
+                "unit": "mm",
+                "context": "Product Specification table"
+              },
+              {
+                "label": "Rim Width",
+                "value": "8.00",
+                "unit": "inches",
+                "context": "Product Specification table"
+              },
+              {
+                "label": "Rim Width",
+                "value": "203.2",
+                "unit": "mm",
+                "context": "Product Specification table"
+              },
+              {
+                "label": "Center Bore",
+                "value": "67.1",
+                "unit": "mm",
+                "context": "Product Specification table"
+              },
+              {
+                "label": "Offset",
+                "value": "ET45",
+                "unit": "",
+                "context": "Product Specification table"
+              },
+              {
+                "label": "Offset",
+                "value": "45.0",
+                "unit": "mm",
+                "context": "Product Specification table"
+              },
+              {
+                "label": "Number of Spokes",
+                "value": "5",
+                "unit": "",
+                "context": "Product Specification table"
+              },
+              {
+                "label": "Weight (per rim)",
+                "value": "9.5",
+                "unit": "kg",
+                "context": "Product Specification table"
+              },
+              {
+                "label": "Weight (per rim)",
+                "value": "9.8",
+                "unit": "kg",
+                "context": "Product Specification table"
+              },
+              {
+                "label": "Bolt Pattern",
+                "value": "5 x 120",
+                "unit": "PCD",
+                "context": "Product Specification table"
+              },
+              {
+                "label": "Tensile Strength",
+                "value": "≥ 310",
+                "unit": "MPa",
+                "context": "Material Specification table"
+              },
+              {
+                "label": "Yield Strength",
+                "value": "≥ 276",
+                "unit": "MPa",
+                "context": "Material Specification table"
+              },
+              {
+                "label": "Elongation",
+                "value": "≥ 12",
+                "unit": "%",
+                "context": "Material Specification table"
+              },
+              {
+                "label": "Hardness",
+                "value": "95",
+                "unit": "",
+                "context": "Material Specification table"
+              },
+              {
+                "label": "Hardness",
+                "value": "5",
+                "unit": "HRB",
+                "context": "Material Specification table"
+              },
+              {
+                "label": "Density",
+                "value": "2.70",
+                "unit": "g/cm³",
+                "context": "Material Specification table"
+              }
+            ],
+            "tables": [
+              {
+                "title": "Product Specification",
+                "headers": [
+                  "Parameter",
+                  "Requirement",
+                  "Reference"
+                ],
+                "rows": [
+                  [
+                    "Product",
+                    "Alloy Wheel Rim",
+                    "As per 3D Model MDL-TR-001"
+                  ],
+                  [
+                    "Rim Diameter",
+                    "16.00 inches (406.4 mm)",
+                    "Drawing TR-16-001 Rev E"
+                  ],
+                  [
+                    "Rim Width",
+                    "8.00 inches (203.2 mm)",
+                    "Drawing TR-16-001 Rev E"
+                  ],
+                  [
+                    "Rim Type",
+                    "J-Type Flange",
+                    "JWL Standard"
+                  ],
+                  [
+                    "Bolt Pattern",
+                    "5 x 120 mm PCD",
+                    "Drawing TR-16-001 Rev E"
+                  ],
+                  [
+                    "Center Bore",
+                    "67.1 mm (Hub-Centric)",
+                    "Drawing TR-16-001 Rev E"
+                  ],
+                  [
+                    "Offset",
+                    "ET45 (45.0 mm)",
+                    "Drawing TR-16-001 Rev E"
+                  ],
+                  [
+                    "Number of Spokes",
+                    "5",
+                    "Drawing TR-16-001 Rev E"
+                  ],
+                  [
+                    "Weight (per rim)",
+                    "9.5 kg (max 9.8 kg)",
+                    "BOM-WA-16-001"
+                  ]
+                ]
+              },
+              {
+                "title": "Material Specification",
+                "headers": [
+                  "Property",
+                  "Requirement",
+                  "Test Method"
+                ],
+                "rows": [
+                  [
+                    "Alloy Grade",
+                    "6061-T6",
+                    "ASTM B221"
+                  ],
+                  [
+                    "Tensile Strength",
+                    "≥ 310 MPa",
+                    "ASTM E8"
+                  ],
+                  [
+                    "Yield Strength",
+                    "≥ 276 MPa",
+                    "ASTM E8"
+                  ],
+                  [
+                    "Elongation",
+                    "≥ 12%",
+                    "ASTM E8"
+                  ],
+                  [
+                    "Hardness",
+                    "95 ± 5 HRB",
+                    "ASTM E18"
+                  ],
+                  [
+                    "Density",
+                    "2.70 g/cm³",
+                    "ASTM B311"
+                  ]
+                ]
+              },
+              {
+                "title": "Delivery Schedule (16\" Rim)",
+                "headers": [
+                  "Month",
+                  "Qty (Units)",
+                  "Part Number",
+                  "Destination"
+                ],
+                "rows": [
+                  [
+                    "APR 2026",
+                    "2,000",
+                    "TR-16-001",
+                    "ACME PUNE P"
+                  ],
+                  [
+                    "MAY 2026",
+                    "2,500",
+                    "TR-16-001",
+                    "ACME PUNE P"
+                  ],
+                  [
+                    "JUN 2026",
+                    "3,000",
+                    "TR-16-001",
+                    "ACME PUNE P"
+                  ],
+                  [
+                    "JUL 2026",
+                    "3,000",
+                    "TR-16-001",
+                    "ACME PUNE P"
+                  ],
+                  [
+                    "AUG 2026",
+                    "2,500",
+                    "TR-16-001",
+                    "ACME PUNE P"
+                  ],
+                  [
+                    "SEP 2026",
+                    "2,000",
+                    "TR-16-001",
+                    "ACME PUNE P"
+                  ]
+                ]
+              },
+              {
+                "title": "Pricing (16\" Rim)",
+                "headers": [
+                  "Description",
+                  "Unit Price (₹)",
+                  "Annual Qty"
+                ],
+                "rows": [
+                  [
+                    "Alloy Rim 16x8J (TR-16-001)",
+                    "4,500.00",
+                    "15,000"
+                  ],
+                  [
+                    "Tooling (one-time)",
+                    "12,00,000",
+                    "1"
+                  ],
+                  [
+                    "Packaging (per unit)",
+                    "85.00",
+                    "15,000"
+                  ]
+                ]
+              },
+              {
+                "title": "Revision History",
+                "headers": [
+                  "Rev",
+                  "Description",
+                  "Date",
+                  "Approved By"
+                ],
+                "rows": [
+                  [
+                    "A",
+                    "Initial Supplier Spec for 16\" Rim",
+                    "2025-03-15",
+                    "PURCH"
+                  ],
+                  [
+                    "B",
+                    "Updated Pricing for 16\" Rim",
+                    "2025-08-01",
+                    "PURCH"
+                  ],
+                  [
+                    "C",
+                    "Added Delivery Schedule 2026",
+                    "2025-01-15",
+                    "PURCH"
+                  ]
+                ]
+              }
+            ],
+            "notes": [
+              "Each 16\" rim to be individually wrapped in VCI paper",
+              "Carton box size: 450 x 450 x 250 mm (sized for 16\" rim)",
+              "Maximum stacking: 4 cartons high",
+              "Pallet configuration: 16 rims per pallet (4x4 arrangement)",
+              "Each carton labeled with: Part No TR-16-001, Lot No, Date of Mfg",
+              "Include material test certificate per lot"
+            ],
+            "title_block": {
+              "part_name": "SUPPLIER SPEC RIM 16\"",
+              "part_number": "SS-TR-16-001",
+              "revision": "C",
+              "material": "AL 6061-T6 (REF)",
+              "drawn_by": "K. DEEKONDAO",
+              "date": "2026-03-05"
+            },
+            "revision_history": [
+              {
+                "rev": "A",
+                "description": "Initial Supplier Spec for 16\" Rim",
+                "date": "2025-03-15",
+                "approved_by": "PURCH"
+              },
+              {
+                "rev": "B",
+                "description": "Updated Pricing for 16\" Rim",
+                "date": "2025-08-01",
+                "approved_by": "PURCH"
+              },
+              {
+                "rev": "C",
+                "description": "Added Delivery Schedule 2026",
+                "date": "2025-01-15",
+                "approved_by": "PURCH"
+              }
+            ],
+            "page_number": 1
+          }
+        ]
+      }
+    }
+  }
+]

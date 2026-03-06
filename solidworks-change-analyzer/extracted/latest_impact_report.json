@@ -1,0 +1,1397 @@
+{
+  "change_request": {
+    "parameter": "Rim Diameter",
+    "old_value": "16",
+    "new_value": "17"
+  },
+  "summary": {
+    "total_files_scanned": 5,
+    "total_files_affected": 5,
+    "total_occurrences": 155,
+    "high_confidence_matches": 33,
+    "needs_review": 62
+  },
+  "affected_files": [
+    {
+      "file": "BOM_WheelAssembly.pdf",
+      "search_value": "16",
+      "parameter_name": "Rim Diameter",
+      "total_matches": 41,
+      "matches": [
+        {
+          "source": "vision_dimension",
+          "page": 1,
+          "label": "Rim Diameter",
+          "value": "16",
+          "unit": "inches",
+          "context": "BOM Summary table",
+          "confidence": 0.98
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 24,
+          "content": "Rim Configuration 16 x 8J 3. TPMS SENSOR CALIBRATED FOR 16\" RIM DIAMETER",
+          "context": "Direct match: 'Rim Diameter' found in context",
+          "confidence": 0.95
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 25,
+          "content": "Rim Diameter 16 inches 4. CENTER CAP DESIGN SPECIFIC TO 16 INCH RIM MODEL",
+          "context": "Direct match: 'Rim Diameter' found in context",
+          "confidence": 0.95
+        },
+        {
+          "source": "table",
+          "page": 1,
+          "table_index": 0,
+          "row": 0,
+          "column": 0,
+          "cell_content": "REVISION HISTORY\nBILL OF MATERIALS - WHEEL ASSEMBLY (16 INCH CONFIGURATION)\nREV DESCRIPTION DATE APPROVED\nA INITIAL BOM RELEASE 2025-02-10 JK\nProject: ACME Sedan MY2026 | Assembly: WA-16-001 | Configuration: 16 INCH RIM\nB UPDATED FOR 16\" RIM CONFIG 2025-05-01 RD\nC ADDED TPMS SENSOR FOR 16\" RIM 2025-11-15 JK\nD ADDED CENTER CAP & REPAIR KIT 2026-02-01 RD\nITEM PART NUMBER DESCRIPTION REVISION QTY UNIT MATERIAL WEIGHT (kg) SUPPLIER UNIT COST (n) STATUS\n1 TR-16-001 ALLOY RIM 16 x 8J E 4 EA AL 6061-T6 9.5 ALCOA INDIA 4,500.00 RELEASED\n2 TR-225-50R16 TYRE 225/50R16 97W B 4 EA RUBBER COMP 12.0 MRF LTD 6,200.00 RELEASED\n3 HA-005 HUB ASSEMBLY (FOR 16\" RIM) C 4 EA AISI 4140 3.2 BHARAT FORGE 2,800.00 RELEASED\n4 LN-M14-15 LUG NUT M14x1.5 GR10.9 A 20 EA STEEL 10.9 0.045 SUNDRAM FAST 45.00 RELEASED\n5 VS-STD-01 VALVE STEM (TUBELESS) A 4 EA BRASS/RUBBER 0.015 SCHRADER 120.00 RELEASED\n6 WB-16-01 WHEEL BALANCE WEIGHT KIT A 4 SET ZINC ALLOY 0.060 WEGMANN AUTO 85.00 RELEASED\n7 TP-16-SEN TPMS SENSOR (16\" RIM) B 4 EA ELECTRONIC 0.035 CONTINENTAL 950.00 RELEASED\n8 CC-16-ABS CENTER CAP (16\" RIM) A 4 EA ABS PLASTIC 0.025 ACME MOLDING 150.00 PENDING\n9 WS-M14-FL WHEEL STUD M14 FLANGED A 20 EA STEEL 12.9 0.085 KAMAX 65.00 RELEASED\n10 RP-16-KIT REPAIR KIT (16\" TYRE) A 1 SET MIXED 0.500 SLIME AUTO 350.00 RELEASED\nASSEMBLY SUMMARY BOM NOTES:\nPARAMETER VALUE\nTotal Assembly Weight (per wheel) 24.8 kg 1. ALL QUANTITIES ARE PER VEHICLE (4 WHEEL POSITIONS)\nTotal Assembly Weight (4 wheels) 99.2 kg 2. THIS BOM IS FOR 16 INCH RIM CONFIGURATION ONLY\nRim Configuration 16 x 8J 3. TPMS SENSOR CALIBRATED FOR 16\" RIM DIAMETER\nRim Diameter 16 inches 4. CENTER CAP DESIGN SPECIFIC TO 16 INCH RIM MODEL\nTotal Unique Parts 10 5. PRICES AS OF Q1 2026, SUBJECT TO REVISION\nTotal Part Count (4 wheels) 65 items\nEstimated Cost per Wheel n15,265.00\nEstimated Cost (4 wheels) n61,060.00\nACME AUTOMOTIVE COMPONENTS PVT. LTD.\nPART NAME DRAWN BY\nBOM - WHEEL ASSY 16 IN K. DEEKONDA\nPART NUMBER DATE\nBOM-WA-16-001 2026-03-05\nMATERIAL SCALE\nMULTI (SEE TABLE) 1:2\nREV SHEET\nD 1 OF 1",
+          "context": "Direct match: 'Rim Diameter' found in context",
+          "confidence": 0.95
+        },
+        {
+          "source": "vision_note",
+          "page": 1,
+          "content": "TPMS SENSOR CALIBRATED FOR 16\" RIM DIAMETER",
+          "context": "Drawing note",
+          "confidence": 0.92
+        },
+        {
+          "source": "table",
+          "page": 1,
+          "table_index": 2,
+          "row": 1,
+          "column": 2,
+          "cell_content": "ALLOY RIM 16 x 8J",
+          "context": "Size/dimension pattern",
+          "confidence": 0.9
+        },
+        {
+          "source": "vision_dimension",
+          "page": 1,
+          "label": "Rim Configuration",
+          "value": "16 x 8J",
+          "unit": "",
+          "context": "BOM Summary table",
+          "confidence": 0.9
+        },
+        {
+          "source": "vision_title_block",
+          "page": 1,
+          "field": "part_name",
+          "content": "BOM - WHEEL ASSY 16 IN",
+          "context": "Title block: part_name",
+          "confidence": 0.9
+        },
+        {
+          "source": "vision_title_block",
+          "page": 1,
+          "field": "part_number",
+          "content": "BOM-WA-16-001",
+          "context": "Title block: part_number",
+          "confidence": 0.9
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 2,
+          "content": "BILL OF MATERIALS - WHEEL ASSEMBLY (16 INCH CONFIGURATION)",
+          "context": "Dimension context: 'inch' keyword found",
+          "confidence": 0.85
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 5,
+          "content": "Project: ACME Sedan MY2026 | Assembly: WA-16-001 | Configuration: 16 INCH RIM",
+          "context": "Dimension context: 'inch' keyword found",
+          "confidence": 0.85
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 10,
+          "content": "1 TR-16-001 ALLOY RIM 16 x 8J E 4 EA AL 6061-T6 9.5 ALCOA INDIA 4,500.00 RELEASED",
+          "context": "Dimension context: 'dia' keyword found",
+          "confidence": 0.85
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 23,
+          "content": "Total Assembly Weight (4 wheels) 99.2 kg 2. THIS BOM IS FOR 16 INCH RIM CONFIGURATION ONLY",
+          "context": "Dimension context: 'inch' keyword found",
+          "confidence": 0.85
+        },
+        {
+          "source": "vision_table",
+          "page": 1,
+          "table_title": "REVISION HISTORY",
+          "row": 1,
+          "column": 1,
+          "cell_content": "UPDATED FOR 16\" RIM CONFIG",
+          "context": "Table: REVISION HISTORY",
+          "confidence": 0.85
+        },
+        {
+          "source": "vision_table",
+          "page": 1,
+          "table_title": "REVISION HISTORY",
+          "row": 2,
+          "column": 1,
+          "cell_content": "ADDED TPMS SENSOR FOR 16\" RIM",
+          "context": "Table: REVISION HISTORY",
+          "confidence": 0.85
+        },
+        {
+          "source": "vision_table",
+          "page": 1,
+          "table_title": "BILL OF MATERIALS",
+          "row": 0,
+          "column": 1,
+          "cell_content": "TR-16-001",
+          "context": "Table: BILL OF MATERIALS",
+          "confidence": 0.85
+        },
+        {
+          "source": "vision_table",
+          "page": 1,
+          "table_title": "BILL OF MATERIALS",
+          "row": 1,
+          "column": 1,
+          "cell_content": "TR-225-50R16",
+          "context": "Table: BILL OF MATERIALS",
+          "confidence": 0.85
+        },
+        {
+          "source": "vision_table",
+          "page": 1,
+          "table_title": "BILL OF MATERIALS",
+          "row": 1,
+          "column": 2,
+          "cell_content": "TYRE 225/50R16 97W",
+          "context": "Table: BILL OF MATERIALS",
+          "confidence": 0.85
+        },
+        {
+          "source": "vision_table",
+          "page": 1,
+          "table_title": "BILL OF MATERIALS",
+          "row": 2,
+          "column": 2,
+          "cell_content": "HUB ASSEMBLY (FOR 16\" RIM)",
+          "context": "Table: BILL OF MATERIALS",
+          "confidence": 0.85
+        },
+        {
+          "source": "vision_table",
+          "page": 1,
+          "table_title": "BILL OF MATERIALS",
+          "row": 5,
+          "column": 1,
+          "cell_content": "WB-16-01",
+          "context": "Table: BILL OF MATERIALS",
+          "confidence": 0.85
+        },
+        {
+          "source": "vision_table",
+          "page": 1,
+          "table_title": "BILL OF MATERIALS",
+          "row": 6,
+          "column": 1,
+          "cell_content": "TP-16-SEN",
+          "context": "Table: BILL OF MATERIALS",
+          "confidence": 0.85
+        },
+        {
+          "source": "vision_table",
+          "page": 1,
+          "table_title": "BILL OF MATERIALS",
+          "row": 6,
+          "column": 2,
+          "cell_content": "TPMS SENSOR (16\" RIM)",
+          "context": "Table: BILL OF MATERIALS",
+          "confidence": 0.85
+        },
+        {
+          "source": "vision_table",
+          "page": 1,
+          "table_title": "BILL OF MATERIALS",
+          "row": 7,
+          "column": 1,
+          "cell_content": "CC-16-ABS",
+          "context": "Table: BILL OF MATERIALS",
+          "confidence": 0.85
+        },
+        {
+          "source": "vision_table",
+          "page": 1,
+          "table_title": "BILL OF MATERIALS",
+          "row": 7,
+          "column": 2,
+          "cell_content": "CENTER CAP (16\" RIM)",
+          "context": "Table: BILL OF MATERIALS",
+          "confidence": 0.85
+        },
+        {
+          "source": "vision_table",
+          "page": 1,
+          "table_title": "BILL OF MATERIALS",
+          "row": 9,
+          "column": 1,
+          "cell_content": "RP-16-KIT",
+          "context": "Table: BILL OF MATERIALS",
+          "confidence": 0.85
+        },
+        {
+          "source": "vision_table",
+          "page": 1,
+          "table_title": "BILL OF MATERIALS",
+          "row": 9,
+          "column": 2,
+          "cell_content": "REPAIR KIT (16\" TYRE)",
+          "context": "Table: BILL OF MATERIALS",
+          "confidence": 0.85
+        },
+        {
+          "source": "table",
+          "page": 1,
+          "table_index": 3,
+          "row": 4,
+          "column": 1,
+          "cell_content": "16 inches",
+          "context": "Dimension context: 'inch' keyword found",
+          "confidence": 0.85
+        },
+        {
+          "source": "vision_note",
+          "page": 1,
+          "content": "THIS BOM IS FOR 16 INCH RIM CONFIGURATION ONLY",
+          "context": "Drawing note",
+          "confidence": 0.8
+        },
+        {
+          "source": "vision_note",
+          "page": 1,
+          "content": "CENTER CAP DESIGN SPECIFIC TO 16 INCH RIM MODEL",
+          "context": "Drawing note",
+          "confidence": 0.8
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 15,
+          "content": "6 WB-16-01 WHEEL BALANCE WEIGHT KIT A 4 SET ZINC ALLOY 0.060 WEGMANN AUTO 85.00 RELEASED",
+          "context": "Part number reference",
+          "confidence": 0.75
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 16,
+          "content": "7 TP-16-SEN TPMS SENSOR (16\" RIM) B 4 EA ELECTRONIC 0.035 CONTINENTAL 950.00 RELEASED",
+          "context": "Part number reference",
+          "confidence": 0.75
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 17,
+          "content": "8 CC-16-ABS CENTER CAP (16\" RIM) A 4 EA ABS PLASTIC 0.025 ACME MOLDING 150.00 PENDING",
+          "context": "Part number reference",
+          "confidence": 0.75
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 19,
+          "content": "10 RP-16-KIT REPAIR KIT (16\" TYRE) A 1 SET MIXED 0.500 SLIME AUTO 350.00 RELEASED",
+          "context": "Part number reference",
+          "confidence": 0.75
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 34,
+          "content": "BOM-WA-16-001 2026-03-05",
+          "context": "Part number reference",
+          "confidence": 0.75
+        },
+        {
+          "source": "table",
+          "page": 1,
+          "table_index": 0,
+          "row": 2,
+          "column": 1,
+          "cell_content": "PART NUMBER\nBOM-WA-16-001",
+          "context": "Part number reference",
+          "confidence": 0.75
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 6,
+          "content": "B UPDATED FOR 16\" RIM CONFIG 2025-05-01 RD",
+          "context": "Value found in text",
+          "confidence": 0.7
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 7,
+          "content": "C ADDED TPMS SENSOR FOR 16\" RIM 2025-11-15 JK",
+          "context": "Value found in text",
+          "confidence": 0.7
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 11,
+          "content": "2 TR-225-50R16 TYRE 225/50R16 97W B 4 EA RUBBER COMP 12.0 MRF LTD 6,200.00 RELEASED",
+          "context": "Value found in text",
+          "confidence": 0.7
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 12,
+          "content": "3 HA-005 HUB ASSEMBLY (FOR 16\" RIM) C 4 EA AISI 4140 3.2 BHARAT FORGE 2,800.00 RELEASED",
+          "context": "Value found in text",
+          "confidence": 0.7
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 32,
+          "content": "BOM - WHEEL ASSY 16 IN K. DEEKONDA",
+          "context": "Value found in text",
+          "confidence": 0.7
+        },
+        {
+          "source": "table",
+          "page": 1,
+          "table_index": 0,
+          "row": 1,
+          "column": 1,
+          "cell_content": "PART NAME\nBOM - WHEEL ASSY 16 IN",
+          "context": "Value found in text",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "file": "QualityInspection_Sheet.pdf",
+      "search_value": "16",
+      "parameter_name": "Rim Diameter",
+      "total_matches": 26,
+      "matches": [
+        {
+          "source": "vision_dimension",
+          "page": 1,
+          "label": "Rim Diameter",
+          "value": "16.00",
+          "unit": "in",
+          "context": "specification table",
+          "confidence": 0.98
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 6,
+          "content": "1 Rim Diameter As per DWG TR-16-001 ± 0.05 mm 406.35 406.45 CMM",
+          "context": "Direct match: 'Rim Diameter' found in context",
+          "confidence": 0.95
+        },
+        {
+          "source": "table",
+          "page": 1,
+          "table_index": 0,
+          "row": 0,
+          "column": 0,
+          "cell_content": "REVISION HISTORY\nINCOMING QUALITY INSPECTION REPORT\nREV DESCRIPTION DATE APPROVED\n# INSPECTION PARAMETER SPECIFICATION NOMINAL TOLERANCE MIN MAX PARMTE:A SAULRLEODY RRIMES U1L6T x 8J I|N S PTRAURMETN NTO: TR-16-001 | SUPPLIER: ALCOA INDIA A INITIAL QC SHEET FOR 16\" RIM 2025-03-01 QM\n406.4 mm n PASS B ADDED HARDNESS TEST FOR 16\" RIM 2025-07-15 QM\n1 Rim Diameter As per DWG TR-16-001 ± 0.05 mm 406.35 406.45 CMM\n(16.00 in) n FAIL C UPDATED TOLERANCES PER ECO-2025-089 2026-01-10 QM\n203.2 mm n PASS\n2 Rim Width As per DWG TR-16-001 ± 0.05 mm 203.15 203.25 CMM\n(8.00 in) n FAIL\nn PASS\n3 PCD (Bolt Circle) As per DWG TR-16-001 120.00 mm ± 0.03 mm 119.97 120.03 CMM\nn FAIL\nn PASS\n4 Center Bore Dia As per DWG TR-16-001 67.10 mm +0.00/-0.02 67.08 67.10 BORE GAUGE\nn FAIL\nn PASS\n5 Bolt Hole Dia (x5) As per DWG TR-16-001 14.00 mm ± 0.02 mm 13.98 14.02 PIN GAUGE\nn FAIL\nn PASS\n6 Offset (ET) As per DWG TR-16-001 45.0 mm ± 0.5 mm 44.5 45.5 CMM\nn FAIL\nn PASS\n7 Radial Runout ISO 1101 0.00 mm MAX 0.3 mm 0.00 0.30 DIAL GAUGE\nn FAIL\nn PASS\n8 Lateral Runout ISO 1101 0.00 mm MAX 0.25 mm 0.00 0.25 DIAL GAUGE\nn FAIL\nn PASS\n9 Weight As per BOM 9.50 kg ± 0.3 kg 9.20 9.80 SCALE\nn FAIL\nn PASS\n10 Surface Finish MIL-A-8625 Ra 1.6 mm MAX Ra 2.0 - 2.0 PROFILOMETER\nn FAIL\nNo cracks, porosity, ZERO n PASS\n11 Visual Inspection - - - VISUAL\nor casting defects DEFECTS n FAIL\nn PASS HARDNESS\n12 Hardness Test ASTM E18 95 HRB ± 5 HRB 90 100\nn FAIL TESTER\nINSPECTION SIGN-OFF\nInspector Name: ____________________ Signature: ____________________ Date: ____/____/______\nACME AUTOMOTIVE COMPONENTS PVT. LTD.\nQC Manager: ____________________ Signature: ____________________ Date: ____/____/______\nLot Size: ________ Sample Size: ________ AQL: 1.0 Sampling Plan: ISO 2859-1 Level II PART NAME DRAWN BY\nQC INSP - RIM 16 INCH K. DEEKONDA\nNOTES:\n1. THIS INSPECTION SHEET IS FOR 16 INCH RIM (PART NO: TR-16-001) ONLY\n2. ALL DIMENSIONS REFERENCE DRAWING TR-16-001 REV E PART NUMBER DATE\n3. REJECT ENTIRE LOT IF ANY CRITICAL DIMENSION (ITEMS 1-6) FAILS QC-TR-16-001 2026-03-05\nMATERIAL SCALE\nN/A (INSPECTION DOC) 1:2\nREV SHEET\nC 1 OF 1",
+          "context": "Direct match: 'Rim Diameter' found in context",
+          "confidence": 0.95
+        },
+        {
+          "source": "vision_title_block",
+          "page": 1,
+          "field": "part_name",
+          "content": "RIM 16 INCH",
+          "context": "Title block: part_name",
+          "confidence": 0.9
+        },
+        {
+          "source": "vision_title_block",
+          "page": 1,
+          "field": "part_number",
+          "content": "QC-TR-16-001",
+          "context": "Title block: part_number",
+          "confidence": 0.9
+        },
+        {
+          "source": "table",
+          "page": 1,
+          "table_index": 2,
+          "row": 1,
+          "column": 2,
+          "cell_content": "As per DWG TR-16-001",
+          "context": "Table column: SPECIFICATION",
+          "confidence": 0.88
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 4,
+          "content": "# INSPECTION PARAMETER SPECIFICATION NOMINAL TOLERANCE MIN MAX PARMTE:A SAULRLEODY RRIMES U1L6T x 8J I|N S PTRAURMETN NTO: TR-16-001 | SUPPLIER: ALCOA INDIA A INITIAL QC SHEET FOR 16\" RIM 2025-03-01 QM",
+          "context": "Dimension context: 'dia' keyword found",
+          "confidence": 0.85
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 5,
+          "content": "406.4 mm n PASS B ADDED HARDNESS TEST FOR 16\" RIM 2025-07-15 QM",
+          "context": "Dimension context: 'mm' keyword found",
+          "confidence": 0.85
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 9,
+          "content": "2 Rim Width As per DWG TR-16-001 ± 0.05 mm 203.15 203.25 CMM",
+          "context": "Dimension context: 'width' keyword found",
+          "confidence": 0.85
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 12,
+          "content": "3 PCD (Bolt Circle) As per DWG TR-16-001 120.00 mm ± 0.03 mm 119.97 120.03 CMM",
+          "context": "Dimension context: 'pcd' keyword found",
+          "confidence": 0.85
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 15,
+          "content": "4 Center Bore Dia As per DWG TR-16-001 67.10 mm +0.00/-0.02 67.08 67.10 BORE GAUGE",
+          "context": "Dimension context: 'dia' keyword found",
+          "confidence": 0.85
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 18,
+          "content": "5 Bolt Hole Dia (x5) As per DWG TR-16-001 14.00 mm ± 0.02 mm 13.98 14.02 PIN GAUGE",
+          "context": "Dimension context: 'dia' keyword found",
+          "confidence": 0.85
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 21,
+          "content": "6 Offset (ET) As per DWG TR-16-001 45.0 mm ± 0.5 mm 44.5 45.5 CMM",
+          "context": "Dimension context: 'offset' keyword found",
+          "confidence": 0.85
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 46,
+          "content": "QC INSP - RIM 16 INCH K. DEEKONDA",
+          "context": "Dimension context: 'inch' keyword found",
+          "confidence": 0.85
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 48,
+          "content": "1. THIS INSPECTION SHEET IS FOR 16 INCH RIM (PART NO: TR-16-001) ONLY",
+          "context": "Dimension context: 'inch' keyword found",
+          "confidence": 0.85
+        },
+        {
+          "source": "table",
+          "page": 1,
+          "table_index": 0,
+          "row": 1,
+          "column": 1,
+          "cell_content": "PART NAME\nQC INSP - RIM 16 INCH",
+          "context": "Dimension context: 'inch' keyword found",
+          "confidence": 0.85
+        },
+        {
+          "source": "vision_table",
+          "page": 1,
+          "table_title": "Revision History",
+          "row": 0,
+          "column": 1,
+          "cell_content": "INITIAL QC SHEET FOR 16\" RIM",
+          "context": "Table: Revision History",
+          "confidence": 0.85
+        },
+        {
+          "source": "vision_table",
+          "page": 1,
+          "table_title": "Revision History",
+          "row": 1,
+          "column": 1,
+          "cell_content": "ADDED HARDNESS TEST FOR 16\" RIM",
+          "context": "Table: Revision History",
+          "confidence": 0.85
+        },
+        {
+          "source": "table",
+          "page": 1,
+          "table_index": 2,
+          "row": 1,
+          "column": 3,
+          "cell_content": "406.4 mm\n(16.00 in)",
+          "context": "Dimension context: 'mm' keyword found",
+          "confidence": 0.85
+        },
+        {
+          "source": "vision_table",
+          "page": 1,
+          "table_title": "Inspection Parameter Table",
+          "row": 0,
+          "column": 3,
+          "cell_content": "406.4 mm (16.00 in)",
+          "context": "Table: Inspection Parameter Table",
+          "confidence": 0.85
+        },
+        {
+          "source": "vision_note",
+          "page": 1,
+          "content": "THIS INSPECTION SHEET IS FOR 16 INCH RIM (PART NO: TR-16-001) ONLY",
+          "context": "Drawing note",
+          "confidence": 0.8
+        },
+        {
+          "source": "vision_note",
+          "page": 1,
+          "content": "ALL DIMENSIONS REFERENCE DRAWING TR-16-001 REV E",
+          "context": "Drawing note",
+          "confidence": 0.8
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 49,
+          "content": "2. ALL DIMENSIONS REFERENCE DRAWING TR-16-001 REV E PART NUMBER DATE",
+          "context": "Part number reference",
+          "confidence": 0.75
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 50,
+          "content": "3. REJECT ENTIRE LOT IF ANY CRITICAL DIMENSION (ITEMS 1-6) FAILS QC-TR-16-001 2026-03-05",
+          "context": "Part number reference",
+          "confidence": 0.75
+        },
+        {
+          "source": "table",
+          "page": 1,
+          "table_index": 0,
+          "row": 2,
+          "column": 1,
+          "cell_content": "PART NUMBER\nQC-TR-16-001",
+          "context": "Part number reference",
+          "confidence": 0.75
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 7,
+          "content": "(16.00 in) n FAIL C UPDATED TOLERANCES PER ECO-2025-089 2026-01-10 QM",
+          "context": "Value found in text",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "file": "SupplierSpec_TyreRim.pdf",
+      "search_value": "16",
+      "parameter_name": "Rim Diameter",
+      "total_matches": 47,
+      "matches": [
+        {
+          "source": "vision_dimension",
+          "page": 1,
+          "label": "Rim Diameter",
+          "value": "16.00",
+          "unit": "inches",
+          "context": "Product Specification table",
+          "confidence": 0.98
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 12,
+          "content": "Rim Diameter 16.00 inches (406.4 mm) Drawing TR-16-001 Rev E",
+          "context": "Direct match: 'Rim Diameter' found in context",
+          "confidence": 0.95
+        },
+        {
+          "source": "table",
+          "page": 1,
+          "table_index": 0,
+          "row": 0,
+          "column": 0,
+          "cell_content": "REVISION HISTORY\nSUPPLIER SPECIFICATION - ALLOY RIM 16 INCH\nREV DESCRIPTION DATE APPROVED\nA INITIAL SUPPLIER SPEC FOR 16\" RIM 2025-03-15 PURCH\nSUPPLIER: ALCOA INDIA PVT LTD | PURCHASE ORDER REF: PO-2026-TR16-0045 | DELIVERY: CIF PUNE B UPDATED PRICING FOR 16\" RIM 2025-09-01 PURCH\nC ADDED DELIVERY SCHEDULE 2026 2026-01-15 PURCH\n1. PRODUCT SPECIFICATION 4. DELIVERY SCHEDULE (16\" RIM)\nPARAMETER REQUIREMENT REFERENCE\nMONTH QTY (UNITS) PART NUMBER DEST\nProduct Alloy Wheel Rim As per 3D Model MDL-TR-001\nAPR 2026 2,000 TR-16-001 ACME\nRim Diameter 16.00 inches (406.4 mm) Drawing TR-16-001 Rev E\nMAY 2026 2,500 TR-16-001 ACME\nRim Width 8.00 inches (203.2 mm) Drawing TR-16-001 Rev E\nJUN 2026 3,000 TR-16-001 ACME\nRim Type J-Type Flange JWL Standard\nJUL 2026 3,000 TR-16-001 ACME\nBolt Pattern 5 x 120 mm PCD Drawing TR-16-001 Rev E\nAUG 2026 2,500 TR-16-001 ACME\nCenter Bore 67.1 mm (Hub-Centric) Drawing TR-16-001 Rev E\nSEP 2026 2,000 TR-16-001 ACME\nOffset ET45 (45.0 mm) Drawing TR-16-001 Rev E\nNumber of Spokes 5 Drawing TR-16-001 Rev E\nWeight (per rim) 9.5 kg (max 9.8 kg) BOM-WA-16-001\n5. PRICING (16\" RIM)\nDESCRIPTION UNIT PRICE (n) ANNUA\n2. MATERIAL SPECIFICATION\nPROPERTY REQUIREMENT TEST METHOD Alloy Rim 16x8J (TR-16-001) 4,500.00 15,000\nAlloy Grade 6061-T6 ASTM B221 Tooling (one-time) 12,00,000 1\nTensile Strength ‡ 310 MPa ASTM E8 Packaging (per unit) 85.00 15,000\nYield Strength ‡ 276 MPa ASTM E8\nElongation ‡ 12% ASTM E8\nHardness 95 ± 5 HRB ASTM E18\nDensity 2.70 g/cm³ ASTM B311\n3. PACKAGING & SHIPPING (FOR 16 INCH RIM)\n3.1 Each 16\" rim to be individually wrapped in VCI paper\n3.2 Carton box size: 450 x 450 x 250 mm (sized for 16\" rim)\nSUPPLIER NOTES:\n3.3 Maximum stacking: 4 cartons high\n3.4 Pallet configuration: 16 rims per pallet (4x4 arrangement) 1. THIS SPECIFICATION IS FOR 16 INCH RIM ONLY\n3.5 Each carton labeled with: Part No TR-16-001, Lot No, Date of Mfg 2. SUPPLIER TO MAINTAIN 16\" RIM TOOLING IN GOOD CONDITION\n3.6 Include material test certificate per lot\n3. ANY DEVIATION FROM 16\" SPEC REQUIRES WRITTEN APPROVA\nACME AUTOMOTIVE COMPONENTS PVT. LTD.\n4. PPAP SUBMISSION REQUIRED BEFORE FIRST DELIVERY\nPART NAME DRAWN BY\nSUPPLIER SPEC RIM 16\" K. DEE5.K ROEFNEDRA TO DRAWING TR-16-001 REV E FOR ALL DIMENSIONS\nPART NUMBER DATE\nSS-TR-16-001 2026-03-05\nMATERIAL SCALE\nAL 6061-T6 (REF) 1:2\nREV SHEET\nC 1 OF 1",
+          "context": "Direct match: 'Rim Diameter' found in context",
+          "confidence": 0.95
+        },
+        {
+          "source": "vision_title_block",
+          "page": 1,
+          "field": "part_name",
+          "content": "SUPPLIER SPEC RIM 16\"",
+          "context": "Title block: part_name",
+          "confidence": 0.9
+        },
+        {
+          "source": "vision_title_block",
+          "page": 1,
+          "field": "part_number",
+          "content": "SS-TR-16-001",
+          "context": "Title block: part_number",
+          "confidence": 0.9
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 2,
+          "content": "SUPPLIER SPECIFICATION - ALLOY RIM 16 INCH",
+          "context": "Dimension context: 'inch' keyword found",
+          "confidence": 0.85
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 5,
+          "content": "SUPPLIER: ALCOA INDIA PVT LTD | PURCHASE ORDER REF: PO-2026-TR16-0045 | DELIVERY: CIF PUNE B UPDATED PRICING FOR 16\" RIM 2025-09-01 PURCH",
+          "context": "Dimension context: 'dia' keyword found",
+          "confidence": 0.85
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 14,
+          "content": "Rim Width 8.00 inches (203.2 mm) Drawing TR-16-001 Rev E",
+          "context": "Dimension context: 'width' keyword found",
+          "confidence": 0.85
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 18,
+          "content": "Bolt Pattern 5 x 120 mm PCD Drawing TR-16-001 Rev E",
+          "context": "Dimension context: 'pcd' keyword found",
+          "confidence": 0.85
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 20,
+          "content": "Center Bore 67.1 mm (Hub-Centric) Drawing TR-16-001 Rev E",
+          "context": "Dimension context: 'bore' keyword found",
+          "confidence": 0.85
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 22,
+          "content": "Offset ET45 (45.0 mm) Drawing TR-16-001 Rev E",
+          "context": "Dimension context: 'offset' keyword found",
+          "confidence": 0.85
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 35,
+          "content": "3. PACKAGING & SHIPPING (FOR 16 INCH RIM)",
+          "context": "Dimension context: 'inch' keyword found",
+          "confidence": 0.85
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 37,
+          "content": "3.2 Carton box size: 450 x 450 x 250 mm (sized for 16\" rim)",
+          "context": "Dimension context: 'size' keyword found",
+          "confidence": 0.85
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 40,
+          "content": "3.4 Pallet configuration: 16 rims per pallet (4x4 arrangement) 1. THIS SPECIFICATION IS FOR 16 INCH RIM ONLY",
+          "context": "Dimension context: 'inch' keyword found",
+          "confidence": 0.85
+        },
+        {
+          "source": "table",
+          "page": 1,
+          "table_index": 2,
+          "row": 2,
+          "column": 1,
+          "cell_content": "16.00 inches (406.4 mm)",
+          "context": "Dimension context: 'inch' keyword found",
+          "confidence": 0.85
+        },
+        {
+          "source": "vision_table",
+          "page": 1,
+          "table_title": "Product Specification",
+          "row": 1,
+          "column": 2,
+          "cell_content": "Drawing TR-16-001 Rev E",
+          "context": "Table: Product Specification",
+          "confidence": 0.85
+        },
+        {
+          "source": "vision_table",
+          "page": 1,
+          "table_title": "Product Specification",
+          "row": 8,
+          "column": 2,
+          "cell_content": "BOM-WA-16-001",
+          "context": "Table: Product Specification",
+          "confidence": 0.85
+        },
+        {
+          "source": "vision_table",
+          "page": 1,
+          "table_title": "Delivery Schedule (16\" Rim)",
+          "row": 0,
+          "column": 2,
+          "cell_content": "TR-16-001",
+          "context": "Table: Delivery Schedule (16\" Rim)",
+          "confidence": 0.85
+        },
+        {
+          "source": "vision_table",
+          "page": 1,
+          "table_title": "Pricing (16\" Rim)",
+          "row": 0,
+          "column": 0,
+          "cell_content": "Alloy Rim 16x8J (TR-16-001)",
+          "context": "Table: Pricing (16\" Rim)",
+          "confidence": 0.85
+        },
+        {
+          "source": "vision_table",
+          "page": 1,
+          "table_title": "Revision History",
+          "row": 0,
+          "column": 1,
+          "cell_content": "Initial Supplier Spec for 16\" Rim",
+          "context": "Table: Revision History",
+          "confidence": 0.85
+        },
+        {
+          "source": "vision_table",
+          "page": 1,
+          "table_title": "Revision History",
+          "row": 1,
+          "column": 1,
+          "cell_content": "Updated Pricing for 16\" Rim",
+          "context": "Table: Revision History",
+          "confidence": 0.85
+        },
+        {
+          "source": "vision_note",
+          "page": 1,
+          "content": "Each 16\" rim to be individually wrapped in VCI paper",
+          "context": "Drawing note",
+          "confidence": 0.8
+        },
+        {
+          "source": "vision_note",
+          "page": 1,
+          "content": "Carton box size: 450 x 450 x 250 mm (sized for 16\" rim)",
+          "context": "Drawing note",
+          "confidence": 0.8
+        },
+        {
+          "source": "vision_note",
+          "page": 1,
+          "content": "Pallet configuration: 16 rims per pallet (4x4 arrangement)",
+          "context": "Drawing note",
+          "confidence": 0.8
+        },
+        {
+          "source": "vision_note",
+          "page": 1,
+          "content": "Each carton labeled with: Part No TR-16-001, Lot No, Date of Mfg",
+          "context": "Drawing note",
+          "confidence": 0.8
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 11,
+          "content": "APR 2026 2,000 TR-16-001 ACME PUNE PLANT",
+          "context": "Part number reference",
+          "confidence": 0.75
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 13,
+          "content": "MAY 2026 2,500 TR-16-001 ACME PUNE PLANT",
+          "context": "Part number reference",
+          "confidence": 0.75
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 15,
+          "content": "JUN 2026 3,000 TR-16-001 ACME PUNE PLANT",
+          "context": "Part number reference",
+          "confidence": 0.75
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 17,
+          "content": "JUL 2026 3,000 TR-16-001 ACME PUNE PLANT",
+          "context": "Part number reference",
+          "confidence": 0.75
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 19,
+          "content": "AUG 2026 2,500 TR-16-001 ACME PUNE PLANT",
+          "context": "Part number reference",
+          "confidence": 0.75
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 21,
+          "content": "SEP 2026 2,000 TR-16-001 ACME PUNE PLANT",
+          "context": "Part number reference",
+          "confidence": 0.75
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 23,
+          "content": "Number of Spokes 5 Drawing TR-16-001 Rev E",
+          "context": "Part number reference",
+          "confidence": 0.75
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 24,
+          "content": "Weight (per rim) 9.5 kg (max 9.8 kg) BOM-WA-16-001",
+          "context": "Part number reference",
+          "confidence": 0.75
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 28,
+          "content": "PROPERTY REQUIREMENT TEST METHOD Alloy Rim 16x8J (TR-16-001) 4,500.00 15,000 6,75,00,000",
+          "context": "Part number reference",
+          "confidence": 0.75
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 41,
+          "content": "3.5 Each carton labeled with: Part No TR-16-001, Lot No, Date of Mfg 2. SUPPLIER TO MAINTAIN 16\" RIM TOOLING IN GOOD CONDITION",
+          "context": "Part number reference",
+          "confidence": 0.75
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 47,
+          "content": "SUPPLIER SPEC RIM 16\" K. DEE5.K ROEFNEDRA TO DRAWING TR-16-001 REV E FOR ALL DIMENSIONS",
+          "context": "Part number reference",
+          "confidence": 0.75
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 49,
+          "content": "SS-TR-16-001 2026-03-05",
+          "context": "Part number reference",
+          "confidence": 0.75
+        },
+        {
+          "source": "table",
+          "page": 1,
+          "table_index": 0,
+          "row": 1,
+          "column": 2,
+          "cell_content": "DRAWN BY\nK. DEE5.K ROEFNEDRA TO DRAWING TR-16-001 REV E FOR ALL DIMENSIONS",
+          "context": "Part number reference",
+          "confidence": 0.75
+        },
+        {
+          "source": "table",
+          "page": 1,
+          "table_index": 0,
+          "row": 2,
+          "column": 1,
+          "cell_content": "PART NUMBER\nSS-TR-16-001",
+          "context": "Part number reference",
+          "confidence": 0.75
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 4,
+          "content": "A INITIAL SUPPLIER SPEC FOR 16\" RIM 2025-03-15 PURCH",
+          "context": "Value found in text",
+          "confidence": 0.7
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 7,
+          "content": "1. PRODUCT SPECIFICATION 4. DELIVERY SCHEDULE (16\" RIM)",
+          "context": "Value found in text",
+          "confidence": 0.7
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 25,
+          "content": "5. PRICING (16\" RIM)",
+          "context": "Value found in text",
+          "confidence": 0.7
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 36,
+          "content": "3.1 Each 16\" rim to be individually wrapped in VCI paper",
+          "context": "Value found in text",
+          "confidence": 0.7
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 43,
+          "content": "3. ANY DEVIATION FROM 16\" SPEC REQUIRES WRITTEN APPROVAL",
+          "context": "Value found in text",
+          "confidence": 0.7
+        },
+        {
+          "source": "table",
+          "page": 1,
+          "table_index": 0,
+          "row": 1,
+          "column": 1,
+          "cell_content": "PART NAME\nSUPPLIER SPEC RIM 16\"",
+          "context": "Value found in text",
+          "confidence": 0.7
+        },
+        {
+          "source": "table",
+          "page": 1,
+          "table_index": 1,
+          "row": 1,
+          "column": 1,
+          "cell_content": "INITIAL SUPPLIER SPEC FOR 16\" RIM",
+          "context": "Value found in text",
+          "confidence": 0.7
+        },
+        {
+          "source": "table",
+          "page": 1,
+          "table_index": 1,
+          "row": 2,
+          "column": 1,
+          "cell_content": "UPDATED PRICING FOR 16\" RIM",
+          "context": "Value found in text",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "file": "TyreRim_PartDrawing.pdf",
+      "search_value": "16",
+      "parameter_name": "Rim Diameter",
+      "total_matches": 17,
+      "matches": [
+        {
+          "source": "vision_dimension",
+          "page": 1,
+          "label": "Rim Diameter",
+          "value": "16.00",
+          "unit": "inches",
+          "context": "specification table",
+          "confidence": 0.98
+        },
+        {
+          "source": "vision_dimension",
+          "page": 1,
+          "label": "Rim Diameter",
+          "value": "16",
+          "unit": "inches",
+          "context": "part name",
+          "confidence": 0.98
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 22,
+          "content": "Rim Diameter 16.00 inches (406.4 mm) ± 0.05 mm",
+          "context": "Direct match: 'Rim Diameter' found in context",
+          "confidence": 0.95
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 40,
+          "content": "2. RIM DIAMETER 16 INCHES - VERIFY AGAINST 3D MODEL REF: MDL-TR-001",
+          "context": "Direct match: 'Rim Diameter' found in context",
+          "confidence": 0.95
+        },
+        {
+          "source": "table",
+          "page": 1,
+          "table_index": 0,
+          "row": 0,
+          "column": 0,
+          "cell_content": "5X Ø14.0 BOLT HOLES\nREVISION HISTORY\nTYRE RIM - DETAIL DRAWING EQUALLY SPACED ON PCD 120\nREV DESCRIPTION DATE APPROVED\nA INITIAL RELEASE 2025-01-15 JK\nB UPDATED RIM DIA TO 16.00 IN 2025-03-22 JK\nC ADDED BOLT HOLE TOLERANCES 2025-06-10 RD\nD CHANGED SPOKE COUNT FROM 6 TO 5 2025-09-01 JK\nE UPDATED SURFACE FINISH SPEC 2026-01-20 RD\nØ67.1 (CENTER BORE)\nPCD 120.00 (BOLT CIRCLE)\nSPECIFICATIONS\nPARAMETER VALUE TOLERANCE\nRim Diameter 16.00 inches (406.4 mm) ± 0.05 mm\nRim Width 8.00 inches (203.2 mm) ± 0.05 mm\nBolt Pattern 5 x 120 mm PCD -\nCenter Bore Ø67.1 mm +0.00 / -0.02 mm\nBolt Hole Dia Ø14.0 mm ± 0.02 mm\nOffset (ET) 45.0 mm ± 0.5 mm\nWeight (Target) 9.5 kg ± 0.3 kg ACME AUTOMOTIVE COMPONENTS PVT. LTD.\nMaterial Aluminum 6061-T6 -\nPART NAME DRAWN BY\nTYRE RIM 16 INCH K. DEEKONDA\nSurface Finish Ra 1.6 mm (machined) -\nNumber of Spokes 5 -\nPART NUMBER DATE\nTR-16-001 2026-03-05\nNOTES:\nMATERIAL SCALE\n1. ALL DIMENSIONS IN MM UNLESS OTHERWISE STATED\nAluminum Alloy 6061-T6 1:2\n2. RIM DIAMETER 16 INCHES - VERIFY AGAINST 3D MODEL REF: MDL-TR-001\nREV SHEET\n3. BREAK ALL SHARP EDGES 0.5 mm MAX E 1 OF 1\n4. SURFACE TREATMENT: ANODIZE PER MIL-A-8625 TYPE III",
+          "context": "Direct match: 'Rim Diameter' found in context",
+          "confidence": 0.95
+        },
+        {
+          "source": "vision_note",
+          "page": 1,
+          "content": "RIM DIAMETER '16 INCHES - VERIFY AGAINST 3D MODEL REF: MDL-TR-001'",
+          "context": "Drawing note",
+          "confidence": 0.92
+        },
+        {
+          "source": "vision_title_block",
+          "page": 1,
+          "field": "part_name",
+          "content": "TYRE RIM 16 INCH",
+          "context": "Title block: part_name",
+          "confidence": 0.9
+        },
+        {
+          "source": "vision_title_block",
+          "page": 1,
+          "field": "part_number",
+          "content": "TR-16-001",
+          "context": "Title block: part_number",
+          "confidence": 0.9
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 15,
+          "content": "B UPDATED RIM DIA TO 16.00 IN 2025-03-22 JK FLANGE: 3.5 mm",
+          "context": "Dimension context: 'dia' keyword found",
+          "confidence": 0.85
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 31,
+          "content": "TYRE RIM 16 INCH K. DEEKONDA",
+          "context": "Dimension context: 'inch' keyword found",
+          "confidence": 0.85
+        },
+        {
+          "source": "table",
+          "page": 1,
+          "table_index": 0,
+          "row": 1,
+          "column": 1,
+          "cell_content": "PART NAME\nTYRE RIM 16 INCH",
+          "context": "Dimension context: 'inch' keyword found",
+          "confidence": 0.85
+        },
+        {
+          "source": "table",
+          "page": 1,
+          "table_index": 1,
+          "row": 2,
+          "column": 1,
+          "cell_content": "UPDATED RIM DIA TO 16.00 IN",
+          "context": "Dimension context: 'dia' keyword found",
+          "confidence": 0.85
+        },
+        {
+          "source": "table",
+          "page": 1,
+          "table_index": 2,
+          "row": 1,
+          "column": 1,
+          "cell_content": "16.00 inches (406.4 mm)",
+          "context": "Dimension context: 'inch' keyword found",
+          "confidence": 0.85
+        },
+        {
+          "source": "vision_table",
+          "page": 1,
+          "table_title": "Revision History",
+          "row": 1,
+          "column": 1,
+          "cell_content": "Updated Rim Dia to 16.00 In",
+          "context": "Table: Revision History",
+          "confidence": 0.85
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 35,
+          "content": "TR-16-001 2026-03-05",
+          "context": "Part number reference",
+          "confidence": 0.75
+        },
+        {
+          "source": "table",
+          "page": 1,
+          "table_index": 0,
+          "row": 2,
+          "column": 1,
+          "cell_content": "PART NUMBER\nTR-16-001",
+          "context": "Part number reference",
+          "confidence": 0.75
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 1,
+          "content": "Ø406.4 (16.00 in)",
+          "context": "Value found in text",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "file": "WheelAssembly_Drawing.pdf",
+      "search_value": "16",
+      "parameter_name": "Rim Diameter",
+      "total_matches": 24,
+      "matches": [
+        {
+          "source": "vision_dimension",
+          "page": 1,
+          "label": "Rim Diameter",
+          "value": "16.00",
+          "unit": "inches",
+          "context": "dimension line",
+          "confidence": 0.98
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 17,
+          "content": "Rim Diameter: 16.00 inches (406.4 mm)",
+          "context": "Direct match: 'Rim Diameter' found in context",
+          "confidence": 0.95
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 28,
+          "content": "2 RIM 16 x 8J",
+          "context": "Size/dimension pattern",
+          "confidence": 0.9
+        },
+        {
+          "source": "table",
+          "page": 1,
+          "table_index": 0,
+          "row": 2,
+          "column": 2,
+          "cell_content": "ALLOY RIM 16 x 8J",
+          "context": "Size/dimension pattern",
+          "confidence": 0.9
+        },
+        {
+          "source": "vision_title_block",
+          "page": 1,
+          "field": "part_name",
+          "content": "WHEEL ASSEMBLY 16 IN",
+          "context": "Title block: part_name",
+          "confidence": 0.9
+        },
+        {
+          "source": "vision_title_block",
+          "page": 1,
+          "field": "part_number",
+          "content": "WA-16-001",
+          "context": "Title block: part_number",
+          "confidence": 0.9
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 14,
+          "content": "B UPDATED RIM SIZE TO 16 INCH 2025-04-15 RD",
+          "context": "Dimension context: 'size' keyword found",
+          "confidence": 0.85
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 34,
+          "content": "1. TYRE TO BE MOUNTED ON 16 INCH RIM WITH BEAD SEALER",
+          "context": "Dimension context: 'inch' keyword found",
+          "confidence": 0.85
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 41,
+          "content": "5. WHEEL ASSEMBLY FOR 16 INCH RIM CONFIGURATION ONLY REV SHEET",
+          "context": "Dimension context: 'inch' keyword found",
+          "confidence": 0.85
+        },
+        {
+          "source": "table",
+          "page": 1,
+          "table_index": 1,
+          "row": 0,
+          "column": 0,
+          "cell_content": "REVISION HISTORY 1 TYRE 225/50R16\nWHEEL ASSEMBLY - GENERAL ARRANGEMENT\nREV DESCRIPTION DATE APPROVED\nA INITIAL ASSEMBLY DRAWING 2025-02-01 JK\nB UPDATED RIM SIZE TO 16 INCH 2025-04-15 RD\n3 HUB ASSEMBLY C ADDED LUG TORQUE SPEC 2025-08-20 JK\n5 VALVE STEM\n4 LUG NUT M14x1.5 (x5)\n2 RIM 16 x 8J\nRIM Ø406.4 (16.00 in)\nACME AUTOMOTIVE COMPONENTS PVT. LTD.\nPART NAME DRAWN BY\nASSEMBLY NOTES:\nWHEEL ASSEMBLY 16 IN K. DEEKONDA\n1. TYRE TO BE MOUNTED ON 16 INCH RIM WITH BEAD SEALER\nPART NUMBER DATE\n2. INFLATE TO 32 PSI (2.2 BAR) COLD PRESSURE WA-16-001 2026-03-05\n3. TORQUE LUG NUTS TO 120 Nm IN STAR PATTERN\nMATERIAL SCALE\nMULTI (SEE BOM) 1:2\n4. VERIFY RIM RUNOUT < 0.5 mm TIR AFTER ASSEMBLY\n5. WHEEL ASSEMBLY FOR 16 INCH RIM CONFIGURATION ONLY REV SHEET\nC 1 OF 1",
+          "context": "Dimension context: 'size' keyword found",
+          "confidence": 0.85
+        },
+        {
+          "source": "table",
+          "page": 1,
+          "table_index": 2,
+          "row": 2,
+          "column": 1,
+          "cell_content": "UPDATED RIM SIZE TO 16 INCH",
+          "context": "Dimension context: 'size' keyword found",
+          "confidence": 0.85
+        },
+        {
+          "source": "vision_note",
+          "page": 1,
+          "content": "TYRE TO BE MOUNTED ON 16 INCH RIM WITH BEAD SEALER",
+          "context": "Drawing note",
+          "confidence": 0.8
+        },
+        {
+          "source": "vision_note",
+          "page": 1,
+          "content": "WHEEL ASSEMBLY FOR 16 INCH RIM CONFIGURATION ONLY",
+          "context": "Drawing note",
+          "confidence": 0.8
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 4,
+          "content": "2 TR-16-001 ALLOY RIM 16 x 8J 1 AL 6061-T6",
+          "context": "Part number reference",
+          "confidence": 0.75
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 36,
+          "content": "2. INFLATE TO 32 PSI (2.2 BAR) COLD PRESSURE WA-16-001 2026-03-05",
+          "context": "Part number reference",
+          "confidence": 0.75
+        },
+        {
+          "source": "table",
+          "page": 1,
+          "table_index": 0,
+          "row": 2,
+          "column": 1,
+          "cell_content": "TR-16-001",
+          "context": "Part number reference",
+          "confidence": 0.75
+        },
+        {
+          "source": "table",
+          "page": 1,
+          "table_index": 1,
+          "row": 2,
+          "column": 1,
+          "cell_content": "PART NUMBER\nWA-16-001",
+          "context": "Part number reference",
+          "confidence": 0.75
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 3,
+          "content": "1 TR-225-50R16 TYRE 225/50R16 1 RUBBER COMPOUND",
+          "context": "Value found in text",
+          "confidence": 0.7
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 10,
+          "content": "REVISION HISTORY 1 TYRE 225/50R16",
+          "context": "Value found in text",
+          "confidence": 0.7
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 29,
+          "content": "RIM Ø406.4 (16.00 in)",
+          "context": "Value found in text",
+          "confidence": 0.7
+        },
+        {
+          "source": "text",
+          "page": 1,
+          "line": 33,
+          "content": "WHEEL ASSEMBLY 16 IN K. DEEKONDA",
+          "context": "Value found in text",
+          "confidence": 0.7
+        },
+        {
+          "source": "table",
+          "page": 1,
+          "table_index": 0,
+          "row": 1,
+          "column": 1,
+          "cell_content": "TR-225-50R16",
+          "context": "Value found in text",
+          "confidence": 0.7
+        },
+        {
+          "source": "table",
+          "page": 1,
+          "table_index": 0,
+          "row": 1,
+          "column": 2,
+          "cell_content": "TYRE 225/50R16",
+          "context": "Value found in text",
+          "confidence": 0.7
+        },
+        {
+          "source": "table",
+          "page": 1,
+          "table_index": 1,
+          "row": 1,
+          "column": 1,
+          "cell_content": "PART NAME\nWHEEL ASSEMBLY 16 IN",
+          "context": "Value found in text",
+          "confidence": 0.7
+        }
+      ]
+    }
+  ]
+}

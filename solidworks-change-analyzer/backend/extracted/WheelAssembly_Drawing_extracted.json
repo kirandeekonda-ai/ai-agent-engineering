@@ -1,0 +1,267 @@
+{
+  "file": "WheelAssembly_Drawing.pdf",
+  "file_path": "C:\\Users\\Kiran\\AI Practice\\solidworks-change-analyzer\\test_data\\WheelAssembly_Drawing.pdf",
+  "total_pages": 1,
+  "extraction": {
+    "pdfplumber": {
+      "file": "WheelAssembly_Drawing.pdf",
+      "pages": [
+        {
+          "page_number": 1,
+          "text": "ASSEMBLY BILL OF MATERIALS\nITEM PART NUMBER DESCRIPTION QTY MATERIAL\n1 TR-225-50R16 TYRE 225/50R16 1 RUBBER COMPOUND\n2 TR-16-001 ALLOY RIM 16 x 8J 1 AL 6061-T6\n3 HA-005 HUB ASSEMBLY 1 STEEL AISI 4140\nØ632.0 OVERALL (TYRE + RIM)\n4 LN-M14-15 LUG NUT M14x1.5 5 STEEL GR 10.9\n5 VS-STD-01 VALVE STEM (TUBELESS) 1 BRASS / RUBBER\nSIDE VIEW\nREVISION HISTORY 1 TYRE 225/50R16\nWHEEL ASSEMBLY - GENERAL ARRANGEMENT\nREV DESCRIPTION DATE APPROVED\nA INITIAL ASSEMBLY DRAWING 2025-02-01 JK\nB UPDATED RIM SIZE TO 16 INCH 2025-04-15 RD\n3 HUB ASSEMBLY C ADDED LUG TORQUE SPEC 2025-08-20 JK ASSEMBLY SPECIFICATIONS\nOverall Diameter (with tyre): 632.0 mm\nRim Diameter: 16.00 inches (406.4 mm)\nRim Width: 8.00 inches (203.2 mm)\nTyre Section Width: 225 mm\nTyre Aspect Ratio: 50%\nTyre Type: Radial (R)\nLoad Rating: 680 kg per wheel\nLug Torque: 120 Nm\nBolt Pattern: 5 x 120 PCD\nAssembly Weight: 21.5 kg (rim 9.5 kg + tyre 12.0 kg)\n5 VALVE STEM\n4 LUG NUT M14x1.5 (x5)\n2 RIM 16 x 8J\nRIM Ø406.4 (16.00 in)\nACME AUTOMOTIVE COMPONENTS PVT. LTD.\nPART NAME DRAWN BY\nASSEMBLY NOTES:\nWHEEL ASSEMBLY 16 IN K. DEEKONDA\n1. TYRE TO BE MOUNTED ON 16 INCH RIM WITH BEAD SEALER\nPART NUMBER DATE\n2. INFLATE TO 32 PSI (2.2 BAR) COLD PRESSURE WA-16-001 2026-03-05\n3. TORQUE LUG NUTS TO 120 Nm IN STAR PATTERN\nMATERIAL SCALE\nMULTI (SEE BOM) 1:2\n4. VERIFY RIM RUNOUT < 0.5 mm TIR AFTER ASSEMBLY\n5. WHEEL ASSEMBLY FOR 16 INCH RIM CONFIGURATION ONLY REV SHEET\nC 1 OF 1",
+          "tables": [
+            [
+              [
+                "ITEM",
+                "PART NUMBER",
+                "DESCRIPTION",
+                "QTY",
+                "MATERIAL"
+              ],
+              [
+                "1",
+                "TR-225-50R16",
+                "TYRE 225/50R16",
+                "1",
+                "RUBBER COMPOUND"
+              ],
+              [
+                "2",
+                "TR-16-001",
+                "ALLOY RIM 16 x 8J",
+                "1",
+                "AL 6061-T6"
+              ],
+              [
+                "3",
+                "HA-005",
+                "HUB ASSEMBLY",
+                "1",
+                "STEEL AISI 4140"
+              ],
+              [
+                "4",
+                "LN-M14-15",
+                "LUG NUT M14x1.5",
+                "5",
+                "STEEL GR 10.9"
+              ],
+              [
+                "5",
+                "VS-STD-01",
+                "VALVE STEM (TUBELESS)",
+                "1",
+                "BRASS / RUBBER"
+              ]
+            ],
+            [
+              [
+                "REVISION HISTORY 1 TYRE 225/50R16\nWHEEL ASSEMBLY - GENERAL ARRANGEMENT\nREV DESCRIPTION DATE APPROVED\nA INITIAL ASSEMBLY DRAWING 2025-02-01 JK\nB UPDATED RIM SIZE TO 16 INCH 2025-04-15 RD\n3 HUB ASSEMBLY C ADDED LUG TORQUE SPEC 2025-08-20 JK\n5 VALVE STEM\n4 LUG NUT M14x1.5 (x5)\n2 RIM 16 x 8J\nRIM Ø406.4 (16.00 in)\nACME AUTOMOTIVE COMPONENTS PVT. LTD.\nPART NAME DRAWN BY\nASSEMBLY NOTES:\nWHEEL ASSEMBLY 16 IN K. DEEKONDA\n1. TYRE TO BE MOUNTED ON 16 INCH RIM WITH BEAD SEALER\nPART NUMBER DATE\n2. INFLATE TO 32 PSI (2.2 BAR) COLD PRESSURE WA-16-001 2026-03-05\n3. TORQUE LUG NUTS TO 120 Nm IN STAR PATTERN\nMATERIAL SCALE\nMULTI (SEE BOM) 1:2\n4. VERIFY RIM RUNOUT < 0.5 mm TIR AFTER ASSEMBLY\n5. WHEEL ASSEMBLY FOR 16 INCH RIM CONFIGURATION ONLY REV SHEET\nC 1 OF 1",
+                "",
+                ""
+              ],
+              [
+                "",
+                "PART NAME\nWHEEL ASSEMBLY 16 IN",
+                "DRAWN BY\nK. DEEKONDA"
+              ],
+              [
+                "",
+                "PART NUMBER\nWA-16-001",
+                "DATE\n2026-03-05"
+              ],
+              [
+                "",
+                "MATERIAL\nMULTI (SEE BOM)",
+                "SCALE\n1:2"
+              ],
+              [
+                "",
+                "REV\nC",
+                "SHEET\n1 OF 1"
+              ]
+            ],
+            [
+              [
+                "REV",
+                "DESCRIPTION",
+                "",
+                "DATE",
+                "APPROVED"
+              ],
+              [
+                "A",
+                "INITIAL ASSEMBLY DRAWING",
+                "",
+                "2025-02-01",
+                "JK"
+              ],
+              [
+                "B",
+                "UPDATED RIM SIZE TO 16 INCH",
+                "",
+                "2025-04-15",
+                "RD"
+              ],
+              [
+                "C",
+                "ADDED LUG TORQUE SPEC",
+                "",
+                "2025-08-20",
+                "JK"
+              ]
+            ]
+          ]
+        }
+      ],
+      "total_pages": 1
+    },
+    "vision": {
+      "file": "WheelAssembly_Drawing.pdf",
+      "pages": [
+        {
+          "dimensions": [
+            {
+              "label": "Rim Diameter",
+              "value": "16.00",
+              "unit": "inches",
+              "context": "dimension line"
+            },
+            {
+              "label": "Rim Width",
+              "value": "9",
+              "unit": "inches",
+              "context": "dimension line"
+            },
+            {
+              "label": "Lug Nut Thread",
+              "value": "M14",
+              "unit": "",
+              "context": "dimension line"
+            },
+            {
+              "label": "Lug Nut Pitch",
+              "value": "1.5",
+              "unit": "",
+              "context": "dimension line"
+            },
+            {
+              "label": "Number of Lug Nuts",
+              "value": "5",
+              "unit": "",
+              "context": "dimension line"
+            },
+            {
+              "label": "Tyre Pressure",
+              "value": "32",
+              "unit": "PSI",
+              "context": "assembly notes"
+            },
+            {
+              "label": "Tyre Pressure (Bar)",
+              "value": "2.2",
+              "unit": "Bar",
+              "context": "assembly notes"
+            },
+            {
+              "label": "Torque",
+              "value": "120",
+              "unit": "Nm",
+              "context": "assembly notes"
+            },
+            {
+              "label": "Rim Runout",
+              "value": "0.5",
+              "unit": "mm",
+              "context": "assembly notes"
+            }
+          ],
+          "tables": [
+            {
+              "title": "Revision History",
+              "headers": [
+                "REV",
+                "DESCRIPTION",
+                "DATE",
+                "APPROVED"
+              ],
+              "rows": [
+                [
+                  "A",
+                  "INITIAL ASSEMBLY DRAWING",
+                  "2025-02-01",
+                  "JK"
+                ],
+                [
+                  "B",
+                  "UPDATED RIM SIZE TO 16 INCH",
+                  "2025-04-15",
+                  "RD"
+                ],
+                [
+                  "C",
+                  "ADDED LUG TORQUE SPEC",
+                  "2025-08-26",
+                  "JK"
+                ]
+              ]
+            },
+            {
+              "title": "Title Block",
+              "headers": [
+                "PART NAME",
+                "PART NUMBER",
+                "MATERIAL",
+                "REV"
+              ],
+              "rows": [
+                [
+                  "WHEEL ASSEMBLY 16 IN",
+                  "WA-16-001",
+                  "MULTI (SEE BOM)",
+                  "C"
+                ]
+              ]
+            }
+          ],
+          "notes": [
+            "TYRE TO BE MOUNTED ON 16 INCH RIM WITH BEAD SEALER",
+            "INFLATE TO 32 PSI (2.2 BAR) COLD PRESSURE",
+            "TORQUE LUG NUTS TO 120 Nm IN STAR PATTERN",
+            "VERIFY RIM RUNOUT < 0.5 mm TIR AFTER ASSEMBLY",
+            "WHEEL ASSEMBLY FOR 16 INCH RIM CONFIGURATION ONLY"
+          ],
+          "title_block": {
+            "part_name": "WHEEL ASSEMBLY 16 IN",
+            "part_number": "WA-16-001",
+            "revision": "C",
+            "material": "MULTI (SEE BOM)",
+            "drawn_by": "K. DEEKONDA",
+            "date": "2026-03-05"
+          },
+          "revision_history": [
+            {
+              "rev": "A",
+              "description": "INITIAL ASSEMBLY DRAWING",
+              "date": "2025-02-01",
+              "approved_by": "JK"
+            },
+            {
+              "rev": "B",
+              "description": "UPDATED RIM SIZE TO 16 INCH",
+              "date": "2025-04-15",
+              "approved_by": "RD"
+            },
+            {
+              "rev": "C",
+              "description": "ADDED LUG TORQUE SPEC",
+              "date": "2025-08-26",
+              "approved_by": "JK"
+            }
+          ],
+          "page_number": 1
+        }
+      ]
+    }
+  }
+}
