@@ -104,8 +104,13 @@ async function loadDocuments() {
             return;
         }
         grid.innerHTML = data.documents.map(doc => `
-            <div class="doc-card">
-                <div class="doc-name">${doc.file}</div>
+            <div class="doc-card" id="doc-${doc.file.replace(/\./g, '-')}">
+                <button class="doc-delete-btn" onclick="deleteDocument('${doc.file}')" title="Delete ${doc.file}">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"></path>
+                    </svg>
+                </button>
+                <div class="doc-name" title="${doc.file}">${doc.file}</div>
                 <div class="doc-part">${doc.title_block?.part_name || 'N/A'} — ${doc.title_block?.part_number || ''} Rev ${doc.title_block?.revision || ''}</div>
                 <div class="doc-stats">
                     <div class="doc-stat"><span class="num">${doc.dimensions_found}</span> dims</div>
@@ -115,6 +120,82 @@ async function loadDocuments() {
             </div>
         `).join('');
     } catch (err) { console.error('Failed to load documents:', err); }
+}
+
+// ── Custom Confirm Modal ──
+function showConfirmModal(message) {
+    return new Promise((resolve) => {
+        const modal = document.getElementById('confirm-modal');
+        const msgEl = document.getElementById('confirm-message');
+        const cancelBtn = document.getElementById('confirm-cancel-btn');
+        const deleteBtn = document.getElementById('confirm-delete-btn');
+
+        msgEl.textContent = message;
+        modal.classList.remove('hidden');
+
+        const cleanup = () => {
+            modal.classList.add('hidden');
+            cancelBtn.removeEventListener('click', onCancel);
+            deleteBtn.removeEventListener('click', onDelete);
+        };
+
+        const onCancel = () => { cleanup(); resolve(false); };
+        const onDelete = () => { cleanup(); resolve(true); };
+
+        cancelBtn.addEventListener('click', onCancel);
+        deleteBtn.addEventListener('click', onDelete);
+    });
+}
+
+async function deleteAllDocuments() {
+    const confirmed = await showConfirmModal('Are you sure you want to delete all processed documents? This action cannot be undone.');
+    if (!confirmed) return;
+
+    showLoading('Deleting documents...');
+    try {
+        const res = await fetch(`${API_BASE}/documents`, { method: 'DELETE' });
+        const data = await res.json();
+
+        // Hide the report section if it's currently showing
+        document.getElementById('report-section').classList.add('hidden');
+        currentReport = null;
+
+        // Reload the empty documents list
+        loadDocuments();
+    } catch (err) {
+        alert('Failed to delete documents: ' + err.message);
+    }
+    hideLoading();
+}
+
+async function deleteDocument(filename) {
+    const confirmed = await showConfirmModal(`Are you sure you want to delete ${filename}?`);
+    if (!confirmed) return;
+
+    try {
+        const res = await fetch(`${API_BASE}/documents/${encodeURIComponent(filename)}`, { method: 'DELETE' });
+
+        if (!res.ok) {
+            throw new Error(`Server returned ${res.status}`);
+        }
+
+        // Remove the card from UI immediately for snappy feel
+        const cardId = `doc-${filename.replace(/\./g, '-')}`;
+        const cardElem = document.getElementById(cardId);
+        if (cardElem) {
+            cardElem.style.display = 'none';
+        }
+
+        // If report is showing data from this file, it might become stale. 
+        // For simplicity, we just reload the document list in the background
+        // and ideally update the total count label.
+        loadDocuments();
+
+    } catch (err) {
+        console.error('Failed to delete document:', err);
+        // Fallback or custom toast could go here instead of alert
+        loadDocuments(); // reload to ensure UI is in sync
+    }
 }
 
 // ── Change Request ──

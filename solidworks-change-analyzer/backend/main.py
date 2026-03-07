@@ -150,6 +150,54 @@ async def list_documents():
     return {"total_documents": len(documents), "documents": documents}
 
 
+@app.delete("/documents")
+async def delete_all_documents():
+    """Delete all processed and uploaded documents to start fresh."""
+    count = 0
+    
+    # Clear uploads directory
+    for filename in os.listdir(UPLOAD_DIR):
+        file_path = os.path.join(UPLOAD_DIR, filename)
+        if os.path.isfile(file_path):
+            os.remove(file_path)
+            count += 1
+            
+    # Clear extracted directory
+    for filename in os.listdir(EXTRACTED_DIR):
+        file_path = os.path.join(EXTRACTED_DIR, filename)
+        if os.path.isfile(file_path):
+            os.remove(file_path)
+            count += 1
+            
+    # Clear test_data if user wants to delete EVERYTHING
+    # For now, let's keep test data so they can easily re-add them if needed, 
+    # but the API allows a fresh start state.
+    
+    return {"message": "All documents cleared successfully", "deleted_files": count}
+
+
+@app.delete("/documents/{filename}")
+async def delete_document(filename: str):
+    """Delete a specific processed document by filename."""
+    deleted = False
+    
+    upload_path = os.path.join(UPLOAD_DIR, filename)
+    if os.path.exists(upload_path):
+        os.remove(upload_path)
+        deleted = True
+        
+    extracted_filename = filename.replace(".pdf", "_extracted.json")
+    extracted_path = os.path.join(EXTRACTED_DIR, extracted_filename)
+    if os.path.exists(extracted_path):
+        os.remove(extracted_path)
+        deleted = True
+        
+    if not deleted:
+        raise HTTPException(status_code=404, detail="Document not found")
+        
+    return {"message": f"Document {filename} deleted successfully"}
+
+
 @app.post("/change-request")
 async def submit_change_request(
     parameter_name: str = Form(...),
